@@ -1,514 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AfHA Knowledge Hub</title>
+<title>AfHA Knowledge Hub</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #263238;
-            background: #f5f7f8;
-            line-height: 1.6;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #273238;
+    background: #f5f6f7;
+    line-height: 1.6;
+}
 
-        .nav {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* =========================
+   HEADER
+========================= */
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #7a1f1f;
-        }
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .logo span {
-            display: block;
-            font-size: 12px;
-            font-weight: normal;
-            color: #666;
-            letter-spacing: 1px;
-        }
+.header-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        nav a:hover {
-            color: #7a1f1f;
-        }
+.logo-placeholder {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #7a1f1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7a1f1f;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-        .hero {
-            background: linear-gradient(
-                rgba(60, 40, 35, 0.78),
-                rgba(60, 40, 35, 0.78)
-            ),
-            url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1800&q=80");
+.logo-text strong {
+    display: block;
+    font-size: 20px;
+    color: #333;
+}
 
-            background-size: cover;
-            background-position: center;
+.logo-text span {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 1px;
+}
 
-            min-height: 480px;
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-size: 14px;
+}
 
-            display: flex;
-            align-items: center;
-        }
+nav a:hover {
+    color: #7a1f1f;
+}
 
-        .hero-content {
-            max-width: 1200px;
-            margin: auto;
-            padding: 60px 25px;
-            color: white;
-        }
+/* =========================
+   HERO
+========================= */
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-        }
+.hero {
+    min-height: 500px;
 
-        .hero p {
-            max-width: 700px;
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
+    background:
+        linear-gradient(
+            rgba(45, 35, 30, 0.72),
+            rgba(45, 35, 30, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1800&q=80");
 
-        .button {
-            display: inline-block;
-            padding: 13px 25px;
-            background: #ffffff;
-            color: #7a1f1f;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
+    background-size: cover;
+    background-position: center;
 
-        .button:hover {
-            background: #eeeeee;
-        }
+    display: flex;
+    align-items: center;
+}
 
-        section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 25px;
-        }
+.hero-container {
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 30px;
+    color: white;
+}
 
-        .section-title {
-            margin-bottom: 35px;
-        }
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    max-width: 750px;
+    margin-bottom: 20px;
+}
 
-        .section-title h2 {
-            font-size: 32px;
-            color: #333;
-            margin-bottom: 8px;
-        }
+.hero p {
+    font-size: 20px;
+    max-width: 750px;
+    margin-bottom: 30px;
+}
 
-        .section-title p {
-            color: #666;
-        }
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .about {
-            background: white;
-        }
+.button-primary {
+    background: white;
+    color: #7a1f1f;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
+.button-secondary {
+    border: 1px solid white;
+    color: white;
+}
 
-        .card {
-            background: white;
-            padding: 28px;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            transition: 0.2s;
-        }
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 30px;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-            color: #7a1f1f;
-        }
+.section-heading {
+    margin-bottom: 40px;
+}
 
-        .card p {
-            color: #666;
-            font-size: 15px;
-        }
+.section-heading h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 8px;
+}
 
-        .resources {
-            background: #f5f7f8;
-        }
+.section-heading p {
+    color: #666;
+    max-width: 750px;
+}
 
-        .resource-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
+/* =========================
+   ABOUT
+========================= */
 
-        .resource {
-            background: white;
-            padding: 22px;
-            border-left: 4px solid #7a1f1f;
-        }
+.about {
+    background: white;
+}
 
-        .resource h3 {
-            margin-bottom: 8px;
-        }
+.about-text {
+    max-width: 900px;
+    font-size: 17px;
+}
 
-        .resource a {
-            color: #7a1f1f;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* =========================
+   RESOURCE CARDS
+========================= */
 
-        footer {
-            background: #252525;
-            color: white;
-            padding: 45px 25px;
-        }
+.resources-section {
+    background: #f5f6f7;
+}
 
-        .footer-inner {
-            max-width: 1200px;
-            margin: auto;
-        }
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
 
-        footer p {
-            color: #bbb;
-            margin-top: 8px;
-        }
+.resource-card {
+    background: white;
+    padding: 28px 24px;
+    border: 1px solid #ddd;
+    border-top: 4px solid #7a1f1f;
+    min-height: 190px;
+    transition: 0.2s;
+}
 
-        @media (max-width: 800px) {
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
-            .nav {
-                flex-direction: column;
-                gap: 15px;
-            }
+.resource-card .number {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 15px;
+}
 
-            nav a {
-                margin: 0 7px;
-            }
+.resource-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: #7a1f1f;
+}
 
-            .hero h1 {
-                font-size: 38px;
-            }
+.resource-card p {
+    color: #666;
+    font-size: 14px;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+/* =========================
+   PRINCIPLES
+========================= */
 
-            .resource-list {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.principles {
+    background: white;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.principle {
+    padding: 22px;
+    background: #f7f7f7;
+    border-left: 4px solid #7a1f1f;
+}
+
+.principle strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.principle span {
+    font-size: 13px;
+    color: #777;
+}
+
+/* =========================
+   FEATURED AREA
+========================= */
+
+.featured {
+    background: #f5f6f7;
+}
+
+.featured-box {
+    background: white;
+    padding: 35px;
+    border-left: 5px solid #7a1f1f;
+}
+
+.featured-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.featured-box p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: #7a1f1f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #252525;
+    color: white;
+}
+
+.footer-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 45px 30px;
+}
+
+.footer-container h3 {
+    margin-bottom: 8px;
+}
+
+.footer-container p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 950px) {
+
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        margin-left: 12px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .resource-grid,
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<header>
-    <div class="nav">
 
-        <div class="logo">
+<!-- HEADER -->
+
+<header>
+
+<div class="header-container">
+
+    <div class="logo">
+
+        <div class="logo-placeholder">
             AfHA
+        </div>
+
+        <div class="logo-text">
+            <strong>African Humanitarian Agency</strong>
             <span>KNOWLEDGE HUB</span>
         </div>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#mandate">Mandate</a>
-            <a href="#frameworks">Frameworks</a>
-            <a href="#resources">Resources</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
     </div>
+
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <a href="#principles">Principles</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</div>
+
 </header>
 
 
-<section class="hero">
 
-    <div class="hero-content">
+<!-- HERO -->
 
-        <h1>African Humanitarian Agency</h1>
+<div class="hero">
 
-        <p>
-            AfHA Knowledge Hub — a central resource for information,
-            frameworks, guidance, tools, reports and learning on
-            humanitarian action in Africa.
-        </p>
+<div class="hero-container">
 
-        <a href="#resources" class="button">
-            Explore Resources
-        </a>
+    <h1>
+        African Humanitarian Agency
+    </h1>
 
-        <a href="#about" class="button">
-            About AfHA
-        </a>
+    <p>
+        AfHA Knowledge Hub — a central platform for humanitarian
+        frameworks, guidance, tools, reports, learning and
+        knowledge resources supporting humanitarian action in Africa.
+    </p>
 
-    </div>
+    <a href="#resources"
+       class="button button-primary">
+        Explore Resources
+    </a>
 
-</section>
+    <a href="#about"
+       class="button button-secondary">
+        About AfHA
+    </a>
 
+</div>
+
+</div>
+
+
+
+<!-- ABOUT -->
 
 <section id="about" class="about">
 
-    <div class="section-title">
+<div class="section-heading">
 
-        <h2>About AfHA</h2>
+    <h2>About AfHA</h2>
 
-        <p>
-            The African Humanitarian Agency (AfHA) is an African Union
-            humanitarian mechanism intended to strengthen continental
-            humanitarian action and support coordinated responses to
-            humanitarian crises across Africa.
-        </p>
+</div>
 
-    </div>
+<div class="about-text">
 
-</section>
+    <p>
+        The African Humanitarian Agency (AfHA) is an African Union
+        humanitarian mechanism established to strengthen continental
+        humanitarian action and support more effective responses to
+        humanitarian crises across Africa.
+    </p>
 
+    <br>
 
-<section id="mandate">
+    <p>
+        The AfHA Knowledge Hub brings together key humanitarian
+        frameworks, policies, guidance, tools, reports and learning
+        resources in one accessible platform.
+    </p>
 
-    <div class="section-title">
-
-        <h2>Mandate, Role & Objectives</h2>
-
-        <p>
-            Explore the key areas defining AfHA's humanitarian mandate
-            and role within the African humanitarian architecture.
-        </p>
-
-    </div>
-
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>Mandate</h3>
-
-            <p>
-                Information on the institutional mandate and
-                responsibilities of AfHA.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Role</h3>
-
-            <p>
-                AfHA's role in strengthening humanitarian coordination,
-                preparedness and response.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Objectives</h3>
-
-            <p>
-                Key objectives supporting more effective humanitarian
-                action across the continent.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<section id="frameworks" class="resources">
 
-    <div class="section-title">
+<!-- RESOURCE CATEGORIES -->
 
-        <h2>Normative Frameworks</h2>
+<section id="resources" class="resources-section">
+
+<div class="section-heading">
+
+    <h2>Knowledge Resources</h2>
+
+    <p>
+        Explore key categories of humanitarian knowledge and
+        operational resources.
+    </p>
+
+</div>
+
+
+<div class="resource-grid">
+
+
+    <div class="resource-card">
+
+        <div class="number">01</div>
+
+        <h3>Frameworks & Guidelines</h3>
 
         <p>
-            Key African Union and humanitarian frameworks, policies
-            and guidance documents.
+            Continental humanitarian frameworks,
+            principles and guidance.
         </p>
 
     </div>
 
 
-    <div class="resource-list">
+    <div class="resource-card">
 
-        <div class="resource">
+        <div class="number">02</div>
 
-            <h3>Frameworks & Guidelines</h3>
-
-            <p>
-                Continental humanitarian frameworks and guidance.
-            </p>
-
-            <br>
-
-            <a href="#">
-                View resources →
-            </a>
-
-        </div>
-
-
-        <div class="resource">
-
-            <h3>Policies & Standards</h3>
-
-            <p>
-                Policies, standards and institutional guidance.
-            </p>
-
-            <br>
-
-            <a href="#">
-                View resources →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="resources">
-
-    <div class="section-title">
-
-        <h2>Knowledge Resources</h2>
+        <h3>SOPs & Procedures</h3>
 
         <p>
-            Browse documents, tools, reports and learning resources.
+            Standard operating procedures and
+            operational guidance.
         </p>
 
     </div>
 
 
-    <div class="cards">
+    <div class="resource-card">
 
-        <div class="card">
-            <h3>SOPs & Procedures</h3>
-            <p>
-                Standard operating procedures and operational guidance.
-            </p>
-        </div>
+        <div class="number">03</div>
 
-
-        <div class="card">
-            <h3>Tools & Templates</h3>
-            <p>
-                Practical tools, templates and operational resources.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Reports & Assessments</h3>
-            <p>
-                Reports, assessments and analytical products.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Training & Learning</h3>
-            <p>
-                Training materials, learning resources and capacity
-                development materials.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Lessons Learned</h3>
-            <p>
-                Lessons learned and good practices from humanitarian
-                action.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Other Resources</h3>
-            <p>
-                Additional resources relevant to humanitarian action.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="contact" class="resources">
-
-    <div class="section-title">
-
-        <h2>Contact</h2>
+        <h3>Tools & Templates</h3>
 
         <p>
-            For information about the AfHA Knowledge Hub and its
-            resources, please contact the relevant AfHA focal point.
+            Practical tools, templates and
+            operational resources.
         </p>
 
     </div>
 
+
+    <div class="resource-card">
+
+        <div class="number">04</div>
+
+        <h3>Policies & Standards</h3>
+
+        <p>
+            Institutional policies, standards
+            and guidance.
+        </p>
+
+    </div>
+
+
+    <div class="resource-card">
+
+        <div class="number">05</div>
+
+        <h3>Reports & Assessments</h3>
+
+        <p>
+            Humanitarian reports, assessments
+            and analytical products.
+        </p>
+
+    </div>
+
+
+    <div class="resource-card">
+
+        <div class="number">06</div>
+
+        <h3>Training & Learning</h3>
+
+        <p>
+            Training materials, learning
+            resources and capacity development.
+        </p>
+
+    </div>
+
+
+    <div class="resource-card">
+
+        <div class="number">07</div>
+
+        <h3>Lessons Learned</h3>
+
+        <p>
+            Lessons learned and good practices
+            from humanitarian action.
+        </p>
+
+    </div>
+
+
+    <div class="resource-card">
+
+        <div class="number">08</div>
+
+        <h3>Other Resources</h3>
+
+        <p>
+            Additional resources relevant to
+            humanitarian action in Africa.
+        </p>
+
+    </div>
+
+
+</div>
+
 </section>
 
+
+
+<!-- PRINCIPLES -->
+
+<section id="principles" class="principles">
+
+<div class="section-heading">
+
+    <h2>Guiding Principles</h2>
+
+    <p>
+        The humanitarian action of AfHA is guided by fundamental
+        principles that support effective, accountable and
+        inclusive humanitarian action.
+    </p>
+
+</div>
+
+
+<div class="principles-grid">
+
+
+    <div class="principle">
+        <strong>Leadership</strong>
+        <span>Strong continental humanitarian leadership.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Humanity</strong>
+        <span>Respect for human dignity and human life.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Impartiality</strong>
+        <span>Assistance based on humanitarian need.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Independence</strong>
+        <span>Independent humanitarian action.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Neutrality</strong>
+        <span>Humanitarian action without taking sides.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Solidarity</strong>
+        <span>Collective African humanitarian responsibility.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Accountability</strong>
+        <span>Transparent and responsible humanitarian action.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Participation & Ownership</strong>
+        <span>Meaningful participation of affected communities.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Subsidiarity & Complementarity</strong>
+        <span>Action at the appropriate level and coordination.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Gender Mainstreaming</strong>
+        <span>Integrating gender considerations across action.</span>
+    </div>
+
+
+    <div class="principle">
+        <strong>Vulnerable Groups</strong>
+        <span>Attention to people with special needs.</span>
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURED RESOURCE -->
+
+<section class="featured">
+
+<div class="section-heading">
+
+    <h2>Featured Knowledge</h2>
+
+</div>
+
+
+<div class="featured-box">
+
+    <h3>
+        AfHA Briefing Package
+    </h3>
+
+    <p>
+        Explore the AfHA briefing package covering its background,
+        mandate, role and objectives, normative frameworks,
+        structure and operationalization.
+    </p>
+
+    <a href="#" class="text-link">
+        View briefing package →
+    </a>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-heading">
+
+    <h2>Contact</h2>
+
+    <p>
+        For information about the AfHA Knowledge Hub,
+        resources and humanitarian knowledge products,
+        please contact the relevant AfHA focal point.
+    </p>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-inner">
+<div class="footer-container">
 
-        <strong>AfHA Knowledge Hub</strong>
+    <h3>
+        AfHA Knowledge Hub
+    </h3>
 
-        <p>
-            African Humanitarian Agency — Knowledge and Resources
-        </p>
+    <p>
+        African Humanitarian Agency
+    </p>
 
-        <p>
-            © 2026 AfHA Knowledge Hub
-        </p>
+    <p>
+        Knowledge and Resources for Humanitarian Action in Africa
+    </p>
 
-    </div>
+    <br>
+
+    <p>
+        © 2026 AfHA Knowledge Hub
+    </p>
+
+</div>
 
 </footer>
+
 
 </body>
 </html>
