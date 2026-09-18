@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Mandate, Role & Objectives | AfHA Knowledge Hub</title>
+
+<meta name="description"
+      content="Mandate, role and objectives of the African Humanitarian Agency (AfHA).">
+
+<style>
+
+/* =====================================================
+   AFHA COLOUR PALETTE
+===================================================== */
+
+:root {
+    --green: #08783E;
+    --dark-green: #045A2C;
+    --light-green: #EAF5EF;
+    --gold: #F5C242;
+    --dark-gold: #C89A18;
+    --black: #111111;
+    --dark-grey: #333333;
+    --grey: #666666;
+    --light-grey: #F5F6F4;
+    --white: #FFFFFF;
+    --border: #E1E5E2;
+    --shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-grey);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+    background: var(--dark-green);
+    color: white;
+    font-size: 13px;
+    padding: 7px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.logo-mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 4px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo-text {
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    display: block;
+    color: var(--green);
+    font-size: 16px;
+}
+
+.logo-text span {
+    font-size: 11px;
+    color: var(--grey);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    border-bottom: 3px solid transparent;
+    transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--green);
+    border-bottom-color: var(--gold);
+}
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.page-hero {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4,90,44,0.97),
+            rgba(8,120,62,0.92)
+        );
+    color: white;
+    padding: 70px 0 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 45px solid rgba(245,194,66,0.12);
+    right: -110px;
+    top: -140px;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 25px solid rgba(255,255,255,0.06);
+    left: -70px;
+    bottom: -80px;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.breadcrumb a {
+    color: white;
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0 0 18px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero p {
+    max-width: 800px;
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   QUICK NAV
+===================================================== */
+
+.quick-nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.quick-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.quick-nav a {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    white-space: nowrap;
+}
+
+.quick-nav a:hover {
+    color: var(--green);
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+main {
+    padding: 65px 0;
+}
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 32px;
+    color: var(--black);
+}
+
+.section-heading p {
+    max-width: 800px;
+    color: var(--grey);
+    margin-top: 12px;
+}
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.intro-box {
+    background: var(--light-green);
+    border-left: 6px solid var(--gold);
+    padding: 28px 32px;
+    margin-bottom: 55px;
+}
+
+.intro-box p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--dark-grey);
+}
+
+/* =====================================================
+   MANDATE FEATURE
+===================================================== */
+
+.mandate-feature {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--green);
+    box-shadow: var(--shadow);
+    padding: 38px;
+}
+
+.mandate-feature h3 {
+    margin-top: 0;
+    color: var(--green);
+    font-size: 25px;
+}
+
+.mandate-feature p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background: var(--light-green);
+    padding: 22px 25px;
+    margin-top: 25px;
+    border-left: 4px solid var(--gold);
+    font-weight: 600;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-top-color: var(--gold);
+}
+
+.card-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.card p {
+    color: var(--grey);
+    font-size: 15px;
+    margin: 0;
+}
+
+/* =====================================================
+   OBJECTIVES
+===================================================== */
+
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.objective {
+    display: flex;
+    gap: 15px;
+    background: var(--light-grey);
+    border: 1px solid var(--border);
+    padding: 20px;
+}
+
+.objective-icon {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.objective strong {
+    display: block;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.objective span {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* =====================================================
+   ROLES
+===================================================== */
+
+.role-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.role {
+    border-left: 4px solid var(--green);
+    background: var(--light-grey);
+    padding: 25px 28px;
+}
+
+.role h3 {
+    margin: 0 0 8px;
+    color: var(--green);
+    font-size: 19px;
+}
+
+.role p {
+    margin: 0;
+    color: var(--grey);
+}
+
+/* =====================================================
+   RELATED RESOURCES
+===================================================== */
+
+.related {
+    background: var(--dark-green);
+    color: white;
+    padding: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border: 30px solid rgba(245,194,66,0.12);
+    border-radius: 50%;
+    right: -80px;
+    top: -80px;
+}
+
+.related h2 {
+    margin-top: 0;
+    font-size: 27px;
+}
+
+.related p {
+    max-width: 700px;
+    opacity: 0.9;
+}
+
+.related-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.related-links a {
+    background: white;
+    color: var(--green);
+    padding: 11px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.related-links a:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--black);
+    color: white;
+    margin-top: 0;
+}
+
+.footer-main {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand strong {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.footer-brand p {
+    color: #CCCCCC;
+    max-width: 450px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    margin-top: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding: 18px 0;
+    color: #AAAAAA;
+    font-size: 12px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .objectives,
+    .role-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-hero {
+        padding: 50px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    .page-hero p {
+        font-size: 16px;
+    }
+
+    .mandate-feature,
+    .related {
+        padding: 25px;
+    }
+
+    main {
+        padding: 45px 0;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div>
+            African Humanitarian Agency
+        </div>
+
+        <div>
+            AfHA Knowledge Hub
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-mark">
+                AfHA
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    African Humanitarian Agency
+                </strong>
+
+                <span>
+                    Knowledge Hub
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html" class="active">
+                Mandate
+            </a>
+
+            <a href="structure.html">
+                Structure
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="principles.html">
+                Principles
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            &nbsp; / &nbsp;
+
+            Mandate, Role & Objectives
+
+        </div>
+
+
+        <h1>
+            Mandate, Role & Objectives
+        </h1>
+
+
+        <p>
+            Understanding the institutional purpose, responsibilities
+            and strategic objectives of the African Humanitarian Agency.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUICK NAVIGATION
+===================================================== -->
+
+<div class="quick-nav">
+
+    <div class="container quick-nav-inner">
+
+        <a href="#mandate">
+            Mandate
+        </a>
+
+        <a href="#roles">
+            Role
+        </a>
+
+        <a href="#objectives">
+            Objectives
+        </a>
+
+        <a href="#resources">
+            Related Resources
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<div class="container">
+
+
+    <!-- =================================================
+         INTRODUCTION
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="intro-box">
+
+            <p>
+                The <strong>African Humanitarian Agency (AfHA)</strong>
+                is established to strengthen Africa’s capacity to
+                anticipate, prevent and respond to humanitarian crises
+                while promoting a coordinated, effective and Africa-led
+                humanitarian response.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MANDATE
+    ================================================== -->
+
+    <section class="section" id="mandate">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                01 | Mandate
+            </div>
+
+            <h2>
+                A stronger Africa-led humanitarian response
+            </h2>
+
+            <p>
+                AfHA provides an institutional framework for strengthening
+                continental humanitarian preparedness, response and
+                coordination.
+            </p>
+
+        </div>
+
+
+        <div class="mandate-feature">
+
+            <h3>
+                AfHA's Mandate
+            </h3>
+
+            <p>
+                AfHA's mandate is to strengthen Africa's capacity to
+                anticipate, prevent and respond to humanitarian crises
+                and to promote coordinated, effective and Africa-led
+                humanitarian action.
+            </p>
+
+            <p>
+                Through this mandate, AfHA supports Member States and
+                humanitarian actors in addressing the needs of populations
+                affected by crises and emergencies across the continent.
+            </p>
+
+            <div class="highlight">
+
+                AfHA contributes to a more coordinated and effective
+                humanitarian system by supporting preparedness, response
+                capacity, cooperation, knowledge and Africa-led
+                humanitarian action.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ROLE
+    ================================================== -->
+
+    <section class="section" id="roles">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                02 | Role
+            </div>
+
+            <h2>
+                Supporting Member States and humanitarian actors
+            </h2>
+
+            <p>
+                AfHA's role is centred on strengthening capacity,
+                coordination and cooperation across the African
+                humanitarian landscape.
+            </p>
+
+        </div>
+
+
+        <div class="role-list">
+
+
+            <div class="role">
+
+                <h3>
+                    Support to Member States
+                </h3>
+
+                <p>
+                    Support Member States in strengthening their
+                    preparedness and capacity to anticipate, prevent
+                    and respond to humanitarian crises.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+                <h3>
+                    Humanitarian Coordination
+                </h3>
+
+                <p>
+                    Facilitate coordination and complementarity among
+                    relevant humanitarian actors and institutions
+                    involved in humanitarian action.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+                <h3>
+                    Preparedness and Response Capacity
+                </h3>
+
+                <p>
+                    Contribute to stronger institutional and operational
+                    capacity for humanitarian preparedness and emergency
+                    response.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+                <h3>
+                    Africa-led Humanitarian Action
+                </h3>
+
+                <p>
+                    Promote approaches that strengthen African ownership,
+                    leadership and participation in humanitarian action.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+                <h3>
+                    Knowledge and Learning
+                </h3>
+
+                <p>
+                    Support the sharing of knowledge, experience,
+                    good practices and lessons learned to strengthen
+                    humanitarian preparedness and response.
+                </p>
+
+            </div>
+
+
+            <div class="role">
+
+                <h3>
+                    Cooperation and Partnerships
+                </h3>
+
+                <p>
+                    Strengthen cooperation and complementarity among
+                    African institutions, Member States and relevant
+                    humanitarian partners.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OBJECTIVES
+    ================================================== -->
+
+    <section class="section" id="objectives">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                03 | Objectives
+            </div>
+
+            <h2>
+                Key objectives
+            </h2>
+
+            <p>
+                The objectives of AfHA are reflected in its focus on
+                stronger preparedness, effective response, coordination,
+                cooperation and Africa-led humanitarian action.
+            </p>
+
+        </div>
+
+
+        <div class="objectives">
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    01
+                </div>
+
+                <div>
+
+                    <strong>
+                        Strengthen preparedness
+                    </strong>
+
+                    <span>
+                        Enhance the capacity of African institutions
+                        and Member States to prepare for humanitarian
+                        crises and emergencies.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    02
+                </div>
+
+                <div>
+
+                    <strong>
+                        Strengthen response capacity
+                    </strong>
+
+                    <span>
+                        Support stronger and more effective humanitarian
+                        response capacities across the continent.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    03
+                </div>
+
+                <div>
+
+                    <strong>
+                        Promote coordination
+                    </strong>
+
+                    <span>
+                        Encourage coordinated and complementary
+                        humanitarian action among relevant actors.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    04
+                </div>
+
+                <div>
+
+                    <strong>
+                        Advance Africa-led action
+                    </strong>
+
+                    <span>
+                        Strengthen African leadership, ownership and
+                        participation in humanitarian response.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    05
+                </div>
+
+                <div>
+
+                    <strong>
+                        Promote cooperation
+                    </strong>
+
+                    <span>
+                        Strengthen cooperation among Member States,
+                        African institutions and humanitarian actors.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="objective">
+
+                <div class="objective-icon">
+                    06
+                </div>
+
+                <div>
+
+                    <strong>
+                        Strengthen knowledge and learning
+                    </strong>
+
+                    <span>
+                        Promote knowledge sharing, learning and the use
+                        of evidence to strengthen humanitarian action.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RELATED RESOURCES
+    ================================================== -->
+
+    <section class="section" id="resources">
+
+        <div class="related">
+
+            <h2>
+                Explore AfHA's institutional framework
+            </h2>
+
+            <p>
+                Explore the Knowledge Hub for the normative frameworks,
+                guidelines, policies, reports and other resources that
+                support understanding of AfHA and its humanitarian role.
+            </p>
+
+
+            <div class="related-links">
+
+                <a href="resources.html#frameworks">
+                    Frameworks & Guidelines
+                </a>
+
+                <a href="resources.html#policies">
+                    Policies & Standards
+                </a>
+
+                <a href="resources.html#reports">
+                    Reports & Assessments
+                </a>
+
+                <a href="structure.html">
+                    AfHA Structure
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <strong>
+                African Humanitarian Agency
+            </strong>
+
+            <p>
+                AfHA Knowledge Hub provides access to institutional
+                information, normative frameworks, guidance, tools,
+                reports, learning resources and other materials
+                supporting Africa-led humanitarian action.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html">
+                Mandate
+            </a>
+
+            <a href="structure.html">
+                Structure
+            </a>
+
+            <a href="principles.html">
+                Principles
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Resources
+            </h4>
+
+            <a href="resources.html#frameworks">
+                Frameworks & Guidelines
+            </a>
+
+            <a href="resources.html#tools">
+                Tools & Templates
+            </a>
+
+            <a href="resources.html#reports">
+                Reports & Assessments
+            </a>
+
+            <a href="resources.html#training">
+                Training & Learning
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            © 2026 African Humanitarian Agency (AfHA) · Knowledge Hub
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
