@@ -1,0 +1,722 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>SOPs & Procedures | AfHA Knowledge Hub</title>
+
+<meta name="description"
+      content="SOPs and Procedures - African Humanitarian Agency Knowledge Hub">
+
+<style>
+
+/* =====================================================
+   AFHA COLOUR PALETTE
+===================================================== */
+
+:root {
+    --afha-green: #00843D;
+    --afha-dark-green: #006B32;
+    --afha-gold: #F9C300;
+    --afha-black: #1D1D1B;
+    --afha-white: #FFFFFF;
+    --afha-light: #F5F7F5;
+    --afha-grey: #6B7280;
+    --afha-border: #E1E5E2;
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--afha-light);
+    color: var(--afha-black);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: var(--afha-white);
+    border-bottom: 4px solid var(--afha-gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-placeholder {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    background: var(--afha-green);
+    color: var(--afha-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    border: 4px solid var(--afha-gold);
+}
+
+.logo-text h1 {
+    margin: 0;
+    color: var(--afha-green);
+    font-size: 22px;
+}
+
+.logo-text p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--afha-grey);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--afha-black);
+    padding: 8px 4px;
+}
+
+nav a:hover {
+    color: var(--afha-green);
+}
+
+nav a.active {
+    color: var(--afha-green);
+    border-bottom: 3px solid var(--afha-gold);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            135deg,
+            var(--afha-green),
+            var(--afha-dark-green)
+        );
+
+    color: var(--afha-white);
+    padding: 65px 25px;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: var(--afha-gold);
+    font-weight: bold;
+}
+
+.hero-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--afha-gold);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin: 0 0 15px;
+    line-height: 1.15;
+}
+
+.hero p {
+    max-width: 760px;
+    font-size: 17px;
+    margin: 0;
+    opacity: 0.95;
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 25px 80px;
+}
+
+/* =====================================================
+   SECTION INTRO
+===================================================== */
+
+.section-intro {
+    margin-bottom: 35px;
+}
+
+.section-intro h3 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: var(--afha-black);
+}
+
+.section-intro p {
+    margin: 0;
+    color: var(--afha-grey);
+    max-width: 800px;
+}
+
+/* =====================================================
+   RESOURCE GRID
+===================================================== */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 24px;
+}
+
+/* =====================================================
+   RESOURCE CARD
+===================================================== */
+
+.resource-card {
+    background: var(--afha-white);
+
+    border: 1px solid var(--afha-border);
+    border-radius: 12px;
+
+    padding: 26px;
+
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.04);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--afha-green);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.10);
+}
+
+.card-number {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 8px;
+
+    background: var(--afha-green);
+    color: var(--afha-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.resource-card h4 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    color: var(--afha-green);
+}
+
+.resource-card p {
+    margin: 0 0 20px;
+
+    color: var(--afha-grey);
+
+    font-size: 14px;
+}
+
+.card-link {
+    margin-top: auto;
+
+    color: var(--afha-green);
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.resource-card:hover .card-link {
+    color: var(--afha-dark-green);
+}
+
+/* =====================================================
+   INFORMATION BOX
+===================================================== */
+
+.info-box {
+    margin-top: 45px;
+
+    background: var(--afha-white);
+
+    border-left: 5px solid var(--afha-gold);
+
+    padding: 25px 28px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,0.04);
+}
+
+.info-box h4 {
+    margin: 0 0 8px;
+
+    color: var(--afha-green);
+}
+
+.info-box p {
+    margin: 0;
+
+    color: var(--afha-grey);
+
+    font-size: 14px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--afha-black);
+    color: var(--afha-white);
+
+    padding: 35px 25px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-title {
+    color: var(--afha-gold);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+.footer-link {
+    color: var(--afha-white);
+    font-size: 13px;
+}
+
+.footer-link:hover {
+    color: var(--afha-gold);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 40px 20px 60px;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo-area">
+
+            <div class="logo-placeholder">
+                AfHA
+            </div>
+
+            <div class="logo-text">
+
+                <h1>AfHA Knowledge Hub</h1>
+
+                <p>
+                    African Humanitarian Agency
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#resources" class="active">
+                Knowledge Resources
+            </a>
+
+            <a href="index.html#about">
+                About AfHA
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            &nbsp; / &nbsp;
+
+            <a href="index.html#resources">
+                Knowledge Resources
+            </a>
+
+            &nbsp; / &nbsp;
+
+            SOPs & Procedures
+
+        </div>
+
+
+        <div class="hero-number">
+            02
+        </div>
+
+
+        <h2>
+            SOPs & Procedures
+        </h2>
+
+
+        <p>
+            Standard operating procedures, operational guidance
+            and procedures supporting effective humanitarian
+            coordination, preparedness and response.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <div class="section-intro">
+
+        <h3>
+            SOPs & Procedures
+        </h3>
+
+        <p>
+            This section provides access to standard operating
+            procedures and operational processes relevant to the
+            African Humanitarian Agency and humanitarian action
+            across Africa.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         RESOURCE CARDS
+    ================================================== -->
+
+    <div class="resource-grid">
+
+
+        <!-- CARD 01 -->
+
+        <a href="#" class="resource-card">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <h4>
+                Operational Procedures
+            </h4>
+
+            <p>
+                Procedures and operational guidance supporting
+                humanitarian preparedness, coordination and
+                response.
+            </p>
+
+            <div class="card-link">
+                View resources →
+            </div>
+
+        </a>
+
+
+        <!-- CARD 02 -->
+
+        <a href="#" class="resource-card">
+
+            <div class="card-number">
+                02
+            </div>
+
+            <h4>
+                Coordination Procedures
+            </h4>
+
+            <p>
+                Procedures supporting coordination between
+                humanitarian actors, institutions and partners.
+            </p>
+
+            <div class="card-link">
+                View resources →
+            </div>
+
+        </a>
+
+
+        <!-- CARD 03 -->
+
+        <a href="#" class="resource-card">
+
+            <div class="card-number">
+                03
+            </div>
+
+            <h4>
+                Emergency Procedures
+            </h4>
+
+            <p>
+                Procedures and operational guidance for
+                emergency preparedness and response.
+            </p>
+
+            <div class="card-link">
+                View resources →
+            </div>
+
+        </a>
+
+
+        <!-- CARD 04 -->
+
+        <a href="#" class="resource-card">
+
+            <div class="card-number">
+                04
+            </div>
+
+            <h4>
+                Other Procedures
+            </h4>
+
+            <p>
+                Additional procedures and operational documents
+                relevant to humanitarian action.
+            </p>
+
+            <div class="card-link">
+                View resources →
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =================================================
+         INFORMATION BOX
+    ================================================== -->
+
+    <div class="info-box">
+
+        <h4>
+            About this collection
+        </h4>
+
+        <p>
+            The SOPs & Procedures collection will provide a
+            centralized reference point for operational procedures
+            and practical guidance. Documents can be added and
+            organized as the AfHA Knowledge Hub develops.
+        </p>
+
+    </div>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+
+            <div class="footer-title">
+                AfHA Knowledge Hub
+            </div>
+
+            <p class="footer-text">
+                African Humanitarian Agency
+            </p>
+
+        </div>
+
+
+        <a href="index.html" class="footer-link">
+            ← Back to Knowledge Hub
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
+```
