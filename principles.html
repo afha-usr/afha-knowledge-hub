@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Guiding Principles | AfHA Knowledge Hub</title>
+
+<meta name="description"
+      content="Guiding principles of the African Humanitarian Agency (AfHA).">
+
+<style>
+
+/* =====================================================
+   AFHA COLOUR PALETTE
+===================================================== */
+
+:root {
+    --green: #08783E;
+    --dark-green: #045A2C;
+    --light-green: #EAF5EF;
+    --gold: #F5C242;
+    --dark-gold: #C89A18;
+    --black: #111111;
+    --dark-grey: #333333;
+    --grey: #666666;
+    --light-grey: #F5F6F4;
+    --white: #FFFFFF;
+    --border: #E1E5E2;
+    --shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-grey);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+    background: var(--dark-green);
+    color: white;
+    font-size: 13px;
+    padding: 7px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.logo-mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 4px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo-text {
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    display: block;
+    color: var(--green);
+    font-size: 16px;
+}
+
+.logo-text span {
+    font-size: 11px;
+    color: var(--grey);
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    border-bottom: 3px solid transparent;
+    transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--green);
+    border-bottom-color: var(--gold);
+}
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.page-hero {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4,90,44,0.97),
+            rgba(8,120,62,0.92)
+        );
+    color: white;
+    padding: 70px 0 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 48px solid rgba(245,194,66,0.12);
+    right: -120px;
+    top: -150px;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 26px solid rgba(255,255,255,0.06);
+    left: -75px;
+    bottom: -85px;
+}
+
+.breadcrumb {
+    font-size: 13px;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.breadcrumb a {
+    color: white;
+}
+
+.page-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0 0 18px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero p {
+    max-width: 820px;
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   QUICK NAV
+===================================================== */
+
+.quick-nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.quick-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.quick-nav a {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    white-space: nowrap;
+}
+
+.quick-nav a:hover {
+    color: var(--green);
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+    padding: 65px 0;
+}
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 32px;
+    color: var(--black);
+}
+
+.section-heading p {
+    max-width: 820px;
+    color: var(--grey);
+    margin-top: 12px;
+}
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro-box {
+    background: var(--light-green);
+    border-left: 6px solid var(--gold);
+    padding: 30px 34px;
+}
+
+.intro-box p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* =====================================================
+   PRINCIPLES FEATURE
+===================================================== */
+
+.principles-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.principles-text {
+    padding: 35px;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.principles-text h2 {
+    margin-top: 0;
+    color: var(--green);
+    font-size: 27px;
+}
+
+.principles-text p {
+    color: var(--grey);
+}
+
+.principles-visual {
+    background: var(--dark-green);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.principles-visual::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 30px solid rgba(245,194,66,0.15);
+    right: -80px;
+    bottom: -80px;
+}
+
+.principles-visual .big-number {
+    font-size: 75px;
+    line-height: 1;
+    font-weight: bold;
+    color: var(--gold);
+    position: relative;
+    z-index: 2;
+}
+
+.principles-visual h3 {
+    font-size: 24px;
+    margin: 15px 0 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.principles-visual p {
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================================
+   PRINCIPLES LIST
+===================================================== */
+
+.principles-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.principle {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 18px;
+    padding: 24px;
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.principle:hover {
+    transform: translateY(-3px);
+    border-left: 4px solid var(--gold);
+}
+
+.principle-number {
+    width: 58px;
+    height: 58px;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+}
+
+.principle-number::after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 7px;
+    width: 58px;
+    height: 58px;
+    border: 2px solid var(--gold);
+    z-index: -1;
+}
+
+.principle h3 {
+    margin: 2px 0 7px;
+    color: var(--black);
+    font-size: 19px;
+}
+
+.principle p {
+    margin: 0;
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* =====================================================
+   PRINCIPLE HIGHLIGHT
+===================================================== */
+
+.principle-highlight {
+    background: var(--light-green);
+    padding: 38px;
+    border-top: 5px solid var(--green);
+}
+
+.principle-highlight h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.principle-highlight p {
+    max-width: 850px;
+    color: var(--grey);
+}
+
+/* =====================================================
+   RELATED
+===================================================== */
+
+.related {
+    background: var(--dark-green);
+    color: white;
+    padding: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border: 30px solid rgba(245,194,66,0.12);
+    border-radius: 50%;
+    right: -80px;
+    top: -80px;
+}
+
+.related h2 {
+    margin-top: 0;
+    font-size: 27px;
+}
+
+.related p {
+    max-width: 700px;
+    opacity: 0.9;
+}
+
+.related-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.related-links a {
+    background: white;
+    color: var(--green);
+    padding: 11px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.related-links a:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--black);
+    color: white;
+}
+
+.footer-main {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand strong {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.footer-brand p {
+    color: #CCCCCC;
+    max-width: 450px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    margin-top: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding: 18px 0;
+    color: #AAAAAA;
+    font-size: 12px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .principles-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .principles-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-hero {
+        padding: 50px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    .page-hero p {
+        font-size: 16px;
+    }
+
+    .principles-text,
+    .principles-visual {
+        padding: 25px;
+    }
+
+    .principle {
+        grid-template-columns: 50px 1fr;
+        padding: 20px;
+    }
+
+    .principle-number {
+        width: 46px;
+        height: 46px;
+        font-size: 14px;
+    }
+
+    .principle-number::after {
+        width: 46px;
+        height: 46px;
+    }
+
+    .related {
+        padding: 25px;
+    }
+
+    main {
+        padding: 45px 0;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div>
+            African Humanitarian Agency
+        </div>
+
+        <div>
+            AfHA Knowledge Hub
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-mark">
+                AfHA
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    African Humanitarian Agency
+                </strong>
+
+                <span>
+                    Knowledge Hub
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html">
+                Mandate
+            </a>
+
+            <a href="structure.html">
+                Structure
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="news.html">
+                News
+            </a>
+
+            <a href="principles.html" class="active">
+                Principles
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            &nbsp; / &nbsp;
+
+            Guiding Principles
+
+        </div>
+
+
+        <h1>
+            Guiding Principles
+        </h1>
+
+
+        <p>
+            The principles that guide AfHA's approach to humanitarian
+            action, coordination, accountability and Africa-led
+            humanitarian response.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUICK NAVIGATION
+===================================================== -->
+
+<div class="quick-nav">
+
+    <div class="container quick-nav-inner">
+
+        <a href="#overview">
+            Overview
+        </a>
+
+        <a href="#principles">
+            The 11 Principles
+        </a>
+
+        <a href="#application">
+            Applying the Principles
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<div class="container">
+
+
+    <!-- =================================================
+         OVERVIEW
+    ================================================== -->
+
+    <section class="section" id="overview">
+
+        <div class="principles-intro">
+
+
+            <div class="principles-text">
+
+                <h2>
+                    Principles at the heart of AfHA
+                </h2>
+
+                <p>
+                    AfHA's humanitarian work is guided by a set of
+                    principles intended to promote effective,
+                    accountable, inclusive and Africa-led humanitarian
+                    action.
+                </p>
+
+                <p>
+                    These principles provide a common foundation for
+                    how humanitarian action is understood, coordinated
+                    and delivered, while recognizing the importance of
+                    national ownership, complementarity and the needs
+                    of vulnerable populations.
+                </p>
+
+            </div>
+
+
+            <div class="principles-visual">
+
+                <div class="big-number">
+                    11
+                </div>
+
+                <h3>
+                    Guiding Principles
+                </h3>
+
+                <p>
+                    A common foundation for AfHA's humanitarian
+                    approach and institutional action.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PRINCIPLES
+    ================================================== -->
+
+    <section class="section" id="principles">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                01 | The Principles
+            </div>
+
+            <h2>
+                AfHA's 11 guiding principles
+            </h2>
+
+            <p>
+                The principles below provide the foundation for
+                understanding AfHA's approach to humanitarian action.
+            </p>
+
+        </div>
+
+
+        <div class="principles-list">
+
+
+            <!-- 01 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Leadership
+                    </h3>
+
+                    <p>
+                        Promote strong African leadership in humanitarian
+                        action and strengthen the capacity of African
+                        institutions to lead humanitarian efforts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Humanity
+                    </h3>
+
+                    <p>
+                        Place the dignity, protection and well-being of
+                        people affected by humanitarian crises at the
+                        centre of humanitarian action.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Impartiality
+                    </h3>
+
+                    <p>
+                        Humanitarian action should respond to needs
+                        without discrimination and prioritize assistance
+                        according to humanitarian need.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        Independence
+                    </h3>
+
+                    <p>
+                        Humanitarian action should maintain the
+                        independence necessary to address humanitarian
+                        needs effectively.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    05
+                </div>
+
+                <div>
+
+                    <h3>
+                        Neutrality
+                    </h3>
+
+                    <p>
+                        Humanitarian action should remain focused on
+                        humanitarian needs and not take sides in
+                        hostilities or disputes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    06
+                </div>
+
+                <div>
+
+                    <h3>
+                        Solidarity
+                    </h3>
+
+                    <p>
+                        Promote collective responsibility, cooperation
+                        and mutual support in responding to humanitarian
+                        crises.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    07
+                </div>
+
+                <div>
+
+                    <h3>
+                        Accountability
+                    </h3>
+
+                    <p>
+                        Promote transparency, responsibility and
+                        accountability towards affected populations,
+                        institutions and partners.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    08
+                </div>
+
+                <div>
+
+                    <h3>
+                        Participation and Ownership
+                    </h3>
+
+                    <p>
+                        Support meaningful participation and ownership
+                        by affected populations, Member States and
+                        relevant African institutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 09 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    09
+                </div>
+
+                <div>
+
+                    <h3>
+                        Subsidiarity and Complementarity
+                    </h3>
+
+                    <p>
+                        Encourage action at the appropriate level while
+                        promoting complementarity among national,
+                        regional, continental and humanitarian actors.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    10
+                </div>
+
+                <div>
+
+                    <h3>
+                        Gender Mainstreaming
+                    </h3>
+
+                    <p>
+                        Integrate gender considerations throughout
+                        humanitarian preparedness, planning, response
+                        and recovery efforts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 11 -->
+
+            <div class="principle">
+
+                <div class="principle-number">
+                    11
+                </div>
+
+                <div>
+
+                    <h3>
+                        Vulnerable Groups and People with Special Needs
+                    </h3>
+
+                    <p>
+                        Ensure that humanitarian action recognizes and
+                        responds to the specific needs and vulnerabilities
+                        of affected populations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         APPLICATION
+    ================================================== -->
+
+    <section class="section" id="application">
+
+        <div class="principle-highlight">
+
+            <h2>
+                Putting the principles into practice
+            </h2>
+
+            <p>
+                The guiding principles provide a foundation for
+                humanitarian preparedness, coordination and response.
+                They can also inform the development and application
+                of AfHA's frameworks, guidelines, policies, tools,
+                training and other institutional resources.
+            </p>
+
+            <p>
+                The Knowledge Hub brings these resources together to
+                support consistent access to institutional knowledge
+                and to facilitate learning across humanitarian actors.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RELATED
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="related">
+
+            <h2>
+                Explore the AfHA Knowledge Hub
+            </h2>
+
+            <p>
+                Continue exploring AfHA's mandate, structure and
+                institutional resources.
+            </p>
+
+            <div class="related-links">
+
+                <a href="mandate.html">
+                    Mandate, Role & Objectives
+                </a>
+
+                <a href="structure.html">
+                    AfHA Structure
+                </a>
+
+                <a href="resources.html">
+                    Knowledge Resources
+                </a>
+
+                <a href="about.html">
+                    About AfHA
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <strong>
+                African Humanitarian Agency
+            </strong>
+
+            <p>
+                AfHA Knowledge Hub provides access to institutional
+                information, normative frameworks, guidance, tools,
+                reports, learning resources and other materials
+                supporting Africa-led humanitarian action.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html">
+                Mandate
+            </a>
+
+            <a href="structure.html">
+                Structure
+            </a>
+
+            <a href="principles.html">
+                Principles
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Resources
+            </h4>
+
+            <a href="resources.html#frameworks">
+                Frameworks & Guidelines
+            </a>
+
+            <a href="resources.html#tools">
+                Tools & Templates
+            </a>
+
+            <a href="resources.html#reports">
+                Reports & Assessments
+            </a>
+
+            <a href="resources.html#training">
+                Training & Learning
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            © 2026 African Humanitarian Agency (AfHA) · Knowledge Hub
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
