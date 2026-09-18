@@ -1,14 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AfHA Knowledge Hub | African Humanitarian Agency</title>
 
-    <meta name="description" content="African Humanitarian Agency Knowledge Hub - humanitarian frameworks, guidelines, tools, resources and knowledge products.">
+    <meta name="description"
+          content="African Humanitarian Agency Knowledge Hub - humanitarian frameworks, guidelines, tools, resources and knowledge products.">
 
     <style>
+
         :root {
             --green: #00843D;
             --dark-green: #006B32;
@@ -48,6 +53,7 @@
             max-width: 1200px;
             margin: auto;
         }
+
 
         /* =========================
            HEADER
@@ -112,7 +118,7 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 24px;
         }
 
         nav a {
@@ -127,6 +133,7 @@
             color: var(--green);
         }
 
+
         /* =========================
            HERO
         ========================= */
@@ -136,8 +143,12 @@
             display: flex;
             align-items: center;
             position: relative;
+
             background:
-                linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+                linear-gradient(
+                    rgba(0, 0, 0, 0.68),
+                    rgba(0, 0, 0, 0.68)
+                ),
                 url("https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1800&q=80")
                 center/cover no-repeat;
         }
@@ -209,6 +220,7 @@
             color: var(--black);
         }
 
+
         /* =========================
            GENERAL SECTIONS
         ========================= */
@@ -239,6 +251,7 @@
             font-size: 16px;
             max-width: 800px;
         }
+
 
         /* =========================
            ABOUT
@@ -276,6 +289,7 @@
         .about-highlight p {
             color: var(--grey);
         }
+
 
         /* =========================
            AT A GLANCE
@@ -315,6 +329,7 @@
             color: var(--grey);
             font-size: 14px;
         }
+
 
         /* =========================
            KNOWLEDGE RESOURCES
@@ -372,6 +387,118 @@
             line-height: 1.6;
         }
 
+
+        /* =========================
+           NEWS & UPDATES
+        ========================= */
+
+        .news {
+            background: var(--light);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--green);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        }
+
+        .news-image {
+            height: 190px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 132, 61, 0.15),
+                    rgba(0, 0, 0, 0.20)
+                ),
+                url("https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80")
+                center/cover no-repeat;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            flex-wrap: wrap;
+        }
+
+        .news-date {
+            color: var(--gold);
+        }
+
+        .news-category {
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .news-card h3 {
+            font-size: 20px;
+            line-height: 1.35;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .news-card p {
+            font-size: 14px;
+            color: var(--grey);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .news-link {
+            display: inline-block;
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .news-link:hover {
+            color: var(--dark-green);
+        }
+
+        .news-footer {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .news-footer a {
+            display: inline-block;
+            border: 2px solid var(--green);
+            color: var(--green);
+            padding: 11px 22px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .news-footer a:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+
         /* =========================
            PRINCIPLES
         ========================= */
@@ -410,6 +537,7 @@
             color: var(--grey);
             font-size: 14px;
         }
+
 
         /* =========================
            FEATURED RESOURCE
@@ -453,10 +581,14 @@
 
         .featured-image {
             background:
-                linear-gradient(rgba(0, 132, 61, 0.25), rgba(0, 0, 0, 0.3)),
+                linear-gradient(
+                    rgba(0, 132, 61, 0.25),
+                    rgba(0, 0, 0, 0.3)
+                ),
                 url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=80")
                 center/cover no-repeat;
         }
+
 
         /* =========================
            CALL TO ACTION
@@ -487,6 +619,7 @@
         .cta .btn:hover {
             background: var(--light-gold);
         }
+
 
         /* =========================
            CONTACT
@@ -528,6 +661,7 @@
             padding: 35px;
             border-top: 4px solid var(--gold);
         }
+
 
         /* =========================
            FOOTER
@@ -584,6 +718,7 @@
             font-size: 12px;
         }
 
+
         /* =========================
            RESPONSIVE
         ========================= */
@@ -599,6 +734,10 @@
             }
 
             .principles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .news-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -620,6 +759,7 @@
                 font-size: 44px;
             }
         }
+
 
         @media (max-width: 700px) {
 
@@ -649,6 +789,7 @@
             .resource-grid,
             .glance-grid,
             .principles-grid,
+            .news-grid,
             .footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -669,16 +810,21 @@
                 flex-direction: column;
             }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
 ========================= -->
 
 <header>
+
     <div class="container header-inner">
 
         <a href="index.html" class="brand">
@@ -688,6 +834,7 @@
             </div>
 
             <div class="brand-text">
+
                 <div class="brand-title">
                     African Humanitarian Agency
                 </div>
@@ -695,20 +842,46 @@
                 <div class="brand-subtitle">
                     KNOWLEDGE HUB
                 </div>
+
             </div>
 
         </a>
 
+
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#about">About AfHA</a>
-            <a href="#mandate">Mandate</a>
-            <a href="#resources">Resources</a>
-            <a href="#principles">Principles</a>
-            <a href="#contact">Contact</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="#about">
+                About AfHA
+            </a>
+
+            <a href="#mandate">
+                Mandate
+            </a>
+
+            <a href="#resources">
+                Resources
+            </a>
+
+            <a href="#news">
+                News
+            </a>
+
+            <a href="#principles">
+                Principles
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
@@ -760,848 +933,5 @@
      ABOUT AfHA
 ========================= -->
 
-<section class="about" id="about">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>
-                About AfHA
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p>
-                Understanding the African Humanitarian Agency and its
-                role within the African humanitarian architecture.
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-            <div class="about-text">
-
-                <p>
-                    The African Humanitarian Agency (AfHA) is established
-                    as a specialized technical institution of the Commission
-                    charged with the responsibility to coordinate humanitarian
-                    responses in Member States.
-                </p>
-
-                <p>
-                    This knowledge hub provides an overview of AfHA's
-                    background, mandate, roles and objectives, institutional
-                    structure, normative frameworks and operationalization.
-                </p>
-
-                <p>
-                    It also provides access to humanitarian knowledge
-                    resources intended to support coordination, preparedness,
-                    response, learning and evidence-based humanitarian action
-                    across the continent.
-                </p>
-
-            </div>
-
-
-            <div class="about-highlight">
-
-                <h3>
-                    A Continental Knowledge Resource
-                </h3>
-
-                <p>
-                    The platform brings together key humanitarian reference
-                    materials in one accessible location, supporting
-                    practitioners, institutions, Member States and partners
-                    engaged in humanitarian action in Africa.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     AFHA AT A GLANCE
-========================= -->
-
-<section class="glance" id="mandate">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>
-                AfHA at a Glance
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p>
-                Key elements of the African Humanitarian Agency's
-                institutional mandate and role.
-            </p>
-
-        </div>
-
-
-        <div class="glance-grid">
-
-            <div class="glance-card">
-
-                <div class="glance-number">
-                    01
-                </div>
-
-                <h3>
-                    Mandate
-                </h3>
-
-                <p>
-                    AfHA is mandated to support the coordination and
-                    strengthening of humanitarian action across African
-                    Union Member States.
-                </p>
-
-            </div>
-
-
-            <div class="glance-card">
-
-                <div class="glance-number">
-                    02
-                </div>
-
-                <h3>
-                    Role
-                </h3>
-
-                <p>
-                    To contribute to a coordinated, effective and
-                    African-led humanitarian response architecture.
-                </p>
-
-            </div>
-
-
-            <div class="glance-card">
-
-                <div class="glance-number">
-                    03
-                </div>
-
-                <h3>
-                    Objectives
-                </h3>
-
-                <p>
-                    Strengthening preparedness, coordination, response
-                    capacity, knowledge and humanitarian leadership.
-                </p>
-
-            </div>
-
-
-            <div class="glance-card">
-
-                <div class="glance-number">
-                    04
-                </div>
-
-                <h3>
-                    Structure
-                </h3>
-
-                <p>
-                    An institutional structure designed to support
-                    continental and regional humanitarian action.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KNOWLEDGE RESOURCES
-========================= -->
-
-<section class="resources" id="resources">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>
-                Knowledge Resources
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p>
-                Browse humanitarian knowledge products organized into
-                key resource categories.
-            </p>
-
-        </div>
-
-
-        <div class="resource-grid">
-
-
-            <!-- 01 - FUNCTIONAL -->
-
-            <a href="frameworks.html" class="resource-card">
-
-                <div class="resource-icon">
-                    01
-                </div>
-
-                <h3>
-                    Frameworks &amp; Guidelines
-                </h3>
-
-                <p>
-                    Continental humanitarian frameworks,
-                    principles and guidance documents.
-                </p>
-
-            </a>
-
-
-            <!-- 02 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    02
-                </div>
-
-                <h3>
-                    SOPs &amp; Procedures
-                </h3>
-
-                <p>
-                    Standard operating procedures and
-                    operational guidance.
-                </p>
-
-            </a>
-
-
-            <!-- 03 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    03
-                </div>
-
-                <h3>
-                    Tools &amp; Templates
-                </h3>
-
-                <p>
-                    Practical tools, templates and
-                    operational resources.
-                </p>
-
-            </a>
-
-
-            <!-- 04 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    04
-                </div>
-
-                <h3>
-                    Policies &amp; Standards
-                </h3>
-
-                <p>
-                    Policies, standards and institutional
-                    reference materials.
-                </p>
-
-            </a>
-
-
-            <!-- 05 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    05
-                </div>
-
-                <h3>
-                    Reports &amp; Assessments
-                </h3>
-
-                <p>
-                    Humanitarian reports, assessments,
-                    analysis and evidence.
-                </p>
-
-            </a>
-
-
-            <!-- 06 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    06
-                </div>
-
-                <h3>
-                    Training &amp; Learning
-                </h3>
-
-                <p>
-                    Training materials, learning resources
-                    and capacity-building materials.
-                </p>
-
-            </a>
-
-
-            <!-- 07 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    07
-                </div>
-
-                <h3>
-                    Lessons Learned
-                </h3>
-
-                <p>
-                    Lessons learned, good practices and
-                    humanitarian learning products.
-                </p>
-
-            </a>
-
-
-            <!-- 08 -->
-
-            <a href="#" class="resource-card">
-
-                <div class="resource-icon">
-                    08
-                </div>
-
-                <h3>
-                    Other Resources
-                </h3>
-
-                <p>
-                    Additional humanitarian knowledge and
-                    reference materials.
-                </p>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     GUIDING PRINCIPLES
-========================= -->
-
-<section class="principles" id="principles">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>
-                Guiding Principles
-            </h2>
-
-            <div class="gold-line"></div>
-
-            <p>
-                Core principles guiding humanitarian action and the
-                work of the African Humanitarian Agency.
-            </p>
-
-        </div>
-
-
-        <div class="principles-grid">
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    01
-                </div>
-
-                <h3>
-                    Leadership
-                </h3>
-
-                <p>
-                    Promoting African leadership and ownership
-                    of humanitarian action.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    02
-                </div>
-
-                <h3>
-                    Humanity
-                </h3>
-
-                <p>
-                    Addressing human suffering wherever it is found,
-                    with particular attention to those most affected.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    03
-                </div>
-
-                <h3>
-                    Impartiality
-                </h3>
-
-                <p>
-                    Providing assistance based on needs without
-                    discrimination.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    04
-                </div>
-
-                <h3>
-                    Independence
-                </h3>
-
-                <p>
-                    Maintaining operational independence in humanitarian
-                    decision-making and action.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    05
-                </div>
-
-                <h3>
-                    Neutrality
-                </h3>
-
-                <p>
-                    Maintaining a position that supports humanitarian
-                    action without taking sides in conflicts.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    06
-                </div>
-
-                <h3>
-                    Solidarity
-                </h3>
-
-                <p>
-                    Strengthening collective responsibility and
-                    solidarity in addressing humanitarian challenges.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    07
-                </div>
-
-                <h3>
-                    Accountability
-                </h3>
-
-                <p>
-                    Promoting accountability to affected people,
-                    institutions and partners.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    08
-                </div>
-
-                <h3>
-                    Participation &amp; Ownership
-                </h3>
-
-                <p>
-                    Ensuring affected populations and relevant
-                    stakeholders participate in humanitarian action.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    09
-                </div>
-
-                <h3>
-                    Subsidiarity &amp; Complementarity
-                </h3>
-
-                <p>
-                    Supporting action at the most appropriate level
-                    while complementing existing humanitarian mechanisms.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    10
-                </div>
-
-                <h3>
-                    Gender Mainstreaming
-                </h3>
-
-                <p>
-                    Integrating gender considerations across
-                    humanitarian action and decision-making.
-                </p>
-
-            </div>
-
-
-            <div class="principle-card">
-
-                <div class="principle-number">
-                    11
-                </div>
-
-                <h3>
-                    Vulnerable Groups
-                </h3>
-
-                <p>
-                    Ensuring attention to vulnerable groups and
-                    people with special needs.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FEATURED RESOURCE
-========================= -->
-
-<section class="featured">
-
-    <div class="container">
-
-        <div class="featured-box">
-
-            <div class="featured-content">
-
-                <div class="featured-label">
-                    Featured Knowledge Product
-                </div>
-
-                <h2>
-                    AfHA 2026 Briefing Package
-                </h2>
-
-                <p>
-                    A consolidated reference package providing an overview
-                    of the African Humanitarian Agency, including its
-                    background, mandate, role and objectives, normative
-                    frameworks, institutional structure and operationalization.
-                </p>
-
-                <a href="#" class="btn btn-primary">
-                    View Briefing Package
-                </a>
-
-            </div>
-
-
-            <div class="featured-image"></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CALL TO ACTION
-========================= -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>
-            Explore Humanitarian Knowledge
-        </h2>
-
-        <p>
-            Access frameworks, guidelines, tools, policies, reports,
-            training materials and other resources supporting
-            humanitarian action across Africa.
-        </p>
-
-        <a href="#resources" class="btn">
-            Browse Resources
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-    <div class="container">
-
-        <div class="contact-grid">
-
-
-            <div>
-
-                <h2>
-                    Contact
-                </h2>
-
-                <div class="gold-line"></div>
-
-                <p>
-                    For information about the African Humanitarian Agency
-                    and its knowledge resources, please use the appropriate
-                    institutional channels.
-                </p>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <div class="contact-item">
-
-                    <strong>
-                        African Humanitarian Agency
-                    </strong>
-
-                    <p>
-                        African Union humanitarian architecture
-                    </p>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        Knowledge Hub
-                    </strong>
-
-                    <p>
-                        Humanitarian frameworks, resources,
-                        learning and reference materials.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-
-            <div>
-
-                <h3>
-                    African Humanitarian Agency
-                </h3>
-
-                <p>
-                    Knowledge Hub for humanitarian action,
-                    coordination, preparedness, response and learning
-                    across Africa.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Explore
-                </h3>
-
-                <ul>
-
-                    <li>
-                        <a href="#about">
-                            About AfHA
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#mandate">
-                            Mandate
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#principles">
-                            Principles
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Resources
-                </h3>
-
-                <ul>
-
-                    <li>
-                        <a href="frameworks.html">
-                            Frameworks &amp; Guidelines
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#resources">
-                            All Resources
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <div>
-                © 2026 African Humanitarian Agency. All rights reserved.
-            </div>
-
-            <div>
-                AfHA Knowledge Hub
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
-
-</body>
-</html>
+<section class="about" id="about"
+```
