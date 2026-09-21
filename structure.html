@@ -12,7 +12,7 @@
 <title>AfHA Structure | AfHA Knowledge Hub</title>
 
 <meta name="description"
-      content="Institutional structure of the African Humanitarian Agency (AfHA).">
+      content="Institutional structure and governance of the African Humanitarian Agency (AfHA).">
 
 <style>
 
@@ -66,6 +66,7 @@ a {
     margin: auto;
 }
 
+
 /* =====================================================
    TOP BAR
 ===================================================== */
@@ -82,6 +83,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
 
 /* =====================================================
    HEADER
@@ -102,6 +104,7 @@ header {
     justify-content: space-between;
     gap: 30px;
 }
+
 
 /* =====================================================
    LOGO
@@ -143,6 +146,7 @@ header {
     color: var(--grey);
 }
 
+
 /* =====================================================
    NAVIGATION
 ===================================================== */
@@ -168,6 +172,7 @@ nav a.active {
     color: var(--green);
     border-bottom-color: var(--gold);
 }
+
 
 /* =====================================================
    PAGE HERO
@@ -235,6 +240,7 @@ nav a.active {
     z-index: 2;
 }
 
+
 /* =====================================================
    QUICK NAVIGATION
 ===================================================== */
@@ -263,6 +269,7 @@ nav a.active {
 .quick-nav a:hover {
     color: var(--green);
 }
+
 
 /* =====================================================
    MAIN
@@ -301,6 +308,7 @@ main {
     margin-top: 12px;
 }
 
+
 /* =====================================================
    INTRODUCTION
 ===================================================== */
@@ -316,6 +324,7 @@ main {
     margin: 0;
     font-size: 18px;
 }
+
 
 /* =====================================================
    STRUCTURE DIAGRAM
@@ -334,6 +343,7 @@ main {
     margin: auto;
     text-align: center;
 }
+
 
 /* =====================================================
    STRUCTURE BOXES
@@ -360,8 +370,9 @@ main {
     color: var(--grey);
 }
 
+
 /* =====================================================
-   TOP LEVEL
+   AUC
 ===================================================== */
 
 .structure-top {
@@ -383,6 +394,7 @@ main {
     color: rgba(255,255,255,0.85);
 }
 
+
 /* =====================================================
    CONNECTORS
 ===================================================== */
@@ -394,8 +406,9 @@ main {
     margin: auto;
 }
 
+
 /* =====================================================
-   AU-HHS
+   STC / AU-HHS
 ===================================================== */
 
 .hhs-level {
@@ -410,6 +423,7 @@ main {
 .hhs-level .structure-box h3 {
     color: var(--dark-green);
 }
+
 
 /* =====================================================
    GOVERNING BOARD
@@ -432,14 +446,15 @@ main {
 
 .board-number {
     display: inline-block;
-    margin-top: 6px;
-    padding: 3px 10px;
+    margin-top: 7px;
+    padding: 4px 12px;
     background: var(--gold);
     color: var(--black);
     font-size: 11px;
     font-weight: bold;
     border-radius: 20px;
 }
+
 
 /* =====================================================
    EXECUTIVE DIRECTOR
@@ -461,6 +476,7 @@ main {
     font-size: 20px;
 }
 
+
 /* =====================================================
    REGIONAL STRUCTURE
 ===================================================== */
@@ -470,8 +486,6 @@ main {
     margin-top: 0;
     padding-top: 48px;
 }
-
-/* Main horizontal connector */
 
 .regional-level::before {
     content: "";
@@ -483,8 +497,6 @@ main {
     background: var(--gold);
 }
 
-/* Connector from Executive Director */
-
 .regional-level::after {
     content: "";
     position: absolute;
@@ -494,6 +506,7 @@ main {
     height: 42px;
     background: var(--gold);
 }
+
 
 /* =====================================================
    REGIONS
@@ -508,8 +521,6 @@ main {
 .region {
     position: relative;
 }
-
-/* Vertical line to each region */
 
 .region::before {
     content: "";
@@ -538,6 +549,180 @@ main {
 .region .structure-box h3 {
     font-size: 17px;
 }
+
+
+/* =====================================================
+   GOVERNING BOARD INTRO
+===================================================== */
+
+.board-intro {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: var(--light-green);
+    border-left: 6px solid var(--gold);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+}
+
+.board-intro-number {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.board-intro h3 {
+    margin: 0 0 5px;
+    color: var(--green);
+    font-size: 21px;
+}
+
+.board-intro p {
+    margin: 0;
+    color: var(--grey);
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BOARD COMPOSITION CARDS
+===================================================== */
+
+.board-composition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.board-composition-card {
+    display: flex;
+    gap: 18px;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--green);
+    box-shadow: var(--shadow);
+}
+
+.composition-number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.composition-content h3 {
+    margin: 0 0 8px;
+    color: var(--black);
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.composition-count {
+    display: inline-block;
+    background: var(--light-green);
+    color: var(--green);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.composition-content p {
+    margin: 0;
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   REGIONAL TAGS
+===================================================== */
+
+.region-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.region-tags span {
+    padding: 4px 9px;
+    background: var(--light-grey);
+    border: 1px solid var(--border);
+    color: var(--dark-grey);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   BOARD SUMMARY
+===================================================== */
+
+.board-summary {
+    margin-top: 30px;
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 28px 30px;
+}
+
+.summary-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.summary-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.summary-items > div {
+    text-align: center;
+    padding: 15px 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.summary-items > div:last-child {
+    border-right: none;
+}
+
+.summary-items strong {
+    display: block;
+    color: var(--gold);
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.summary-items span {
+    display: block;
+    margin-top: 5px;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.summary-items .total {
+    background: rgba(245,194,66,0.12);
+}
+
 
 /* =====================================================
    EXPLANATION CARDS
@@ -581,6 +766,7 @@ main {
     font-size: 14px;
 }
 
+
 /* =====================================================
    GOVERNANCE
 ===================================================== */
@@ -623,6 +809,7 @@ main {
     color: var(--grey);
 }
 
+
 /* =====================================================
    NOTE
 ===================================================== */
@@ -635,6 +822,7 @@ main {
     color: var(--dark-grey);
     font-size: 14px;
 }
+
 
 /* =====================================================
    RELATED LINKS
@@ -691,6 +879,7 @@ main {
     color: var(--black);
 }
 
+
 /* =====================================================
    FOOTER
 ===================================================== */
@@ -742,6 +931,7 @@ footer {
     font-size: 12px;
 }
 
+
 /* =====================================================
    RESPONSIVE
 ===================================================== */
@@ -764,6 +954,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .board-composition-grid {
+        grid-template-columns: 1fr;
+    }
+
     .governance-grid {
         grid-template-columns: 1fr;
     }
@@ -776,7 +970,18 @@ footer {
     .page-hero h1 {
         font-size: 34px;
     }
+
+    .summary-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary-items > div {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
 }
+
 
 @media (max-width: 600px) {
 
@@ -807,6 +1012,26 @@ footer {
 
     main {
         padding: 45px 0;
+    }
+
+    .board-intro {
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    .board-intro-number {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        font-size: 22px;
+    }
+
+    .board-composition-card {
+        padding: 22px;
+    }
+
+    .summary-items {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -963,6 +1188,10 @@ footer {
             Institutional Structure
         </a>
 
+        <a href="#board-composition">
+            Governing Board
+        </a>
+
         <a href="#functions">
             Key Components
         </a>
@@ -1006,7 +1235,7 @@ footer {
 
 
     <!-- =================================================
-         STRUCTURE
+         INSTITUTIONAL STRUCTURE
     ================================================== -->
 
     <section class="section" id="structure">
@@ -1097,7 +1326,8 @@ footer {
                         </h3>
 
                         <p>
-                            The Department of Health, Humanitarian Affairs and Social Development (HHS)
+                            African Union humanitarian and health
+                            institutional level
                         </p>
 
                     </div>
@@ -1121,7 +1351,7 @@ footer {
                         </h3>
 
                         <span class="board-number">
-                            20 MEMBERS
+                            15 MEMBERS
                         </span>
 
                     </div>
@@ -1240,6 +1470,299 @@ footer {
         </div>
 
 
+        <div class="note">
+
+            <strong>Institutional hierarchy:</strong>
+            AUC → STC → AU-HHS → Governing Board (15) →
+            Executive Director → North, South, Central, East and West.
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GOVERNING BOARD COMPOSITION
+    ================================================== -->
+
+    <section class="section" id="board-composition">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                02 | Governing Board
+            </div>
+
+            <h2>
+                Composition of the Governing Board
+            </h2>
+
+            <p>
+                The Governing Board is composed of fifteen (15) members,
+                representing Member States, the African Union Commission,
+                civil society and the private sector, and the United Nations
+                humanitarian and human rights system.
+            </p>
+
+        </div>
+
+
+        <!-- BOARD INTRO -->
+
+        <div class="board-intro">
+
+            <div class="board-intro-number">
+                15
+            </div>
+
+            <div>
+
+                <h3>
+                    Fifteen Members
+                </h3>
+
+                <p>
+                    The Board is answerable to the Chairperson of the
+                    AU Commission / STC and is composed of fifteen (15)
+                    members.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOARD COMPOSITION -->
+
+        <div class="board-composition-grid">
+
+
+            <!-- A -->
+
+            <div class="board-composition-card">
+
+                <div class="composition-number">
+                    A
+                </div>
+
+                <div class="composition-content">
+
+                    <h3>
+                        Ministers Responsible for Forced Displacement
+                        and Humanitarian Affairs
+                    </h3>
+
+                    <div class="composition-count">
+                        10 Members
+                    </div>
+
+                    <p>
+                        Ten Ministers representing the five Regions
+                        of the African Union, with two Ministers per
+                        Region nominated by their respective Region.
+                    </p>
+
+                    <div class="region-tags">
+
+                        <span>North</span>
+                        <span>South</span>
+                        <span>Central</span>
+                        <span>East</span>
+                        <span>West</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- B -->
+
+            <div class="board-composition-card">
+
+                <div class="composition-number">
+                    B
+                </div>
+
+                <div class="composition-content">
+
+                    <h3>
+                        AU Commission Commissioners
+                    </h3>
+
+                    <div class="composition-count">
+                        2 Members · Non-voting Ex-officio
+                    </div>
+
+                    <p>
+                        Two Commissioners of the AU Commission
+                        representing Political Affairs, Peace and
+                        Security and Social Development, Health and
+                        Humanitarian Affairs, serving as non-voting
+                        ex-officio members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="board-composition-card">
+
+                <div class="composition-number">
+                    C
+                </div>
+
+                <div class="composition-content">
+
+                    <h3>
+                        Private Sector and Civil Society
+                    </h3>
+
+                    <div class="composition-count">
+                        2 Members
+                    </div>
+
+                    <p>
+                        Two nominees of the Chairperson of the
+                        Commission representing the Private Sector
+                        and Civil Society, in consultation with the
+                        Chairperson of the Board, including Red Cross
+                        and Red Crescent Societies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- D -->
+
+            <div class="board-composition-card">
+
+                <div class="composition-number">
+                    D
+                </div>
+
+                <div class="composition-content">
+
+                    <h3>
+                        United Nations Representative
+                    </h3>
+
+                    <div class="composition-count">
+                        1 Member · Rotational
+                    </div>
+
+                    <p>
+                        One representative of UN Agencies with
+                        mandates on Human Rights and Humanitarian
+                        Issues, serving on a rotational basis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- BOARD SUMMARY -->
+
+        <div class="board-summary">
+
+            <div class="summary-title">
+                Board Composition at a Glance
+            </div>
+
+            <div class="summary-items">
+
+
+                <div>
+
+                    <strong>
+                        10
+                    </strong>
+
+                    <span>
+                        Regional Ministers
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        AU Commissioners
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        Private Sector & Civil Society
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        1
+                    </strong>
+
+                    <span>
+                        UN Representative
+                    </span>
+
+                </div>
+
+
+                <div class="total">
+
+                    <strong>
+                        15
+                    </strong>
+
+                    <span>
+                        Total Members
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- GOVERNANCE NOTE -->
+
+        <div class="note">
+
+            <strong>Governance note:</strong>
+            The Board is answerable to the Chairperson of the
+            AU Commission / STC. The two AU Commission Commissioners
+            serve as non-voting ex-officio members, while the UN
+            representative participates on a rotational basis.
+
+        </div>
 
     </section>
 
@@ -1253,7 +1776,7 @@ footer {
         <div class="section-heading">
 
             <div class="section-label">
-                02 | Key Components
+                03 | Key Components
             </div>
 
             <h2>
@@ -1273,6 +1796,8 @@ footer {
         <div class="structure-cards">
 
 
+            <!-- 01 -->
+
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1290,6 +1815,8 @@ footer {
 
             </div>
 
+
+            <!-- 02 -->
 
             <div class="structure-card">
 
@@ -1310,6 +1837,8 @@ footer {
             </div>
 
 
+            <!-- 03 -->
+
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1329,6 +1858,8 @@ footer {
             </div>
 
 
+            <!-- 04 -->
+
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1340,13 +1871,15 @@ footer {
                 </h3>
 
                 <p>
-                    The Governing Board is represented in the
-                    structure as a 20-member governing body providing
-                    institutional oversight.
+                    The 15-member Governing Board forms the principal
+                    governance level shown in the institutional
+                    hierarchy.
                 </p>
 
             </div>
 
+
+            <!-- 05 -->
 
             <div class="structure-card">
 
@@ -1360,12 +1893,13 @@ footer {
 
                 <p>
                     The Executive Director represents the executive
-                    leadership level responsible for leading the
-                    Agency's implementation and management.
+                    leadership level below the Governing Board.
                 </p>
 
             </div>
 
+
+            <!-- 06 -->
 
             <div class="structure-card">
 
@@ -1399,7 +1933,7 @@ footer {
         <div class="section-heading">
 
             <div class="section-label">
-                03 | Governance
+                04 | Governance
             </div>
 
             <h2>
@@ -1418,6 +1952,8 @@ footer {
 
         <div class="governance-grid">
 
+
+            <!-- 01 -->
 
             <div class="governance-item">
 
@@ -1441,6 +1977,8 @@ footer {
             </div>
 
 
+            <!-- 02 -->
+
             <div class="governance-item">
 
                 <div class="governance-icon">
@@ -1454,7 +1992,7 @@ footer {
                     </strong>
 
                     <span>
-                        The 20-member Governing Board forms the
+                        The 15-member Governing Board forms the
                         principal governance level shown in the
                         institutional hierarchy.
                     </span>
@@ -1463,6 +2001,8 @@ footer {
 
             </div>
 
+
+            <!-- 03 -->
 
             <div class="governance-item">
 
@@ -1485,6 +2025,8 @@ footer {
 
             </div>
 
+
+            <!-- 04 -->
 
             <div class="governance-item">
 
@@ -1549,4 +2091,113 @@ footer {
                 <a href="about.html">
                     About AfHA
                 </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-main">
+
+
+        <div class="footer-brand">
+
+            <strong>
+                African Humanitarian Agency
+            </strong>
+
+            <p>
+                AfHA Knowledge Hub provides access to institutional
+                information, normative frameworks, guidance, tools,
+                reports, learning resources and other materials
+                supporting Africa-led humanitarian action.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html">
+                Mandate
+            </a>
+
+            <a href="structure.html">
+                Structure
+            </a>
+
+            <a href="principles.html">
+                Principles
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Resources
+            </h4>
+
+            <a href="resources.html#frameworks">
+                Frameworks & Guidelines
+            </a>
+
+            <a href="resources.html#tools">
+                Tools & Templates
+            </a>
+
+            <a href="resources.html#reports">
+                Reports & Assessments
+            </a>
+
+            <a href="resources.html#training">
+                Training & Learning
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            © 2026 African Humanitarian Agency (AfHA) · Knowledge Hub
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
 ```
+
+This version is ready to replace the current `structure.html` in your GitHub repository. The **15-member composition is now shown both in the organogram and in a detailed section below it**, including the 10 regional ministers, 2 AU Commissioners, 2 Private Sector/Civil Society nominees, and 1 rotating UN representative.
