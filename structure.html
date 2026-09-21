@@ -35,6 +35,7 @@
     --shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
+
 /* =====================================================
    GENERAL
 ===================================================== */
@@ -552,7 +553,7 @@ main {
 
 
 /* =====================================================
-   GOVERNING BOARD INTRO
+   BOARD INTRO
 ===================================================== */
 
 .board-intro {
@@ -690,13 +691,13 @@ main {
 
 .summary-items {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
 }
 
 .summary-items > div {
     text-align: center;
-    padding: 15px 10px;
+    padding: 15px 8px;
     border-right: 1px solid rgba(255,255,255,0.2);
 }
 
@@ -707,7 +708,7 @@ main {
 .summary-items strong {
     display: block;
     color: var(--gold);
-    font-size: 26px;
+    font-size: 25px;
     line-height: 1.2;
 }
 
@@ -715,12 +716,39 @@ main {
     display: block;
     margin-top: 5px;
     color: rgba(255,255,255,0.85);
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.4;
 }
 
 .summary-items .total {
     background: rgba(245,194,66,0.12);
+}
+
+
+/* =====================================================
+   PLACEHOLDER CARD
+===================================================== */
+
+.placeholder-card {
+    border-top-color: var(--dark-gold);
+    background: #FFFDF5;
+}
+
+.placeholder-card .composition-number {
+    background: var(--dark-gold);
+    color: var(--white);
+}
+
+.placeholder-label {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    background: #FFF1B8;
+    color: #765900;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
 
 
@@ -936,6 +964,20 @@ footer {
    RESPONSIVE
 ===================================================== */
 
+@media (max-width: 1100px) {
+
+    .summary-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .summary-items > div {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+}
+
+
 @media (max-width: 900px) {
 
     .navbar {
@@ -969,15 +1011,6 @@ footer {
 
     .page-hero h1 {
         font-size: 34px;
-    }
-
-    .summary-items {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .summary-items > div {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
 }
@@ -1031,7 +1064,7 @@ footer {
     }
 
     .summary-items {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -1265,9 +1298,7 @@ footer {
             <div class="structure">
 
 
-                <!-- =========================================
-                     LEVEL 1 — AUC
-                ========================================== -->
+                <!-- LEVEL 1 -->
 
                 <div class="structure-top">
 
@@ -1289,9 +1320,7 @@ footer {
                 <div class="connector"></div>
 
 
-                <!-- =========================================
-                     LEVEL 2 — STC
-                ========================================== -->
+                <!-- LEVEL 2 -->
 
                 <div class="hhs-level">
 
@@ -1313,9 +1342,7 @@ footer {
                 <div class="connector"></div>
 
 
-                <!-- =========================================
-                     LEVEL 3 — AU-HHS
-                ========================================== -->
+                <!-- LEVEL 3 -->
 
                 <div class="hhs-level">
 
@@ -1338,9 +1365,7 @@ footer {
                 <div class="connector"></div>
 
 
-                <!-- =========================================
-                     LEVEL 4 — GOVERNING BOARD
-                ========================================== -->
+                <!-- LEVEL 4 -->
 
                 <div class="board-level">
 
@@ -1351,7 +1376,7 @@ footer {
                         </h3>
 
                         <span class="board-number">
-                            15 MEMBERS
+                            20 MEMBERS
                         </span>
 
                     </div>
@@ -1362,9 +1387,7 @@ footer {
                 <div class="connector"></div>
 
 
-                <!-- =========================================
-                     LEVEL 5 — EXECUTIVE DIRECTOR
-                ========================================== -->
+                <!-- LEVEL 5 -->
 
                 <div class="executive-level">
 
@@ -1386,84 +1409,45 @@ footer {
                 <div class="connector"></div>
 
 
-                <!-- =========================================
-                     LEVEL 6 — FIVE REGIONS
-                ========================================== -->
+                <!-- LEVEL 6 -->
 
                 <div class="regional-level">
 
                     <div class="regions">
 
-
                         <div class="region">
-
                             <div class="structure-box">
-
-                                <h3>
-                                    North
-                                </h3>
-
+                                <h3>North</h3>
                             </div>
-
                         </div>
 
-
                         <div class="region">
-
                             <div class="structure-box">
-
-                                <h3>
-                                    South
-                                </h3>
-
+                                <h3>South</h3>
                             </div>
-
                         </div>
 
-
                         <div class="region">
-
                             <div class="structure-box">
-
-                                <h3>
-                                    Central
-                                </h3>
-
+                                <h3>Central</h3>
                             </div>
-
                         </div>
 
-
                         <div class="region">
-
                             <div class="structure-box">
-
-                                <h3>
-                                    East
-                                </h3>
-
+                                <h3>East</h3>
                             </div>
-
                         </div>
 
-
                         <div class="region">
-
                             <div class="structure-box">
-
-                                <h3>
-                                    West
-                                </h3>
-
+                                <h3>West</h3>
                             </div>
-
                         </div>
-
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -1473,7 +1457,7 @@ footer {
         <div class="note">
 
             <strong>Institutional hierarchy:</strong>
-            AUC → STC → AU-HHS → Governing Board (15) →
+            AUC → STC → AU-HHS → Governing Board (20) →
             Executive Director → North, South, Central, East and West.
 
         </div>
@@ -1498,10 +1482,11 @@ footer {
             </h2>
 
             <p>
-                The Governing Board is composed of fifteen (15) members,
-                representing Member States, the African Union Commission,
-                civil society and the private sector, and the United Nations
-                humanitarian and human rights system.
+                The Governing Board comprises twenty (20) members,
+                bringing together representatives of Member States,
+                Regional Economic Communities, the private sector
+                and civil society, together with additional members
+                to be confirmed.
             </p>
 
         </div>
@@ -1512,19 +1497,19 @@ footer {
         <div class="board-intro">
 
             <div class="board-intro-number">
-                15
+                20
             </div>
 
             <div>
 
                 <h3>
-                    Fifteen Members
+                    Twenty Members
                 </h3>
 
                 <p>
-                    The Board is answerable to the Chairperson of the
-                    AU Commission / STC and is composed of fifteen (15)
-                    members.
+                    The Governing Board provides the principal
+                    governance level within AfHA's institutional
+                    structure.
                 </p>
 
             </div>
@@ -1537,7 +1522,7 @@ footer {
         <div class="board-composition-grid">
 
 
-            <!-- A -->
+            <!-- A: MEMBER STATES -->
 
             <div class="board-composition-card">
 
@@ -1548,8 +1533,7 @@ footer {
                 <div class="composition-content">
 
                     <h3>
-                        Ministers Responsible for Forced Displacement
-                        and Humanitarian Affairs
+                        Member States
                     </h3>
 
                     <div class="composition-count">
@@ -1557,9 +1541,9 @@ footer {
                     </div>
 
                     <p>
-                        Ten Ministers representing the five Regions
-                        of the African Union, with two Ministers per
-                        Region nominated by their respective Region.
+                        Ten representatives of Member States,
+                        with two representatives from each of
+                        the five regions of the African Union.
                     </p>
 
                     <div class="region-tags">
@@ -1577,7 +1561,7 @@ footer {
             </div>
 
 
-            <!-- B -->
+            <!-- B: RECs -->
 
             <div class="board-composition-card">
 
@@ -1588,27 +1572,33 @@ footer {
                 <div class="composition-content">
 
                     <h3>
-                        AU Commission Commissioners
+                        Regional Economic Communities
                     </h3>
 
                     <div class="composition-count">
-                        2 Members · Non-voting Ex-officio
+                        4 Members · Rotational
                     </div>
 
                     <p>
-                        Two Commissioners of the AU Commission
-                        representing Political Affairs, Peace and
-                        Security and Social Development, Health and
-                        Humanitarian Affairs, serving as non-voting
-                        ex-officio members.
+                        Four representatives of the eight Regional
+                        Economic Communities (RECs), serving on a
+                        rotational basis for a term of three years.
                     </p>
+
+                    <div class="region-tags">
+
+                        <span>8 RECs</span>
+                        <span>4 Representatives</span>
+                        <span>3-Year Term</span>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- C -->
+            <!-- C: PRIVATE SECTOR -->
 
             <div class="board-composition-card">
 
@@ -1619,7 +1609,7 @@ footer {
                 <div class="composition-content">
 
                     <h3>
-                        Private Sector and Civil Society
+                        Private Sector Representatives
                     </h3>
 
                     <div class="composition-count">
@@ -1627,19 +1617,26 @@ footer {
                     </div>
 
                     <p>
-                        Two nominees of the Chairperson of the
-                        Commission representing the Private Sector
-                        and Civil Society, in consultation with the
-                        Chairperson of the Board, including Red Cross
-                        and Red Crescent Societies.
+                        Two representatives of the private sector,
+                        nominated by the Chairperson of the African
+                        Union Commission in consultation with the
+                        Chairperson of the Board, for a term of
+                        two years.
                     </p>
+
+                    <div class="region-tags">
+
+                        <span>2 Representatives</span>
+                        <span>2-Year Term</span>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- D -->
+            <!-- D: CSO -->
 
             <div class="board-composition-card">
 
@@ -1650,18 +1647,62 @@ footer {
                 <div class="composition-content">
 
                     <h3>
-                        United Nations Representative
+                        Civil Society Representatives
                     </h3>
 
                     <div class="composition-count">
-                        1 Member · Rotational
+                        2 Members
                     </div>
 
                     <p>
-                        One representative of UN Agencies with
-                        mandates on Human Rights and Humanitarian
-                        Issues, serving on a rotational basis.
+                        Two representatives of civil society,
+                        nominated by the Chairperson of the African
+                        Union Commission in consultation with the
+                        Chairperson of the Board, for a term of
+                        two years.
                     </p>
+
+                    <div class="region-tags">
+
+                        <span>2 Representatives</span>
+                        <span>2-Year Term</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- E: PLACEHOLDER -->
+
+            <div class="board-composition-card placeholder-card">
+
+                <div class="composition-number">
+                    E
+                </div>
+
+                <div class="composition-content">
+
+                    <h3>
+                        Additional Members
+                    </h3>
+
+                    <div class="composition-count">
+                        2 Members · To Be Confirmed
+                    </div>
+
+                    <p>
+                        Placeholder for two additional Governing
+                        Board members. The category, representation
+                        and applicable terms will be updated once
+                        the relevant institutional provision is
+                        confirmed.
+                    </p>
+
+                    <span class="placeholder-label">
+                        Placeholder — To Be Confirmed
+                    </span>
 
                 </div>
 
@@ -1689,7 +1730,20 @@ footer {
                     </strong>
 
                     <span>
-                        Regional Ministers
+                        Member States
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <span>
+                        REC Representatives
                     </span>
 
                 </div>
@@ -1702,7 +1756,7 @@ footer {
                     </strong>
 
                     <span>
-                        AU Commissioners
+                        Private Sector
                     </span>
 
                 </div>
@@ -1715,7 +1769,7 @@ footer {
                     </strong>
 
                     <span>
-                        Private Sector & Civil Society
+                        Civil Society
                     </span>
 
                 </div>
@@ -1724,11 +1778,11 @@ footer {
                 <div>
 
                     <strong>
-                        1
+                        2
                     </strong>
 
                     <span>
-                        UN Representative
+                        Additional Members*
                     </span>
 
                 </div>
@@ -1737,7 +1791,7 @@ footer {
                 <div class="total">
 
                     <strong>
-                        15
+                        20
                     </strong>
 
                     <span>
@@ -1752,15 +1806,15 @@ footer {
         </div>
 
 
-        <!-- GOVERNANCE NOTE -->
+        <!-- BOARD NOTE -->
 
         <div class="note">
 
-            <strong>Governance note:</strong>
-            The Board is answerable to the Chairperson of the
-            AU Commission / STC. The two AU Commission Commissioners
-            serve as non-voting ex-officio members, while the UN
-            representative participates on a rotational basis.
+            <strong>Board composition note:</strong>
+            The current presentation reflects the available
+            composition information. The two additional members
+            are shown as placeholders pending confirmation of
+            the relevant category and institutional provision.
 
         </div>
 
@@ -1796,8 +1850,6 @@ footer {
         <div class="structure-cards">
 
 
-            <!-- 01 -->
-
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1815,8 +1867,6 @@ footer {
 
             </div>
 
-
-            <!-- 02 -->
 
             <div class="structure-card">
 
@@ -1837,8 +1887,6 @@ footer {
             </div>
 
 
-            <!-- 03 -->
-
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1858,8 +1906,6 @@ footer {
             </div>
 
 
-            <!-- 04 -->
-
             <div class="structure-card">
 
                 <div class="structure-card-number">
@@ -1871,15 +1917,13 @@ footer {
                 </h3>
 
                 <p>
-                    The 15-member Governing Board forms the principal
+                    The 20-member Governing Board forms the principal
                     governance level shown in the institutional
                     hierarchy.
                 </p>
 
             </div>
 
-
-            <!-- 05 -->
 
             <div class="structure-card">
 
@@ -1898,8 +1942,6 @@ footer {
 
             </div>
 
-
-            <!-- 06 -->
 
             <div class="structure-card">
 
@@ -1941,10 +1983,10 @@ footer {
             </h2>
 
             <p>
-                The institutional structure establishes a clear
-                relationship between continental oversight,
-                technical and policy structures, governance,
-                executive leadership and regional representation.
+                The institutional structure establishes a relationship
+                between continental oversight, technical and policy
+                structures, governance, executive leadership and
+                regional representation.
             </p>
 
         </div>
@@ -1952,8 +1994,6 @@ footer {
 
         <div class="governance-grid">
 
-
-            <!-- 01 -->
 
             <div class="governance-item">
 
@@ -1977,8 +2017,6 @@ footer {
             </div>
 
 
-            <!-- 02 -->
-
             <div class="governance-item">
 
                 <div class="governance-icon">
@@ -1992,7 +2030,7 @@ footer {
                     </strong>
 
                     <span>
-                        The 15-member Governing Board forms the
+                        The 20-member Governing Board forms the
                         principal governance level shown in the
                         institutional hierarchy.
                     </span>
@@ -2001,8 +2039,6 @@ footer {
 
             </div>
 
-
-            <!-- 03 -->
 
             <div class="governance-item">
 
@@ -2025,8 +2061,6 @@ footer {
 
             </div>
 
-
-            <!-- 04 -->
 
             <div class="governance-item">
 
@@ -2199,5 +2233,3 @@ footer {
 
 </html>
 ```
-
-This version is ready to replace the current `structure.html` in your GitHub repository. The **15-member composition is now shown both in the organogram and in a detailed section below it**, including the 10 regional ministers, 2 AU Commissioners, 2 Private Sector/Civil Society nominees, and 1 rotating UN representative.
