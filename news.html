@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,12 +7,12 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+   content="width=device-width, initial-scale=1.0">
 
-<title>AfHA Structure | AfHA Knowledge Hub</title>
+<title>AfHA News & Updates | AfHA Knowledge Hub</title>
 
 <meta name="description"
-      content="Institutional structure of the African Humanitarian Agency.">
+   content="News, announcements and updates from the African Humanitarian Agency (AfHA).">
 
 <style>
 
@@ -105,6 +106,9 @@ header {
     gap: 30px;
 }
 
+
+/* LOGO */
+
 .logo {
     display: flex;
     align-items: center;
@@ -170,7 +174,7 @@ nav a.active {
 
 
 /* =====================================================
-   HERO
+   PAGE HERO
 ===================================================== */
 
 .page-hero {
@@ -189,31 +193,29 @@ nav a.active {
 .page-hero::after {
     content: "";
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
-    border: 48px solid rgba(245,194,66,0.12);
-    right: -120px;
-    top: -150px;
+    border: 45px solid rgba(245,194,66,0.12);
+    right: -110px;
+    top: -140px;
 }
 
 .page-hero::before {
     content: "";
     position: absolute;
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 26px solid rgba(255,255,255,0.06);
-    left: -75px;
-    bottom: -85px;
+    border: 25px solid rgba(255,255,255,0.06);
+    left: -70px;
+    bottom: -80px;
 }
 
 .breadcrumb {
     font-size: 13px;
     margin-bottom: 20px;
     opacity: 0.85;
-    position: relative;
-    z-index: 2;
 }
 
 .breadcrumb a {
@@ -229,7 +231,7 @@ nav a.active {
 }
 
 .page-hero p {
-    max-width: 820px;
+    max-width: 800px;
     font-size: 18px;
     margin: 0;
     opacity: 0.95;
@@ -239,11 +241,11 @@ nav a.active {
 
 
 /* =====================================================
-   QUICK NAV
+   QUICK NAVIGATION
 ===================================================== */
 
 .quick-nav {
-    background: white;
+    background: var(--white);
     border-bottom: 1px solid var(--border);
     box-shadow: 0 3px 12px rgba(0,0,0,0.04);
 }
@@ -277,7 +279,11 @@ main {
 }
 
 .section {
-    margin-bottom: 75px;
+    margin-bottom: 80px;
+}
+
+.section-heading {
+    margin-bottom: 35px;
 }
 
 .section-label {
@@ -287,10 +293,6 @@ main {
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 8px;
-}
-
-.section-heading {
-    margin-bottom: 32px;
 }
 
 .section-heading h2 {
@@ -307,189 +309,268 @@ main {
 
 
 /* =====================================================
-   INTRO
+   INTRODUCTION
 ===================================================== */
 
 .intro-box {
     background: var(--light-green);
     border-left: 6px solid var(--gold);
-    padding: 32px 38px;
-}
-
-.intro-box h2 {
-    margin-top: 0;
-    color: var(--green);
+    padding: 28px 32px;
+    margin-bottom: 55px;
 }
 
 .intro-box p {
-    margin-bottom: 0;
+    margin: 0;
+    font-size: 18px;
 }
 
 
 /* =====================================================
-   STRUCTURE DIAGRAM
+   FEATURED NEWS
 ===================================================== */
 
-.structure-chart {
-    margin-top: 40px;
-    text-align: center;
-}
-
-
-/* TOP LEVEL */
-
-.structure-top {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 45px;
-}
-
-.structure-box {
-    position: relative;
-    background: white;
-    border: 2px solid var(--green);
+.featured-news {
+    display: grid;
+    grid-template-columns: 1.05fr 1.4fr;
+    border: 1px solid var(--border);
     box-shadow: var(--shadow);
-    padding: 24px 35px;
-    max-width: 430px;
-    width: 100%;
-}
-
-.structure-box.primary {
-    background: var(--green);
-    color: white;
-    border-color: var(--green);
-}
-
-.structure-box.primary h3 {
-    color: white;
-}
-
-.structure-box h3 {
-    margin: 0 0 5px;
-    color: var(--green);
-    font-size: 19px;
-}
-
-.structure-box p {
-    margin: 0;
-    font-size: 13px;
-    color: var(--grey);
-}
-
-.structure-box.primary p {
-    color: rgba(255,255,255,0.9);
-}
-
-
-/* CONNECTOR */
-
-.vertical-line {
-    width: 3px;
-    height: 45px;
-    background: var(--gold);
-    margin: -45px auto 0;
-}
-
-
-/* SECOND LEVEL */
-
-.structure-level {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 45px;
-}
-
-.structure-level::before {
-    content: "";
-    position: absolute;
-    top: -23px;
-    left: 16%;
-    right: 16%;
-    height: 3px;
-    background: var(--gold);
-}
-
-.structure-level .structure-box::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    width: 3px;
-    height: 25px;
-    background: var(--gold);
-}
-
-
-/* THIRD LEVEL */
-
-.support-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin-top: 45px;
-}
-
-.support-box {
-    background: var(--light-grey);
-    border: 1px solid var(--border);
-    border-top: 4px solid var(--gold);
-    padding: 23px 18px;
-    min-height: 150px;
-}
-
-.support-box h3 {
-    margin: 0 0 8px;
-    color: var(--green);
-    font-size: 16px;
-}
-
-.support-box p {
-    margin: 0;
-    font-size: 13px;
-    color: var(--grey);
-}
-
-
-/* =====================================================
-   FUNCTIONS
-===================================================== */
-
-.functions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.function-item {
-    border: 1px solid var(--border);
-    padding: 27px 30px;
     background: white;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
-    display: flex;
-    gap: 20px;
+    overflow: hidden;
 }
 
-.function-number {
-    min-width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: var(--green);
+.featured-visual {
+    min-height: 330px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark-green),
+            var(--green)
+        );
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-visual::before {
+    content: "AfHA";
+    font-size: 82px;
+    font-weight: bold;
+    opacity: 0.10;
+}
+
+.featured-visual::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 35px solid rgba(245,194,66,0.13);
+    border-radius: 50%;
+    right: -90px;
+    bottom: -90px;
+}
+
+.featured-label {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    background: var(--gold);
+    color: var(--black);
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    z-index: 2;
+}
+
+.featured-content {
+    padding: 40px;
+}
+
+.news-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.news-date {
+    color: var(--green);
+    font-size: 13px;
     font-weight: bold;
 }
 
-.function-item h3 {
-    margin: 0 0 7px;
+.news-category {
+    color: var(--dark-gold);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.featured-content h3 {
+    margin: 0 0 15px;
+    color: var(--black);
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.featured-content p {
+    color: var(--grey);
+    margin: 0 0 25px;
+}
+
+.news-button {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-button:hover {
+    background: var(--dark-green);
+}
+
+
+/* =====================================================
+   NEWS GRID
+===================================================== */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+}
+
+.news-card-visual {
+    height: 170px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark-green),
+            var(--green)
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card-visual::before {
+    content: "AfHA";
+    font-size: 45px;
+    font-weight: bold;
+    opacity: 0.10;
+}
+
+.news-card-visual::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 20px solid rgba(245,194,66,0.12);
+    border-radius: 50%;
+    right: -50px;
+    top: -50px;
+}
+
+.news-card-content {
+    padding: 25px;
+}
+
+.news-card-content .news-meta {
+    margin-bottom: 10px;
+}
+
+.news-card-content h3 {
+    margin: 0 0 12px;
+    color: var(--black);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.news-card-content p {
+    color: var(--grey);
+    font-size: 14px;
+    margin: 0 0 18px;
+}
+
+.read-more {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: var(--dark-green);
+}
+
+
+/* =====================================================
+   NEWS LIST
+===================================================== */
+
+.news-list {
+    display: grid;
+    gap: 15px;
+}
+
+.news-list-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 25px;
+    padding: 22px;
+    background: var(--light-grey);
+    border: 1px solid var(--border);
+}
+
+.news-list-date {
+    background: var(--green);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    align-self: start;
+}
+
+.news-list-date strong {
+    display: block;
+    font-size: 25px;
+    line-height: 1;
+}
+
+.news-list-date span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.news-list-content h3 {
+    margin: 0 0 6px;
     color: var(--black);
     font-size: 18px;
 }
 
-.function-item p {
+.news-list-content p {
     margin: 0;
     color: var(--grey);
     font-size: 14px;
@@ -497,22 +578,21 @@ main {
 
 
 /* =====================================================
-   NOTE
+   NEWS NOTE
 ===================================================== */
 
 .note {
-    background: #FFF9E7;
+    margin-top: 30px;
+    background: #FFF9E8;
     border-left: 5px solid var(--gold);
-    padding: 25px 30px;
-}
-
-.note strong {
-    color: var(--green);
+    padding: 20px 24px;
+    color: var(--dark-grey);
+    font-size: 14px;
 }
 
 
 /* =====================================================
-   RELATED
+   RELATED LINKS
 ===================================================== */
 
 .related {
@@ -623,7 +703,7 @@ footer {
    RESPONSIVE
 ===================================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
     .navbar {
         flex-direction: column;
@@ -637,29 +717,21 @@ footer {
         flex-wrap: nowrap;
     }
 
-    .structure-level {
+    .featured-news {
         grid-template-columns: 1fr;
     }
 
-    .structure-level::before {
-        display: none;
-    }
-
-    .structure-level .structure-box::before {
-        display: none;
-    }
-
-    .support-grid {
+    .news-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .functions {
-        grid-template-columns: 1fr;
     }
 
     .footer-main {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
     }
 
 }
@@ -687,16 +759,17 @@ footer {
         font-size: 16px;
     }
 
-    .support-grid {
+    .featured-content {
+        padding: 25px;
+    }
+
+    .news-grid {
         grid-template-columns: 1fr;
     }
 
-    .structure-box {
-        padding: 22px;
-    }
-
-    .intro-box {
-        padding: 25px;
+    .news-list-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .related {
@@ -713,9 +786,7 @@ footer {
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      TOP BAR
@@ -723,20 +794,21 @@ footer {
 
 <div class="top-bar">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div>
-            African Humanitarian Agency
-        </div>
+    <div>
+        African Humanitarian Agency
+    </div>
 
-        <div>
-            AfHA Knowledge Hub
-        </div>
-
+    <div>
+        AfHA Knowledge Hub
     </div>
 
 </div>
+```
 
+</div>
 
 <!-- =====================================================
      HEADER
@@ -744,106 +816,108 @@ footer {
 
 <header>
 
-    <div class="container navbar">
+```
+<div class="container navbar">
 
-        <a href="index.html" class="logo">
+    <a href="index.html" class="logo">
 
-            <div class="logo-mark">
-                AfHA
-            </div>
+        <div class="logo-mark">
+            AfHA
+        </div>
 
-            <div class="logo-text">
+        <div class="logo-text">
 
-                <strong>
-                    African Humanitarian Agency
-                </strong>
+            <strong>
+                African Humanitarian Agency
+            </strong>
 
-                <span>
-                    Knowledge Hub
-                </span>
+            <span>
+                Knowledge Hub
+            </span>
 
-            </div>
+        </div>
 
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
         </a>
 
+        <a href="about.html">
+            About AfHA
+        </a>
 
-        <nav>
+        <a href="mandate.html">
+            Mandate
+        </a>
 
-            <a href="index.html">
-                Home
-            </a>
+        <a href="structure.html">
+            Structure
+        </a>
 
-            <a href="about.html">
-                About AfHA
-            </a>
+        <a href="resources.html">
+            Resources
+        </a>
 
-            <a href="mandate.html">
-                Mandate
-            </a>
+        <a href="news.html" class="active">
+            News
+        </a>
 
-            <a href="structure.html" class="active">
-                Structure
-            </a>
+        <a href="principles.html">
+            Principles
+        </a>
 
-            <a href="resources.html">
-                Resources
-            </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
-            <a href="news.html">
-                News
-            </a>
+    </nav>
 
-            <a href="principles.html">
-                Principles
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
+</div>
+```
 
 </header>
 
-
 <!-- =====================================================
-     HERO
+     PAGE HERO
 ===================================================== -->
 
 <section class="page-hero">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="breadcrumb">
+    <div class="breadcrumb">
 
-            <a href="index.html">
-                Home
-            </a>
+        <a href="index.html">
+            Home
+        </a>
 
-            &nbsp; / &nbsp;
+        &nbsp; / &nbsp;
 
-            Structure
-
-        </div>
-
-
-        <h1>
-            AfHA Structure
-        </h1>
-
-
-        <p>
-            Understanding the institutional structure and
-            organizational relationships supporting the African
-            Humanitarian Agency.
-        </p>
+        News & Updates
 
     </div>
 
-</section>
 
+    <h1>
+        News & Updates
+    </h1>
+
+
+    <p>
+        Latest news, announcements, developments and knowledge
+        updates related to the African Humanitarian Agency and
+        Africa-led humanitarian action.
+    </p>
+
+</div>
+```
+
+</section>
 
 <!-- =====================================================
      QUICK NAVIGATION
@@ -851,28 +925,29 @@ footer {
 
 <div class="quick-nav">
 
-    <div class="container quick-nav-inner">
+```
+<div class="container quick-nav-inner">
 
-        <a href="#overview">
-            Overview
-        </a>
+    <a href="#latest">
+        Latest News
+    </a>
 
-        <a href="#structure">
-            Institutional Structure
-        </a>
+    <a href="#updates">
+        Updates
+    </a>
 
-        <a href="#functions">
-            Key Areas
-        </a>
+    <a href="#announcements">
+        Announcements
+    </a>
 
-        <a href="#foundation">
-            Institutional Foundation
-        </a>
-
-    </div>
+    <a href="#archive">
+        Archive
+    </a>
 
 </div>
+```
 
+</div>
 
 <!-- =====================================================
      MAIN
@@ -882,444 +957,679 @@ footer {
 
 <div class="container">
 
+```
+<!-- =================================================
+     INTRODUCTION
+================================================== -->
 
-    <!-- =================================================
-         OVERVIEW
-    ================================================== -->
+<section class="section" id="latest">
 
-    <section class="section" id="overview">
+    <div class="intro-box">
 
-        <div class="section-heading">
+        <p>
+            The AfHA News and Updates section provides a central
+            space for sharing institutional developments,
+            announcements, humanitarian coordination updates,
+            knowledge products and other information relevant
+            to the African Humanitarian Agency.
+        </p>
 
-            <div class="section-label">
+    </div>
+
+
+    <!-- FEATURED NEWS -->
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Featured
+        </div>
+
+        <h2>
+            Latest AfHA Update
+        </h2>
+
+        <p>
+            Highlights from the Agency's institutional and
+            humanitarian work.
+        </p>
+
+    </div>
+
+
+    <article class="featured-news">
+
+        <div class="featured-visual">
+
+            <div class="featured-label">
+                Featured News
+            </div>
+
+        </div>
+
+
+        <div class="featured-content">
+
+            <div class="news-meta">
+
+                <span class="news-date">
+                    2026
+                </span>
+
+                <span class="news-category">
+                    Institutional Development
+                </span>
+
+            </div>
+
+
+            <h3>
+                Strengthening Africa's Humanitarian Architecture
+            </h3>
+
+
+            <p>
+                The African Humanitarian Agency is being
+                operationalized as part of efforts to strengthen
+                Africa's capacity to anticipate, prevent and
+                respond to humanitarian crises and promote
+                coordinated, effective and Africa-led humanitarian
+                action.
+            </p>
+
+
+            <a href="#" class="news-button">
+                Read More →
+            </a>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+
+<!-- =================================================
+     LATEST NEWS GRID
+================================================== -->
+
+<section class="section" id="updates">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            01 | Latest Updates
+        </div>
+
+        <h2>
+            Recent News & Developments
+        </h2>
+
+        <p>
+            Explore recent developments, activities and
+            institutional updates related to AfHA.
+        </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <!-- NEWS 01 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Knowledge
+                    </span>
+
+                </div>
+
+                <h3>
+                    AfHA Knowledge Hub
+                </h3>
+
+                <p>
+                    The AfHA Knowledge Hub brings together
+                    institutional information, normative frameworks,
+                    guidance, tools, reports and learning resources
+                    in one accessible platform.
+                </p>
+
+                <a href="index.html" class="read-more">
+                    Explore the Knowledge Hub →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 02 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Humanitarian Action
+                    </span>
+
+                </div>
+
+                <h3>
+                    Strengthening Humanitarian Preparedness
+                </h3>
+
+                <p>
+                    Efforts to strengthen preparedness, response
+                    capacity and coordination remain central to
+                    Africa's humanitarian agenda.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 03 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Partnerships
+                    </span>
+
+                </div>
+
+                <h3>
+                    Strengthening Humanitarian Partnerships
+                </h3>
+
+                <p>
+                    Cooperation among Member States, African
+                    Union institutions, regional bodies and
+                    humanitarian partners supports more coherent
+                    humanitarian action.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 04 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Preparedness
+                    </span>
+
+                </div>
+
+                <h3>
+                    Preparedness and Early Action
+                </h3>
+
+                <p>
+                    Strengthening preparedness and anticipatory
+                    approaches contributes to more timely and
+                    effective humanitarian action.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 05 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Capacity Building
+                    </span>
+
+                </div>
+
+                <h3>
+                    Humanitarian Capacity Building
+                </h3>
+
+                <p>
+                    Capacity strengthening and learning support
+                    contribute to improving humanitarian
+                    preparedness and response across the continent.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS 06 -->
+
+        <article class="news-card">
+
+            <div class="news-card-visual"></div>
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                    <span class="news-category">
+                        Institutional
+                    </span>
+
+                </div>
+
+                <h3>
+                    AfHA Institutional Development
+                </h3>
+
+                <p>
+                    Updates on the development and operationalization
+                    of AfHA and its contribution to strengthening
+                    continental humanitarian capacities.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     ANNOUNCEMENTS
+================================================== -->
+
+<section class="section" id="announcements">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            02 | Announcements
+        </div>
+
+        <h2>
+            Announcements & Notices
+        </h2>
+
+        <p>
+            Selected announcements, notices and institutional
+            communications.
+        </p>
+
+    </div>
+
+
+    <div class="news-list">
+
+
+        <article class="news-list-item">
+
+            <div class="news-list-date">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Update
+                </span>
+
+            </div>
+
+
+            <div class="news-list-content">
+
+                <h3>
+                    AfHA Knowledge Hub Development
+                </h3>
+
+                <p>
+                    Development of the AfHA Knowledge Hub to
+                    consolidate institutional information and
+                    humanitarian knowledge resources.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="news-list-item">
+
+            <div class="news-list-date">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Notice
+                </span>
+
+            </div>
+
+
+            <div class="news-list-content">
+
+                <h3>
+                    Institutional and Normative Resources
+                </h3>
+
+                <p>
+                    Continued organization and publication of
+                    AfHA frameworks, guidelines, tools, reports
+                    and learning materials.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="news-list-item">
+
+            <div class="news-list-date">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Update
+                </span>
+
+            </div>
+
+
+            <div class="news-list-content">
+
+                <h3>
+                    Humanitarian Knowledge and Learning
+                </h3>
+
+                <p>
+                    The Knowledge Hub supports access to information
+                    and learning materials for humanitarian actors
+                    working across the continent.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="note">
+
+        <strong>Content note:</strong>
+        News items on this page should be replaced with
+        verified AfHA announcements, official institutional
+        updates and approved news content as these become
+        available.
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     ARCHIVE
+================================================== -->
+
+<section class="section" id="archive">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            03 | Archive
+        </div>
+
+        <h2>
+            News Archive
+        </h2>
+
+        <p>
+            Browse news and updates by year.
+        </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <article class="news-card">
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2026
+                    </span>
+
+                </div>
+
+                <h3>
+                    AfHA News Archive — 2026
+                </h3>
+
+                <p>
+                    News, announcements and institutional updates
+                    published during 2026.
+                </p>
+
+                <a href="#" class="read-more">
+                    View 2026 Archive →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        2025
+                    </span>
+
+                </div>
+
+                <h3>
+                    AfHA News Archive — 2025
+                </h3>
+
+                <p>
+                    News and institutional developments from 2025.
+                </p>
+
+                <a href="#" class="read-more">
+                    View 2025 Archive →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <div class="news-card-content">
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                        Archive
+                    </span>
+
+                </div>
+
+                <h3>
+                    Earlier Updates
+                </h3>
+
+                <p>
+                    Historical announcements and developments
+                    can be added here as the archive expands.
+                </p>
+
+                <a href="#" class="read-more">
+                    View Archive →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     RELATED
+================================================== -->
+
+<section class="section">
+
+    <div class="related">
+
+        <h2>
+            Explore the AfHA Knowledge Hub
+        </h2>
+
+        <p>
+            Continue exploring AfHA's mandate, institutional
+            structure, guiding principles and knowledge resources.
+        </p>
+
+
+        <div class="related-links">
+
+            <a href="about.html">
+                About AfHA
+            </a>
+
+            <a href="mandate.html">
+                Mandate, Role & Objectives
+            </a>
+
+            <a href="structure.html">
                 Institutional Structure
-            </div>
+            </a>
 
-            <h2>
-                A coordinated institutional framework
-            </h2>
+            <a href="principles.html">
+                Guiding Principles
+            </a>
 
-            <p>
-                AfHA's institutional structure is intended to support
-                effective governance, coordination, technical
-                functions and implementation of its humanitarian
-                mandate.
-            </p>
+            <a href="resources.html">
+                Knowledge Resources
+            </a>
 
         </div>
 
+    </div>
 
-        <div class="intro-box">
-
-            <h2>
-                Structure and institutional roles
-            </h2>
-
-            <p>
-                The Agency's institutional arrangements provide the
-                basis for connecting governance, strategic direction,
-                technical functions and operational support. The
-                structure should enable AfHA to work with African
-                Union institutions, Member States and humanitarian
-                partners while maintaining clear responsibilities
-                and coordination mechanisms.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         STRUCTURE
-    ================================================== -->
-
-    <section class="section" id="structure">
-
-        <div class="section-heading">
-
-            <div class="section-label">
-                Institutional Architecture
-            </div>
-
-            <h2>
-                AfHA institutional structure
-            </h2>
-
-            <p>
-                The diagram below provides a simplified website
-                representation of the institutional architecture.
-                Detailed legal and organizational arrangements
-                should be read together with the AfHA Statute and
-                other authoritative documents.
-            </p>
-
-        </div>
-
-
-        <div class="structure-chart">
-
-
-            <!-- TOP -->
-
-            <div class="structure-top">
-
-                <div class="structure-box primary">
-
-                    <h3>
-                        African Humanitarian Agency
-                    </h3>
-
-                    <p>
-                        Continental humanitarian institution
-                        supporting Africa-led humanitarian action
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="vertical-line"></div>
-
-
-            <!-- SECOND LEVEL -->
-
-            <div class="structure-level">
-
-
-                <div class="structure-box">
-
-                    <h3>
-                        Governance & Oversight
-                    </h3>
-
-                    <p>
-                        Strategic governance, policy direction
-                        and institutional oversight.
-                    </p>
-
-                </div>
-
-
-                <div class="structure-box">
-
-                    <h3>
-                        Leadership & Management
-                    </h3>
-
-                    <p>
-                        Strategic leadership, management and
-                        coordination of AfHA's functions.
-                    </p>
-
-                </div>
-
-
-                <div class="structure-box">
-
-                    <h3>
-                        Technical & Operational Functions
-                    </h3>
-
-                    <p>
-                        Technical expertise, humanitarian
-                        coordination and operational support.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SUPPORTING FUNCTIONS -->
-
-            <div class="support-grid">
-
-
-                <div class="support-box">
-
-                    <h3>
-                        Preparedness & Response
-                    </h3>
-
-                    <p>
-                        Humanitarian preparedness, response
-                        capacity and emergency support.
-                    </p>
-
-                </div>
-
-
-                <div class="support-box">
-
-                    <h3>
-                        Coordination
-                    </h3>
-
-                    <p>
-                        Cooperation and coordination with
-                        Member States and humanitarian actors.
-                    </p>
-
-                </div>
-
-
-                <div class="support-box">
-
-                    <h3>
-                        Knowledge & Learning
-                    </h3>
-
-                    <p>
-                        Knowledge management, learning,
-                        information and institutional capacity.
-                    </p>
-
-                </div>
-
-
-                <div class="support-box">
-
-                    <h3>
-                        Administration & Support
-                    </h3>
-
-                    <p>
-                        Administrative and institutional support
-                        for effective implementation.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         KEY AREAS
-    ================================================== -->
-
-    <section class="section" id="functions">
-
-        <div class="section-heading">
-
-            <div class="section-label">
-                Key Areas
-            </div>
-
-            <h2>
-                Areas supporting AfHA's work
-            </h2>
-
-            <p>
-                The institutional structure connects several areas
-                that contribute to AfHA's broader humanitarian
-                objectives.
-            </p>
-
-        </div>
-
-
-        <div class="functions">
-
-
-            <div class="function-item">
-
-                <div class="function-number">
-                    01
-                </div>
-
-                <div>
-
-                    <h3>
-                        Humanitarian Preparedness
-                    </h3>
-
-                    <p>
-                        Supporting preparedness, anticipation and
-                        capacity strengthening before humanitarian
-                        crises occur.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="function-item">
-
-                <div class="function-number">
-                    02
-                </div>
-
-                <div>
-
-                    <h3>
-                        Humanitarian Response
-                    </h3>
-
-                    <p>
-                        Supporting coordinated and effective
-                        humanitarian response to crises and
-                        emergencies.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="function-item">
-
-                <div class="function-number">
-                    03
-                </div>
-
-                <div>
-
-                    <h3>
-                        Coordination & Partnerships
-                    </h3>
-
-                    <p>
-                        Promoting cooperation and complementarity
-                        among Member States, African institutions
-                        and humanitarian actors.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="function-item">
-
-                <div class="function-number">
-                    04
-                </div>
-
-                <div>
-
-                    <h3>
-                        Knowledge & Capacity
-                    </h3>
-
-                    <p>
-                        Strengthening humanitarian knowledge,
-                        learning, information systems and
-                        institutional capacities.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         FOUNDATION
-    ================================================== -->
-
-    <section class="section" id="foundation">
-
-        <div class="section-heading">
-
-            <div class="section-label">
-                Institutional Foundation
-            </div>
-
-            <h2>
-                Structure supported by normative frameworks
-            </h2>
-
-            <p>
-                AfHA's institutional arrangements should be
-                understood alongside its legal and normative
-                foundations.
-            </p>
-
-        </div>
-
-
-        <div class="note">
-
-            <strong>
-                Important:
-            </strong>
-
-            The organizational representation on this page is a
-            simplified knowledge-hub presentation. For authoritative
-            information on AfHA's organs, governance arrangements,
-            functions and responsibilities, consult the official
-            AfHA Statute and other approved institutional documents
-            in the Knowledge Resources section.
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         RELATED
-    ================================================== -->
-
-    <section class="section">
-
-        <div class="related">
-
-            <h2>
-                Explore AfHA
-            </h2>
-
-            <p>
-                Explore the Agency's mandate, institutional
-                background, guiding principles and knowledge
-                resources.
-            </p>
-
-
-            <div class="related-links">
-
-                <a href="about.html">
-                    About AfHA
-                </a>
-
-                <a href="mandate.html">
-                    Mandate, Role & Objectives
-                </a>
-
-                <a href="principles.html">
-                    Guiding Principles
-                </a>
-
-                <a href="resources.html">
-                    Knowledge Resources
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
+</section>
+```
 
 </div>
 
 </main>
-
 
 <!-- =====================================================
      FOOTER
@@ -1327,90 +1637,91 @@ footer {
 
 <footer>
 
-    <div class="container footer-main">
+```
+<div class="container footer-main">
 
 
-        <div class="footer-brand">
+    <div class="footer-brand">
 
-            <strong>
-                African Humanitarian Agency
-            </strong>
+        <strong>
+            African Humanitarian Agency
+        </strong>
 
-            <p>
-                AfHA Knowledge Hub provides access to institutional
-                information, normative frameworks, guidance, tools,
-                reports, learning resources and other materials
-                supporting Africa-led humanitarian action.
-            </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                Explore
-            </h4>
-
-            <a href="about.html">
-                About AfHA
-            </a>
-
-            <a href="mandate.html">
-                Mandate
-            </a>
-
-            <a href="structure.html">
-                Structure
-            </a>
-
-            <a href="principles.html">
-                Principles
-            </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4>
-                Resources
-            </h4>
-
-            <a href="resources.html#frameworks">
-                Frameworks & Guidelines
-            </a>
-
-            <a href="resources.html#tools">
-                Tools & Templates
-            </a>
-
-            <a href="resources.html#reports">
-                Reports & Assessments
-            </a>
-
-            <a href="resources.html#training">
-                Training & Learning
-            </a>
-
-        </div>
-
+        <p>
+            AfHA Knowledge Hub provides access to institutional
+            information, normative frameworks, guidance, tools,
+            reports, learning resources and other materials
+            supporting Africa-led humanitarian action.
+        </p>
 
     </div>
 
 
-    <div class="footer-bottom">
+    <div class="footer-column">
 
-        <div class="container">
+        <h4>
+            Explore
+        </h4>
 
-            © 2026 African Humanitarian Agency (AfHA) · Knowledge Hub
+        <a href="about.html">
+            About AfHA
+        </a>
 
-        </div>
+        <a href="mandate.html">
+            Mandate
+        </a>
+
+        <a href="structure.html">
+            Structure
+        </a>
+
+        <a href="principles.html">
+            Principles
+        </a>
 
     </div>
+
+
+    <div class="footer-column">
+
+        <h4>
+            Resources
+        </h4>
+
+        <a href="resources.html#frameworks">
+            Frameworks & Guidelines
+        </a>
+
+        <a href="resources.html#tools">
+            Tools & Templates
+        </a>
+
+        <a href="resources.html#reports">
+            Reports & Assessments
+        </a>
+
+        <a href="resources.html#training">
+            Training & Learning
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <div class="container">
+
+        © 2026 African Humanitarian Agency (AfHA) · Knowledge Hub
+
+    </div>
+
+</div>
+```
 
 </footer>
-
 
 </body>
 
