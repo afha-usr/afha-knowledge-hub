@@ -11,7 +11,7 @@
 <title>Mandate | AfHA Knowledge Hub</title>
 
 <meta name="description"
-      content="Mandate, roles, objectives and operational requirements of the African Humanitarian Agency">
+      content="Mandate, roles and objectives of the African Humanitarian Agency">
 
 <style>
 
@@ -39,6 +39,7 @@
 
     --shadow:
         0 8px 25px rgba(0,0,0,0.08);
+
 }
 
 
@@ -71,7 +72,9 @@ body {
 }
 
 a {
+
     color: inherit;
+
     text-decoration: none;
 }
 
@@ -108,10 +111,12 @@ a {
 }
 
 .top-left {
+
     font-weight: 600;
 }
 
 .top-right {
+
     opacity: 0.9;
 }
 
@@ -294,17 +299,17 @@ nav a.active {
 
     position: absolute;
 
-    width: 300px;
+    width: 320px;
 
-    height: 300px;
+    height: 320px;
 
     border-radius: 50%;
 
     background: rgba(245,194,66,0.12);
 
-    right: -80px;
+    right: -90px;
 
-    top: -100px;
+    top: -120px;
 }
 
 .hero::after {
@@ -313,17 +318,17 @@ nav a.active {
 
     position: absolute;
 
-    width: 180px;
+    width: 200px;
 
-    height: 180px;
+    height: 200px;
 
     border-radius: 50%;
 
     background: rgba(255,255,255,0.06);
 
-    left: -70px;
+    left: -80px;
 
-    bottom: -90px;
+    bottom: -100px;
 }
 
 .hero-content {
@@ -343,6 +348,7 @@ nav a.active {
 }
 
 .breadcrumb a:hover {
+
     text-decoration: underline;
 }
 
@@ -359,7 +365,7 @@ nav a.active {
 
 .hero p {
 
-    max-width: 800px;
+    max-width: 820px;
 
     margin: 0;
 
@@ -445,19 +451,20 @@ nav a.active {
 ===================================================== */
 
 main {
-    padding: 55px 0 70px;
+
+    padding: 58px 0 75px;
 }
 
 
 /* =====================================================
-   SECTION INTRO
+   INTRODUCTION
 ===================================================== */
 
 .section-intro {
 
     max-width: 850px;
 
-    margin-bottom: 45px;
+    margin-bottom: 52px;
 }
 
 .section-label {
@@ -497,12 +504,12 @@ main {
 
 
 /* =====================================================
-   CONTENT SECTIONS
+   SECTION
 ===================================================== */
 
 .content-section {
 
-    margin-bottom: 58px;
+    margin-bottom: 68px;
 }
 
 .section-heading {
@@ -513,7 +520,7 @@ main {
 
     gap: 14px;
 
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 .section-number {
@@ -524,7 +531,7 @@ main {
 
     font-weight: 800;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 
     min-width: 42px;
 }
@@ -535,147 +542,169 @@ main {
 
     color: var(--black);
 
-    font-size: 27px;
+    font-size: 28px;
 
     line-height: 1.2;
 }
 
 
 /* =====================================================
-   MANDATE / LIST BOX
+   MANDATE INTRO CARD
 ===================================================== */
 
-.mandate-box {
+.mandate-intro {
 
-    background: var(--light-green);
+    position: relative;
 
-    border-left: 5px solid var(--green);
+    overflow: hidden;
 
-    padding: 28px 30px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark-green),
+            var(--green)
+        );
 
-    border-radius: 6px;
+    color: var(--white);
+
+    padding: 34px 38px;
+
+    border-radius: 10px;
+
+    margin-bottom: 22px;
+
+    box-shadow: var(--shadow);
 }
 
-.mandate-box > p {
+.mandate-intro::after {
 
-    margin: 0 0 20px;
+    content: "";
 
-    font-size: 16px;
+    position: absolute;
 
-    color: var(--dark-grey);
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(245,194,66,0.12);
+
+    right: -50px;
+
+    bottom: -90px;
 }
 
-.mandate-list {
+.mandate-intro-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.mandate-intro-label {
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.3px;
+
+    color: var(--gold);
+
+    font-weight: 800;
+
+    margin-bottom: 9px;
+}
+
+.mandate-intro h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 24px;
+}
+
+.mandate-intro p {
 
     margin: 0;
 
-    padding-left: 23px;
-}
-
-.mandate-list li {
-
-    margin-bottom: 17px;
-
-    padding-left: 5px;
+    max-width: 900px;
 
     font-size: 15px;
 
-    color: var(--dark-grey);
-}
-
-.mandate-list li:last-child {
-    margin-bottom: 0;
-}
-
-.mandate-list li::marker {
-    color: var(--green);
-}
-
-.mandate-list strong {
-    color: var(--dark-green);
+    color: rgba(255,255,255,0.9);
 }
 
 
 /* =====================================================
-   OBJECTIVES
+   MANDATE CARDS
 ===================================================== */
 
-.objectives-box {
+.mandate-grid {
 
-    background: var(--light-green);
+    display: grid;
 
-    border-left: 5px solid var(--green);
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-    padding: 28px 30px;
-
-    border-radius: 6px;
+    gap: 18px;
 }
 
-.objectives-list {
-
-    margin: 0;
-
-    padding-left: 23px;
-}
-
-.objectives-list li {
-
-    margin-bottom: 18px;
-
-    padding-left: 5px;
-
-    font-size: 15px;
-
-    color: var(--dark-grey);
-}
-
-.objectives-list li:last-child {
-    margin-bottom: 0;
-}
-
-.objectives-list li::marker {
-    color: var(--green);
-}
-
-
-/* =====================================================
-   OPERATIONAL REQUIREMENT
-===================================================== */
-
-.requirement-box {
+.mandate-card {
 
     background: var(--white);
 
     border: 1px solid var(--border);
 
-    border-top: 5px solid var(--gold);
+    border-radius: 9px;
 
-    border-radius: 7px;
-
-    padding: 30px;
+    padding: 25px;
 
     box-shadow:
-        0 5px 18px rgba(0,0,0,0.05);
+        0 5px 18px rgba(0,0,0,0.045);
+
+    position: relative;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.requirement-title {
+.mandate-card:hover {
 
-    display: flex;
+    transform: translateY(-3px);
 
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 18px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
 }
 
-.requirement-icon {
+.mandate-card::before {
 
-    width: 46px;
+    content: "";
 
-    height: 46px;
+    position: absolute;
 
-    border-radius: 6px;
+    left: 0;
+
+    top: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background: var(--green);
+
+    border-radius:
+        9px 0 0 9px;
+}
+
+.card-number {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
 
     background: var(--light-green);
 
@@ -687,54 +716,435 @@ main {
 
     justify-content: center;
 
+    font-size: 12px;
+
     font-weight: 800;
+
+    margin-bottom: 14px;
+}
+
+.mandate-card h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 18px;
+
+    color: var(--black);
+}
+
+.mandate-card p {
+
+    margin: 0;
+
+    color: var(--grey);
 
     font-size: 14px;
 }
 
-.requirement-title h3 {
 
-    margin: 0;
+/* =====================================================
+   INSTITUTIONAL CARD
+===================================================== */
 
-    color: var(--black);
-
-    font-size: 21px;
-}
-
-.requirement-box p {
-
-    margin: 0 0 15px;
-
-    color: var(--grey);
-
-    font-size: 15px;
-
-    max-width: 900px;
-}
-
-.requirement-box p:last-of-type {
-    margin-bottom: 0;
-}
-
-.requirement-box strong {
-    color: var(--dark-green);
-}
-
-.key-message {
-
-    margin-top: 23px;
-
-    padding: 18px 21px;
+.institutional-card {
 
     background: var(--light-green);
 
-    border-left: 4px solid var(--green);
+    border: 1px solid rgba(8,120,62,0.15);
 
-    border-radius: 5px;
+    border-radius: 9px;
+
+    padding: 25px;
+
+    margin-top: 18px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+.institutional-icon {
+
+    flex: 0 0 48px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 7px;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+.institutional-card h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--dark-green);
+
+    font-size: 18px;
+}
+
+.institutional-card p {
+
+    margin: 0;
 
     color: var(--dark-grey);
 
     font-size: 14px;
+}
+
+
+/* =====================================================
+   ROLE CARDS
+===================================================== */
+
+.roles-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.role-card {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 24px;
+
+    display: flex;
+
+    gap: 17px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 23px rgba(0,0,0,0.08);
+}
+
+.role-number {
+
+    flex: 0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 7px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.role-content h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--black);
+
+    font-size: 17px;
+
+    line-height: 1.3;
+}
+
+.role-content p {
+
+    margin: 0;
+
+    color: var(--grey);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FULL WIDTH ROLE
+===================================================== */
+
+.role-card.full-width {
+
+    grid-column: 1 / -1;
+
+    background: var(--light-green);
+
+    border-color:
+        rgba(8,120,62,0.18);
+}
+
+.role-card.full-width .role-number {
+
+    background: var(--gold);
+
+    color: var(--black);
+}
+
+
+/* =====================================================
+   OBJECTIVE CARDS
+===================================================== */
+
+.objectives-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.objective-card {
+
+    position: relative;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    padding: 28px;
+
+    min-height: 205px;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.045);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.objective-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+.objective-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    right: -35px;
+
+    bottom: -40px;
+}
+
+.objective-number {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 17px;
+}
+
+.objective-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 9px;
+
+    color: var(--black);
+
+    font-size: 18px;
+}
+
+.objective-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color: var(--grey);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   OPERATIONAL REQUIREMENT
+===================================================== */
+
+.access-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--light-green),
+            var(--white)
+        );
+
+    border: 1px solid
+        rgba(8,120,62,0.18);
+
+    border-left: 6px solid var(--gold);
+
+    border-radius: 10px;
+
+    padding: 34px 38px;
+
+    box-shadow: var(--shadow);
+}
+
+.access-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(245,194,66,0.12);
+
+    right: -90px;
+
+    top: -90px;
+}
+
+.access-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.access-label {
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.3px;
+
+    font-weight: 800;
+
+    margin-bottom: 9px;
+}
+
+.access-card h3 {
+
+    margin: 0 0 17px;
+
+    color: var(--black);
+
+    font-size: 25px;
+}
+
+.access-quote {
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    color: var(--dark-green);
+
+    max-width: 850px;
+
+    margin: 0 0 18px;
+}
+
+.access-explanation {
+
+    margin: 0;
+
+    color: var(--grey);
+
+    font-size: 14px;
+
+    max-width: 850px;
 }
 
 
@@ -793,7 +1203,8 @@ main {
 
     padding: 11px 13px;
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid
+        rgba(255,255,255,0.2);
 
     border-radius: 5px;
 
@@ -804,7 +1215,8 @@ main {
 
 .related-links a:hover {
 
-    background: rgba(255,255,255,0.1);
+    background:
+        rgba(255,255,255,0.1);
 
     border-color: var(--gold);
 
@@ -837,7 +1249,8 @@ footer {
     padding-bottom: 35px;
 
     border-bottom:
-        1px solid rgba(255,255,255,0.12);
+        1px solid
+        rgba(255,255,255,0.12);
 }
 
 .footer-brand h3 {
@@ -881,6 +1294,7 @@ footer {
 }
 
 .footer-column a:hover {
+
     color: var(--gold);
 }
 
@@ -933,25 +1347,18 @@ footer {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
-    .top-bar-inner {
+    .mandate-grid,
+    .roles-grid,
+    .objectives-grid {
 
-        flex-direction: column;
-
-        gap: 3px;
-
-        text-align: center;
+        grid-template-columns: 1fr;
     }
 
-    .hero {
+    .role-card.full-width {
 
-        padding: 45px 0 50px;
-    }
-
-    main {
-
-        padding: 45px 0 55px;
+        grid-column: auto;
     }
 
     .related-inner {
@@ -961,7 +1368,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     .container {
 
@@ -980,6 +1387,11 @@ footer {
         font-size: 12px;
     }
 
+    .hero {
+
+        padding: 45px 0 50px;
+    }
+
     .hero h1 {
 
         font-size: 34px;
@@ -990,16 +1402,37 @@ footer {
         font-size: 15px;
     }
 
-    .section-heading h2 {
+    main {
 
-        font-size: 23px;
+        padding: 45px 0 55px;
     }
 
-    .mandate-box,
-    .objectives-box,
-    .requirement-box {
+    .section-heading h2 {
+
+        font-size: 24px;
+    }
+
+    .mandate-intro,
+    .access-card {
+
+        padding: 27px 24px;
+    }
+
+    .mandate-card,
+    .role-card,
+    .objective-card {
 
         padding: 22px;
+    }
+
+    .access-quote {
+
+        font-size: 17px;
+    }
+
+    .institutional-card {
+
+        flex-direction: column;
     }
 
     .related-links {
@@ -1259,45 +1692,112 @@ footer {
             </div>
 
 
-            <div class="mandate-box">
+            <!-- Mandate statement -->
 
-                <p>
-                    The mandate of the African Humanitarian
-                    Agency is to strengthen the coordination,
-                    assistance and capacity of humanitarian
-                    action on the continent in collaboration
-                    with AU Member States and relevant
-                    regional bodies and mechanisms.
-                </p>
+            <div class="mandate-intro">
+
+                <div class="mandate-intro-content">
+
+                    <div class="mandate-intro-label">
+                        AfHA Mandate
+                    </div>
+
+                    <h3>
+                        Strengthening humanitarian action
+                        across Africa
+                    </h3>
+
+                    <p>
+                        The mandate of the African Humanitarian
+                        Agency is to strengthen the coordination,
+                        assistance and capacity of humanitarian
+                        action on the continent in collaboration
+                        with AU Member States and relevant
+                        regional bodies and mechanisms.
+                    </p>
+
+                </div>
+
+            </div>
 
 
-                <ul class="mandate-list">
+            <!-- Mandate groupings -->
 
-                    <li>
-                        <strong>
-                            Streamline the coordination of
-                            humanitarian action and response
-                            on the continent with Member States.
-                        </strong>
-                    </li>
+            <div class="mandate-grid">
 
-                    <li>
+
+                <div class="mandate-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Humanitarian Coordination
+                    </h3>
+
+                    <p>
+                        Streamline the coordination of
+                        humanitarian action and response
+                        on the continent with Member States.
+                    </p>
+
+                </div>
+
+
+                <div class="mandate-card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Humanitarian Assistance
+                    </h3>
+
+                    <p>
                         Provide assistance and ensure effective
                         coordination of humanitarian action on
                         the continent.
-                    </li>
+                    </p>
 
-                    <li>
+                </div>
+
+
+                <div class="mandate-card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Capacity Strengthening
+                    </h3>
+
+                    <p>
                         Build and strengthen the capabilities
                         and capacities of AU Member States,
                         Regional Bodies and Mechanisms in
                         preventing, responding, effectively
                         managing, alleviating and contributing
-                        to resolving the humanitarian crises
-                        on the continent.
-                    </li>
+                        to resolving humanitarian crises on
+                        the continent.
+                    </p>
 
-                    <li>
+                </div>
+
+
+                <div class="mandate-card">
+
+                    <div class="card-number">
+                        04
+                    </div>
+
+                    <h3>
+                        African Union Institutional Status
+                    </h3>
+
+                    <p>
                         The AfHA is established as a
                         <strong>
                             Specialized Technical Institution
@@ -1306,17 +1806,36 @@ footer {
                         with a continental mandate to contribute
                         to strengthening Africa's humanitarian
                         architecture and response capacity.
-                    </li>
+                    </p>
 
-                    <li>
+                </div>
+
+            </div>
+
+
+            <!-- Institutional context -->
+
+            <div class="institutional-card">
+
+                <div class="institutional-icon">
+                    AU
+                </div>
+
+                <div>
+
+                    <h3>
+                        African Ownership and Solidarity
+                    </h3>
+
+                    <p>
                         Its institutional role is anchored in
                         African ownership, solidarity,
                         coordination and strengthened capacity
                         to address humanitarian crises and
                         emergencies across the continent.
-                    </li>
+                    </p>
 
-                </ul>
+                </div>
 
             </div>
 
@@ -1344,63 +1863,197 @@ footer {
             </div>
 
 
-            <div class="mandate-box">
+            <div class="roles-grid">
 
-                <ul class="mandate-list">
 
-                    <li>
-                        Identify and map humanitarian crises
-                        on the continent.
-                    </li>
+                <!-- Role 01 -->
 
-                    <li>
-                        Provide humanitarian assistance to AU
-                        Member States and persons affected by
-                        humanitarian crises. To this end, the
-                        AfHA will establish five regional centres
-                        to ensure proximity for an effective and
-                        timely humanitarian response in each
-                        region. These regional centres will also
-                        include regional depots to stockpile
-                        humanitarian assistance.
-                    </li>
+                <div class="role-card">
 
-                    <li>
-                        Provide strong coordination mechanisms
-                        on humanitarian issues, including with
-                        the African Standby Force
-                        (the Civil Military Element).
-                    </li>
+                    <div class="role-number">
+                        01
+                    </div>
 
-                    <li>
-                        Raise awareness of its role as a primary
-                        Agency on the continent.
-                    </li>
+                    <div class="role-content">
 
-                    <li>
-                        Monitor, conduct research, assess and
-                        develop as well as disseminate regular
-                        and comprehensive data and information
-                        on humanitarian issues.
-                    </li>
+                        <h3>
+                            Identify &amp; Map Humanitarian Crises
+                        </h3>
 
-                    <li>
-                        The HHS has an advisory role on policy
-                        and strategic issues, and it ensures
-                        synergy between the AfHA and the
-                        Commission.
-                    </li>
+                        <p>
+                            Identify and map humanitarian crises
+                            on the continent.
+                        </p>
 
-                    <li>
-                        To fulfill its mandate, the AfHA will
-                        need to have
-                        <strong>
-                            unimpeded access to humanitarian
-                            situations.
-                        </strong>
-                    </li>
+                    </div>
 
-                </ul>
+                </div>
+
+
+                <!-- Role 02 -->
+
+                <div class="role-card">
+
+                    <div class="role-number">
+                        02
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Humanitarian Assistance &amp;
+                            Regional Centres
+                        </h3>
+
+                        <p>
+                            Provide humanitarian assistance to AU
+                            Member States and persons affected by
+                            humanitarian crises. To this end, the
+                            AfHA will establish five regional
+                            centres to ensure proximity for an
+                            effective and timely humanitarian
+                            response in each region. These
+                            regional centres will also include
+                            regional depots to stockpile
+                            humanitarian assistance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Role 03 -->
+
+                <div class="role-card">
+
+                    <div class="role-number">
+                        03
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Humanitarian Coordination
+                        </h3>
+
+                        <p>
+                            Provide strong coordination
+                            mechanisms on humanitarian issues,
+                            including with the African Standby
+                            Force (the Civil Military Element).
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Role 04 -->
+
+                <div class="role-card">
+
+                    <div class="role-number">
+                        04
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Awareness &amp; Institutional
+                            Positioning
+                        </h3>
+
+                        <p>
+                            Raise awareness of its role as a
+                            primary Agency on the continent.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Role 05 -->
+
+                <div class="role-card">
+
+                    <div class="role-number">
+                        05
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Research, Assessment &amp;
+                            Information
+                        </h3>
+
+                        <p>
+                            Monitor, conduct research, assess and
+                            develop as well as disseminate regular
+                            and comprehensive data and information
+                            on humanitarian issues.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Role 06 -->
+
+                <div class="role-card">
+
+                    <div class="role-number">
+                        06
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Policy &amp; Strategic Advisory
+                        </h3>
+
+                        <p>
+                            The HHS has an advisory role on policy
+                            and strategic issues, and it ensures
+                            synergy between the AfHA and the
+                            Commission.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Role 07 -->
+
+                <div class="role-card full-width">
+
+                    <div class="role-number">
+                        07
+                    </div>
+
+                    <div class="role-content">
+
+                        <h3>
+                            Humanitarian Access
+                        </h3>
+
+                        <p>
+                            To fulfill its mandate, the AfHA will
+                            need to have
+                            <strong>
+                                unimpeded access to humanitarian
+                                situations.
+                            </strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
@@ -1428,45 +2081,100 @@ footer {
             </div>
 
 
-            <div class="objectives-box">
+            <div class="objectives-grid">
 
-                <ul class="objectives-list">
 
-                    <li>
+                <!-- Objective 01 -->
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Early Warning &amp; Early Action
+                    </h3>
+
+                    <p>
                         Prevent humanitarian crises from
-                        unfolding through improved early
-                        warning and early action, including
-                        anticipatory action, thereby ensuring
-                        timely responses to situations that may
-                        otherwise develop into humanitarian
-                        crises.
-                    </li>
+                        unfolding through improved early warning
+                        and early action, including anticipatory
+                        action, thereby ensuring timely responses
+                        to situations that may otherwise develop
+                        into humanitarian crises.
+                    </p>
 
-                    <li>
-                        Enhance the capacity of AU Member
-                        States, RECs and AU bodies in
-                        cooperation with other agencies to
-                        prevent and respond to humanitarian
-                        crises.
-                    </li>
+                </div>
 
-                    <li>
+
+                <!-- Objective 02 -->
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Capacity Strengthening
+                    </h3>
+
+                    <p>
+                        Enhance the capacity of AU Member States,
+                        RECs and AU bodies in cooperation with
+                        other agencies to prevent and respond to
+                        humanitarian crises.
+                    </p>
+
+                </div>
+
+
+                <!-- Objective 03 -->
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Response Mechanisms
+                    </h3>
+
+                    <p>
                         Ensure timely and effective responses
                         through establishing and strengthening
                         capacities of continental, regional and
                         national mechanisms.
-                    </li>
+                    </p>
 
-                    <li>
+                </div>
+
+
+                <!-- Objective 04 -->
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Adaptation &amp; Resilience
+                    </h3>
+
+                    <p>
                         Together with Member States, design
                         strategies for strengthening adaptation
                         and resilience at the continental,
                         regional and national levels in order
                         to ensure an effective response to
                         humanitarian crises.
-                    </li>
+                    </p>
 
-                </ul>
+                </div>
+
 
             </div>
 
@@ -1494,41 +2202,31 @@ footer {
             </div>
 
 
-            <div class="requirement-box">
+            <div class="access-card">
 
-                <div class="requirement-title">
+                <div class="access-content">
 
-                    <div class="requirement-icon">
-                        04
+                    <div class="access-label">
+                        Humanitarian Access
                     </div>
 
                     <h3>
-                        Humanitarian Access
+                        Access to Humanitarian Situations
                     </h3>
 
-                </div>
+                    <p class="access-quote">
+                        “To fulfill its mandate, the AfHA will
+                        need to have unimpeded access to
+                        humanitarian situations.”
+                    </p>
 
-
-                <p>
-                    To fulfill its mandate, the
-                    <strong>
-                        AfHA will need to have unimpeded
-                        access to humanitarian situations.
-                    </strong>
-                </p>
-
-
-                <div class="key-message">
-
-                    <strong>
-                        Humanitarian Access:
-                    </strong>
-
-                    Effective access to humanitarian
-                    situations is an operational requirement
-                    for AfHA to fulfill its mandate and
-                    undertake its humanitarian responsibilities
-                    effectively.
+                    <p class="access-explanation">
+                        Effective access to humanitarian
+                        situations is an operational requirement
+                        for AfHA to fulfill its mandate and
+                        undertake its humanitarian
+                        responsibilities effectively.
+                    </p>
 
                 </div>
 
