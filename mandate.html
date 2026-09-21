@@ -11,7 +11,7 @@
 <title>Mandate | AfHA Knowledge Hub</title>
 
 <meta name="description"
-      content="Mandate, role, objectives and operational requirements of the African Humanitarian Agency">
+      content="Mandate, roles, objectives and operational requirements of the African Humanitarian Agency">
 
 <style>
 
@@ -359,7 +359,7 @@ nav a.active {
 
 .hero p {
 
-    max-width: 780px;
+    max-width: 800px;
 
     margin: 0;
 
@@ -502,7 +502,7 @@ main {
 
 .content-section {
 
-    margin-bottom: 55px;
+    margin-bottom: 58px;
 }
 
 .section-heading {
@@ -542,7 +542,7 @@ main {
 
 
 /* =====================================================
-   MANDATE BOX
+   MANDATE / LIST BOX
 ===================================================== */
 
 .mandate-box {
@@ -554,35 +554,33 @@ main {
     padding: 28px 30px;
 
     border-radius: 6px;
-
-    margin-bottom: 20px;
 }
 
-.mandate-box p {
+.mandate-box > p {
 
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 
     font-size: 16px;
 
     color: var(--dark-grey);
 }
 
-.mandate-box p:last-child {
-    margin-bottom: 0;
-}
-
 .mandate-list {
 
     margin: 0;
 
-    padding-left: 22px;
+    padding-left: 23px;
 }
 
 .mandate-list li {
 
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 
     padding-left: 5px;
+
+    font-size: 15px;
+
+    color: var(--dark-grey);
 }
 
 .mandate-list li:last-child {
@@ -593,70 +591,8 @@ main {
     color: var(--green);
 }
 
-
-/* =====================================================
-   ROLE SECTION
-===================================================== */
-
-.role-list {
-
-    border-top: 1px solid var(--border);
-}
-
-.role-item {
-
-    display: grid;
-
-    grid-template-columns: 70px 1fr;
-
-    gap: 22px;
-
-    padding: 24px 0;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.role-number {
-
-    width: 48px;
-
-    height: 48px;
-
-    border-radius: 50%;
-
-    background: var(--light-green);
-
-    color: var(--green);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-weight: 800;
-
-    font-size: 13px;
-}
-
-.role-content h3 {
-
-    margin: 0 0 7px;
-
-    color: var(--black);
-
-    font-size: 19px;
-}
-
-.role-content p {
-
-    margin: 0;
-
-    color: var(--grey);
-
-    font-size: 14px;
-
-    max-width: 850px;
+.mandate-list strong {
+    color: var(--dark-green);
 }
 
 
@@ -664,64 +600,41 @@ main {
    OBJECTIVES
 ===================================================== */
 
-.objectives {
+.objectives-box {
 
-    display: grid;
+    background: var(--light-green);
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+    border-left: 5px solid var(--green);
 
-    gap: 18px;
+    padding: 28px 30px;
+
+    border-radius: 6px;
 }
 
-.objective {
-
-    border: 1px solid var(--border);
-
-    border-radius: 7px;
-
-    padding: 22px;
-
-    background: var(--white);
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,0.04);
-
-    display: flex;
-
-    gap: 15px;
-}
-
-.objective-number {
-
-    min-width: 34px;
-
-    height: 34px;
-
-    border-radius: 50%;
-
-    background: var(--gold);
-
-    color: var(--black);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 12px;
-
-    font-weight: 800;
-}
-
-.objective p {
+.objectives-list {
 
     margin: 0;
 
-    font-size: 14px;
+    padding-left: 23px;
+}
+
+.objectives-list li {
+
+    margin-bottom: 18px;
+
+    padding-left: 5px;
+
+    font-size: 15px;
 
     color: var(--dark-grey);
+}
+
+.objectives-list li:last-child {
+    margin-bottom: 0;
+}
+
+.objectives-list li::marker {
+    color: var(--green);
 }
 
 
@@ -753,7 +666,7 @@ main {
 
     gap: 15px;
 
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
 .requirement-icon {
@@ -799,7 +712,7 @@ main {
     max-width: 900px;
 }
 
-.requirement-box p:last-child {
+.requirement-box p:last-of-type {
     margin-bottom: 0;
 }
 
@@ -807,16 +720,11 @@ main {
     color: var(--dark-green);
 }
 
-
-/* =====================================================
-   KEY MESSAGE
-===================================================== */
-
 .key-message {
 
-    margin-top: 25px;
+    margin-top: 23px;
 
-    padding: 20px 23px;
+    padding: 18px 21px;
 
     background: var(--light-green);
 
@@ -1017,11 +925,6 @@ footer {
         justify-content: center;
     }
 
-    .objectives {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
     .footer-grid {
 
         grid-template-columns:
@@ -1049,18 +952,6 @@ footer {
     main {
 
         padding: 45px 0 55px;
-    }
-
-    .role-item {
-
-        grid-template-columns: 55px 1fr;
-
-        gap: 15px;
-    }
-
-    .objectives {
-
-        grid-template-columns: 1fr;
     }
 
     .related-inner {
@@ -1105,14 +996,10 @@ footer {
     }
 
     .mandate-box,
+    .objectives-box,
     .requirement-box {
 
         padding: 22px;
-    }
-
-    .role-item {
-
-        grid-template-columns: 1fr;
     }
 
     .related-links {
@@ -1272,14 +1159,15 @@ footer {
 
 
         <h1>
-            Mandate, Role &amp; Objectives
+            Mandate, Roles &amp; Objectives
         </h1>
 
 
         <p>
-            Understanding the mandate, institutional role,
-            objectives and operational requirements of the
-            African Humanitarian Agency.
+            The mandate, roles and objectives of the African
+            Humanitarian Agency, including the operational
+            requirements necessary to fulfill its continental
+            humanitarian responsibilities.
         </p>
 
     </div>
@@ -1299,8 +1187,8 @@ footer {
             Mandate
         </a>
 
-        <a href="#role">
-            Role
+        <a href="#roles">
+            Roles
         </a>
 
         <a href="#objectives">
@@ -1374,7 +1262,12 @@ footer {
             <div class="mandate-box">
 
                 <p>
-                    The mandate of AfHA is to:
+                    The mandate of the African Humanitarian
+                    Agency is to strengthen the coordination,
+                    assistance and capacity of humanitarian
+                    action on the continent in collaboration
+                    with AU Member States and relevant
+                    regional bodies and mechanisms.
                 </p>
 
 
@@ -1404,6 +1297,25 @@ footer {
                         on the continent.
                     </li>
 
+                    <li>
+                        The AfHA is established as a
+                        <strong>
+                            Specialized Technical Institution
+                            of the African Union
+                        </strong>,
+                        with a continental mandate to contribute
+                        to strengthening Africa's humanitarian
+                        architecture and response capacity.
+                    </li>
+
+                    <li>
+                        Its institutional role is anchored in
+                        African ownership, solidarity,
+                        coordination and strengthened capacity
+                        to address humanitarian crises and
+                        emergencies across the continent.
+                    </li>
+
                 </ul>
 
             </div>
@@ -1412,11 +1324,11 @@ footer {
 
 
         <!-- =================================================
-             02 | ROLE
+             02 | ROLES
         ================================================== -->
 
         <section
-            id="role"
+            id="roles"
             class="content-section">
 
             <div class="section-heading">
@@ -1426,161 +1338,69 @@ footer {
                 </div>
 
                 <h2>
-                    Role
+                    Roles
                 </h2>
 
             </div>
 
 
-            <div class="role-list">
+            <div class="mandate-box">
 
+                <ul class="mandate-list">
 
-                <div class="role-item">
+                    <li>
+                        Identify and map humanitarian crises
+                        on the continent.
+                    </li>
 
-                    <div class="role-number">
-                        01
-                    </div>
+                    <li>
+                        Provide humanitarian assistance to AU
+                        Member States and persons affected by
+                        humanitarian crises. To this end, the
+                        AfHA will establish five regional centres
+                        to ensure proximity for an effective and
+                        timely humanitarian response in each
+                        region. These regional centres will also
+                        include regional depots to stockpile
+                        humanitarian assistance.
+                    </li>
 
-                    <div class="role-content">
+                    <li>
+                        Provide strong coordination mechanisms
+                        on humanitarian issues, including with
+                        the African Standby Force
+                        (the Civil Military Element).
+                    </li>
 
-                        <h3>
-                            Humanitarian Coordination
-                        </h3>
+                    <li>
+                        Raise awareness of its role as a primary
+                        Agency on the continent.
+                    </li>
 
-                        <p>
-                            Support and strengthen coordination
-                            of humanitarian action and response
-                            across the continent, working closely
-                            with Member States and relevant
-                            regional and humanitarian actors.
-                        </p>
+                    <li>
+                        Monitor, conduct research, assess and
+                        develop as well as disseminate regular
+                        and comprehensive data and information
+                        on humanitarian issues.
+                    </li>
 
-                    </div>
+                    <li>
+                        The HHS has an advisory role on policy
+                        and strategic issues, and it ensures
+                        synergy between the AfHA and the
+                        Commission.
+                    </li>
 
-                </div>
+                    <li>
+                        To fulfill its mandate, the AfHA will
+                        need to have
+                        <strong>
+                            unimpeded access to humanitarian
+                            situations.
+                        </strong>
+                    </li>
 
-
-                <div class="role-item">
-
-                    <div class="role-number">
-                        02
-                    </div>
-
-                    <div class="role-content">
-
-                        <h3>
-                            Humanitarian Assistance
-                        </h3>
-
-                        <p>
-                            Provide assistance and contribute
-                            to effective and timely humanitarian
-                            response to populations affected
-                            by crises and emergencies.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="role-item">
-
-                    <div class="role-number">
-                        03
-                    </div>
-
-                    <div class="role-content">
-
-                        <h3>
-                            Capacity Strengthening
-                        </h3>
-
-                        <p>
-                            Build and strengthen the capacities
-                            of AU Member States, Regional Bodies
-                            and Mechanisms in preventing,
-                            preparing for and responding to
-                            humanitarian crises.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="role-item">
-
-                    <div class="role-number">
-                        04
-                    </div>
-
-                    <div class="role-content">
-
-                        <h3>
-                            Prevention and Preparedness
-                        </h3>
-
-                        <p>
-                            Support efforts to anticipate,
-                            prevent and prepare for humanitarian
-                            crises and strengthen preparedness
-                            and response capacities.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="role-item">
-
-                    <div class="role-number">
-                        05
-                    </div>
-
-                    <div class="role-content">
-
-                        <h3>
-                            Humanitarian Policy and Advocacy
-                        </h3>
-
-                        <p>
-                            Contribute to humanitarian policy,
-                            advocacy and strategic engagement
-                            to advance Africa's humanitarian
-                            architecture and response.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="role-item">
-
-                    <div class="role-number">
-                        06
-                    </div>
-
-                    <div class="role-content">
-
-                        <h3>
-                            Partnerships and Collaboration
-                        </h3>
-
-                        <p>
-                            Promote collaboration among the
-                            African Union, Member States,
-                            Regional Bodies and Mechanisms,
-                            humanitarian organizations and
-                            other relevant stakeholders.
-                        </p>
-
-                    </div>
-
-                </div>
-
+                </ul>
 
             </div>
 
@@ -1608,98 +1428,45 @@ footer {
             </div>
 
 
-            <div class="objectives">
+            <div class="objectives-box">
 
+                <ul class="objectives-list">
 
-                <div class="objective">
+                    <li>
+                        Prevent humanitarian crises from
+                        unfolding through improved early
+                        warning and early action, including
+                        anticipatory action, thereby ensuring
+                        timely responses to situations that may
+                        otherwise develop into humanitarian
+                        crises.
+                    </li>
 
-                    <div class="objective-number">
-                        01
-                    </div>
+                    <li>
+                        Enhance the capacity of AU Member
+                        States, RECs and AU bodies in
+                        cooperation with other agencies to
+                        prevent and respond to humanitarian
+                        crises.
+                    </li>
 
-                    <p>
-                        Strengthen Africa's capacity to
-                        anticipate, prevent and respond
-                        effectively to humanitarian crises.
-                    </p>
+                    <li>
+                        Ensure timely and effective responses
+                        through establishing and strengthening
+                        capacities of continental, regional and
+                        national mechanisms.
+                    </li>
 
-                </div>
+                    <li>
+                        Together with Member States, design
+                        strategies for strengthening adaptation
+                        and resilience at the continental,
+                        regional and national levels in order
+                        to ensure an effective response to
+                        humanitarian crises.
+                    </li>
 
-
-                <div class="objective">
-
-                    <div class="objective-number">
-                        02
-                    </div>
-
-                    <p>
-                        Enhance coordination and coherence
-                        of humanitarian action and response
-                        across the continent.
-                    </p>
-
-                </div>
-
-
-                <div class="objective">
-
-                    <div class="objective-number">
-                        03
-                    </div>
-
-                    <p>
-                        Support Member States, Regional Bodies
-                        and Mechanisms in developing and
-                        strengthening humanitarian capacities.
-                    </p>
-
-                </div>
-
-
-                <div class="objective">
-
-                    <div class="objective-number">
-                        04
-                    </div>
-
-                    <p>
-                        Promote effective, timely and
-                        principled humanitarian assistance
-                        to populations affected by crises.
-                    </p>
-
-                </div>
-
-
-                <div class="objective">
-
-                    <div class="objective-number">
-                        05
-                    </div>
-
-                    <p>
-                        Strengthen African humanitarian
-                        leadership, ownership and
-                        institutional capacity.
-                    </p>
-
-                </div>
-
-
-                <div class="objective">
-
-                    <div class="objective-number">
-                        06
-                    </div>
-
-                    <p>
-                        Contribute to improved preparedness,
-                        prevention, response and recovery
-                        from humanitarian crises.
-                    </p>
-
-                </div>
-
+                </ul>
 
             </div>
 
@@ -1707,52 +1474,7 @@ footer {
 
 
         <!-- =================================================
-             04 | INSTITUTIONAL STATUS
-        ================================================== -->
-
-        <section
-            id="institutional-status"
-            class="content-section">
-
-            <div class="section-heading">
-
-                <div class="section-number">
-                    04
-                </div>
-
-                <h2>
-                    Institutional Status
-                </h2>
-
-            </div>
-
-
-            <div class="mandate-box">
-
-                <p>
-                    The AfHA is established as a
-                    <strong>Specialized Technical Institution
-                    of the African Union</strong>, with a
-                    continental mandate to contribute to
-                    strengthening Africa's humanitarian
-                    architecture and response capacity.
-                </p>
-
-                <p>
-                    Its institutional role is anchored in
-                    African ownership, solidarity,
-                    coordination and strengthened capacity
-                    to address humanitarian crises and
-                    emergencies across the continent.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             05 | OPERATIONAL REQUIREMENT
+             04 | OPERATIONAL REQUIREMENT
         ================================================== -->
 
         <section
@@ -1762,7 +1484,7 @@ footer {
             <div class="section-heading">
 
                 <div class="section-number">
-                    05
+                    04
                 </div>
 
                 <h2>
@@ -1777,7 +1499,7 @@ footer {
                 <div class="requirement-title">
 
                     <div class="requirement-icon">
-                        05
+                        04
                     </div>
 
                     <h3>
@@ -1789,28 +1511,10 @@ footer {
 
                 <p>
                     To fulfill its mandate, the
-                    <strong>AfHA will need to have
-                    unimpeded access to humanitarian
-                    situations.</strong>
-                </p>
-
-
-                <p>
-                    Such access is essential for the Agency
-                    to understand humanitarian needs,
-                    support effective coordination, facilitate
-                    timely assistance and contribute to an
-                    appropriate response to crises and
-                    emergencies across the continent.
-                </p>
-
-
-                <p>
-                    Humanitarian access therefore represents
-                    an important operational requirement for
-                    AfHA to effectively carry out the roles
-                    and responsibilities established under
-                    its mandate.
+                    <strong>
+                        AfHA will need to have unimpeded
+                        access to humanitarian situations.
+                    </strong>
                 </p>
 
 
@@ -1820,11 +1524,11 @@ footer {
                         Humanitarian Access:
                     </strong>
 
-                    Effective implementation of AfHA's
-                    mandate requires practical access to
-                    affected populations, humanitarian
-                    situations and relevant operational
-                    environments.
+                    Effective access to humanitarian
+                    situations is an operational requirement
+                    for AfHA to fulfill its mandate and
+                    undertake its humanitarian responsibilities
+                    effectively.
 
                 </div>
 
@@ -1855,7 +1559,8 @@ footer {
             <p>
                 Continue exploring the African Humanitarian
                 Agency's institutional background, structure,
-                principles and knowledge resources.
+                principles, knowledge resources and
+                developments.
             </p>
 
         </div>
