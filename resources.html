@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -692,6 +691,87 @@ main {
 
 
 /* =====================================================
+   FRAMEWORKS INTRO
+===================================================== */
+
+.frameworks-intro {
+
+    background: var(--light-green);
+
+    border: 1px solid var(--border);
+
+    border-left: 5px solid var(--green);
+
+    border-radius: 6px;
+
+    padding: 28px 30px;
+
+    margin-top: 20px;
+
+}
+
+
+.frameworks-intro h4 {
+
+    margin: 0 0 10px;
+
+    font-size: 19px;
+
+    color: var(--dark-green);
+
+}
+
+
+.frameworks-intro p {
+
+    margin: 0 0 12px;
+
+    max-width: 900px;
+
+    font-size: 14px;
+
+    color: var(--black);
+
+    line-height: 1.7;
+
+}
+
+
+.frameworks-button {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 11px 20px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.frameworks-button:hover {
+
+    background: var(--dark-green);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =====================================================
    DOCUMENT LIST
 ===================================================== */
 
@@ -1011,6 +1091,12 @@ footer {
         flex-direction: column;
 
         align-items: flex-start;
+
+    }
+
+    .frameworks-intro {
+
+        padding: 22px;
 
     }
 
@@ -1513,7 +1599,7 @@ footer {
 
 
     <!-- =================================================
-         FRAMEWORKS
+         FRAMEWORKS & GUIDELINES
     ================================================== -->
 
     <section class="category-section"
@@ -1547,74 +1633,42 @@ footer {
         </div>
 
 
-        <div class="document-list">
+        <!-- Frameworks introduction -->
+
+        <div class="frameworks-intro">
+
+            <h4>
+                AfHA Frameworks and Guidelines
+            </h4>
+
+            <p>
+
+                This section provides access to key frameworks,
+                guidelines and reference documents supporting the
+                African Humanitarian Agency's humanitarian mandate.
+                These resources provide strategic and operational
+                guidance for humanitarian coordination, preparedness,
+                response, partnerships, financing, information
+                management, capacity development and other areas
+                of Africa-led humanitarian action.
+
+            </p>
+
+            <p>
+
+                The collection will be progressively expanded as
+                additional frameworks, guidelines and related
+                documents become available.
+
+            </p>
 
 
-            <div class="document-item">
+            <a href="frameworks.html"
+               class="frameworks-button">
 
-                <div class="document-info">
+                View Documents →
 
-                    <div class="file-icon">
-                        PDF
-                    </div>
-
-                    <div>
-
-                        <div class="document-name">
-                            AfHA Statute
-                        </div>
-
-                        <div class="document-meta">
-                            Foundational document · January 2020
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <a href="#"
-                   class="view-link">
-
-                    View document →
-
-                </a>
-
-            </div>
-
-
-
-            <div class="document-item">
-
-                <div class="document-info">
-
-                    <div class="file-icon">
-                        PDF
-                    </div>
-
-                    <div>
-
-                        <div class="document-name">
-                            Common African Position on
-                            Humanitarian Effectiveness
-                        </div>
-
-                        <div class="document-meta">
-                            African Union · Humanitarian effectiveness
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <a href="#"
-                   class="view-link">
-
-                    View document →
-
-                </a>
-
-            </div>
-
+            </a>
 
         </div>
 
@@ -2178,7 +2232,7 @@ footer {
 
 <!-- =================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
 <footer>
 
@@ -2216,7 +2270,7 @@ footer {
 
 <!-- =================================================
      SEARCH SCRIPT
-================================================== -->
+===================================================== -->
 
 <script>
 
@@ -2258,4 +2312,3 @@ function searchResources() {
 </body>
 
 </html>
-```
