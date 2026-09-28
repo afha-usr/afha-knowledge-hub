@@ -280,11 +280,13 @@ main {
 .document-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 
-/* DOCUMENT ITEM */
+/* =====================================================
+   DOCUMENT ITEM
+===================================================== */
 
 .document-item {
     display: grid;
@@ -292,7 +294,7 @@ main {
     align-items: center;
     gap: 20px;
 
-    padding: 22px 25px;
+    padding: 24px 25px;
 
     background: var(--white);
     border: 1px solid var(--border);
@@ -331,7 +333,9 @@ main {
 }
 
 
-/* DOCUMENT INFORMATION */
+/* =====================================================
+   DOCUMENT INFORMATION
+===================================================== */
 
 .document-info {
     min-width: 0;
@@ -347,10 +351,26 @@ main {
 .document-meta {
     font-size: 13px;
     color: var(--grey);
+    margin-bottom: 10px;
 }
 
 
-/* VIEW BUTTON */
+/* SYNOPSIS */
+
+.document-synopsis {
+    max-width: 820px;
+    margin: 0;
+
+    color: var(--grey);
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   VIEW BUTTON
+===================================================== */
 
 .view-link {
     display: inline-block;
@@ -366,10 +386,15 @@ main {
     font-weight: bold;
 
     white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .view-link:hover {
     background: var(--dark-green);
+    transform: translateY(-1px);
 }
 
 
@@ -483,6 +508,7 @@ footer {
     .view-link {
         grid-column: 2;
         justify-self: start;
+        margin-top: 5px;
     }
 
     .resource-cards {
@@ -714,12 +740,21 @@ footer {
                         Framework &nbsp;·&nbsp; Version 4
                     </div>
 
+                    <p class="document-synopsis">
+                        Provides a framework for strengthening
+                        continental humanitarian coordination,
+                        partnerships and collective action among
+                        the African Union, Member States, regional
+                        institutions and humanitarian partners.
+                    </p>
+
                 </div>
 
                 <a href="documents/frameworks/F1_Continental_Humanitarian_Coordination_and_Partnership_Framework_v4.pdf"
                    class="view-link"
-                   target="_blank">
-                    View document →
+                   target="_blank"
+                   rel="noopener">
+                    View Document →
                 </a>
 
             </div>
@@ -747,12 +782,21 @@ footer {
                         Framework &nbsp;·&nbsp; Version 4
                     </div>
 
+                    <p class="document-synopsis">
+                        Provides guidance for strengthening
+                        humanitarian financing and resource
+                        mobilisation, supporting more predictable,
+                        sustainable and coordinated financing for
+                        humanitarian action.
+                    </p>
+
                 </div>
 
                 <a href="documents/frameworks/F2_Humanitarian_Financing_Resource_Mobilisation_Framework_v4.pdf"
                    class="view-link"
-                   target="_blank">
-                    View document →
+                   target="_blank"
+                   rel="noopener">
+                    View Document →
                 </a>
 
             </div>
@@ -780,12 +824,20 @@ footer {
                         Framework &nbsp;·&nbsp; Version 3
                     </div>
 
+                    <p class="document-synopsis">
+                        Provides a common approach to improving
+                        humanitarian data and information management,
+                        interoperability, exchange and use across
+                        institutions and humanitarian actors.
+                    </p>
+
                 </div>
 
                 <a href="documents/frameworks/F3_Humanitarian_Data_Information_Interoperability_Framework_v3.pdf"
                    class="view-link"
-                   target="_blank">
-                    View document →
+                   target="_blank"
+                   rel="noopener">
+                    View Document →
                 </a>
 
             </div>
@@ -813,12 +865,20 @@ footer {
                         Framework &nbsp;·&nbsp; Version 3
                     </div>
 
+                    <p class="document-synopsis">
+                        Provides a framework for strengthening
+                        humanitarian capacities, preparedness and
+                        surge readiness, including mechanisms to
+                        support timely deployment and response.
+                    </p>
+
                 </div>
 
                 <a href="documents/frameworks/F4_Capacity_Development_Surge_Readiness_Framework_v3.pdf"
                    class="view-link"
-                   target="_blank">
-                    View document →
+                   target="_blank"
+                   rel="noopener">
+                    View Document →
                 </a>
 
             </div>
@@ -846,12 +906,20 @@ footer {
                         Framework &nbsp;·&nbsp; Version 3
                     </div>
 
+                    <p class="document-synopsis">
+                        Provides guidance for strengthening
+                        preparedness, anticipatory action and risk
+                        reduction to enable earlier action and
+                        reduce the impacts of humanitarian crises.
+                    </p>
+
                 </div>
 
                 <a href="documents/frameworks/F5_Preparedness_Anticipatory_Action_Risk_Reduction_Framework_v3.pdf"
                    class="view-link"
-                   target="_blank">
-                    View document →
+                   target="_blank"
+                   rel="noopener">
+                    View Document →
                 </a>
 
             </div>
