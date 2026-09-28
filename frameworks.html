@@ -766,13 +766,12 @@ footer {
 
 
 /* =====================================================
-   LOADING / ERROR MESSAGE
+   LOADING / ERROR
 ===================================================== */
 
-.loading-message,
-.error-message {
+.loading-message {
 
-    padding: 35px;
+    padding: 40px;
 
     text-align: center;
 
@@ -785,9 +784,15 @@ footer {
 
 .error-message {
 
+    padding: 30px;
+
+    text-align: center;
+
     color: #9B1C1C;
 
     background: #FFF5F5;
+
+    font-size: 14px;
 
 }
 
@@ -1226,56 +1231,73 @@ footer {
 
 <script>
 
-/*
-=======================================================
-   GITHUB REPOSITORY SETTINGS
-=======================================================
 
-   Repository:
-   afha-usr/afha-knowledge-hub
+/* =====================================================
+   GITHUB REPOSITORY
+===================================================== */
 
-   Folder:
-   documents/frameworks/
-
-=======================================================
-*/
-
-const GITHUB_USER = "afha-usr";
-
-const GITHUB_REPO = "afha-knowledge-hub";
-
-const GITHUB_FOLDER = "documents/frameworks";
+const GITHUB_API_URL =
+    "https://api.github.com/repos/afha-usr/afha-knowledge-hub/contents/documents/frameworks";
 
 
-/*
-=======================================================
-   LOAD DOCUMENTS
-=======================================================
-*/
+/* =====================================================
+   SUPPORTED DOCUMENT TYPES
+===================================================== */
+
+const SUPPORTED_EXTENSIONS = [
+
+    ".pdf",
+
+    ".doc",
+
+    ".docx",
+
+    ".xls",
+
+    ".xlsx",
+
+    ".ppt",
+
+    ".pptx",
+
+    ".txt"
+
+];
+
+
+/* =====================================================
+   LOAD DOCUMENTS FROM GITHUB
+===================================================== */
 
 async function loadFrameworks() {
 
+
     const documentList =
-        document.getElementById("documentList");
+        document.getElementById(
+            "documentList"
+        );
+
 
     const documentCount =
-        document.getElementById("documentCount");
-
-
-    const apiURL =
-        `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}`;
+        document.getElementById(
+            "documentCount"
+        );
 
 
     try {
 
+
         const response =
-            await fetch(apiURL);
+            await fetch(
+                GITHUB_API_URL
+            );
 
 
         if (!response.ok) {
 
             throw new Error(
-                "Unable to access the GitHub repository."
+                "GitHub API error: " +
+                response.status
             );
 
         }
@@ -1285,65 +1307,109 @@ async function loadFrameworks() {
             await response.json();
 
 
+        console.log(
+            "Files returned by GitHub:",
+            files
+        );
+
+
         /*
-        -----------------------------------------------
-        ONLY SHOW PDF FILES
-        -----------------------------------------------
+        -------------------------------------------------
+        FILTER DOCUMENTS
+        -------------------------------------------------
         */
 
-        const pdfFiles =
+        const documents =
             files.filter(function(file) {
 
-                return file.type === "file" &&
-                       file.name.toLowerCase().endsWith(".pdf");
+
+                if (file.type !== "file") {
+
+                    return false;
+
+                }
+
+
+                const filename =
+                    file.name.toLowerCase();
+
+
+                return SUPPORTED_EXTENSIONS.some(
+                    function(extension) {
+
+                        return filename.endsWith(
+                            extension
+                        );
+
+                    }
+                );
 
             });
 
 
+        console.log(
+            "Documents detected:",
+            documents
+        );
+
+
         /*
-        -----------------------------------------------
-        SORT FILES ALPHABETICALLY
-        -----------------------------------------------
+        -------------------------------------------------
+        SORT DOCUMENTS
+        -------------------------------------------------
         */
 
-        pdfFiles.sort(function(a, b) {
+        documents.sort(function(a, b) {
 
-            return a.name.localeCompare(b.name);
+            return a.name.localeCompare(
+                b.name,
+                undefined,
+                {
+                    numeric: true,
+                    sensitivity: "base"
+                }
+            );
 
         });
 
 
         /*
-        -----------------------------------------------
-        UPDATE DOCUMENT COUNT
-        -----------------------------------------------
+        -------------------------------------------------
+        UPDATE COUNT
+        -------------------------------------------------
         */
 
         documentCount.textContent =
-            pdfFiles.length +
-            (pdfFiles.length === 1
-                ? " document"
-                : " documents");
+
+            documents.length +
+
+            (
+                documents.length === 1
+                    ? " document"
+                    : " documents"
+            );
 
 
         /*
-        -----------------------------------------------
+        -------------------------------------------------
         NO DOCUMENTS
-        -----------------------------------------------
+        -------------------------------------------------
         */
 
-        if (pdfFiles.length === 0) {
+        if (documents.length === 0) {
+
 
             documentList.innerHTML = `
 
                 <div class="loading-message">
 
-                    No frameworks or guidelines are
-                    currently available.
+                    No frameworks or guidelines
+                    are currently available.
 
                 </div>
 
             `;
+
 
             return;
 
@@ -1351,352 +1417,81 @@ async function loadFrameworks() {
 
 
         /*
-        -----------------------------------------------
+        -------------------------------------------------
         CLEAR LOADING MESSAGE
-        -----------------------------------------------
+        -------------------------------------------------
         */
 
         documentList.innerHTML = "";
 
 
         /*
-        -----------------------------------------------
-        CREATE DOCUMENT CARDS
-        -----------------------------------------------
+        -------------------------------------------------
+        CREATE DOCUMENT ITEMS
+        -------------------------------------------------
         */
 
-        pdfFiles.forEach(function(file) {
+        documents.forEach(function(file) {
 
 
-            const documentItem =
-                document.createElement("div");
+            /*
+            ---------------------------------------------
+            FILE INFORMATION
+            ---------------------------------------------
+            */
 
-            documentItem.className =
+            const filename =
+                file.name;
+
+
+            const title =
+                createReadableTitle(
+                    filename
+                );
+
+
+            const version =
+                detectVersion(
+                    filename
+                );
+
+
+            const extension =
+                getFileExtension(
+                    filename
+                );
+
+
+            const fileType =
+                getFileType(
+                    extension
+                );
+
+
+            /*
+            ---------------------------------------------
+            CREATE ITEM
+            ---------------------------------------------
+            */
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
                 "document-item";
 
 
             /*
-            -------------------------------------------
-            CREATE READABLE TITLE
-            -------------------------------------------
+            ---------------------------------------------
+            DOCUMENT HTML
+            ---------------------------------------------
             */
 
-            const title =
-                createReadableTitle(file.name);
-
-
-            /*
-            -------------------------------------------
-            DETECT VERSION
-            -------------------------------------------
-            */
-
-            const version =
-                detectVersion(file.name);
-
-
-            /*
-            -------------------------------------------
-            DOCUMENT ITEM
-            -------------------------------------------
-            */
-
-            documentItem.innerHTML = `
+            item.innerHTML = `
 
                 <div class="document-info">
 
                     <div class="file-icon">
-                        PDF
-                    </div>
-
-
-                    <div class="document-content">
-
-                        <div class="document-name">
-
-                            ${escapeHTML(title)}
-
-                        </div>
-
-
-                        <div class="document-meta">
-
-                            Framework
-                            ${version ? " · " + escapeHTML(version) : ""}
-
-                        </div>
-
-
-                        <div class="document-description">
-
-                            Framework or guideline supporting
-                            humanitarian coordination,
-                            preparedness, response and
-                            Africa-led humanitarian action.
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <a
-                    href="${file.path}"
-                    class="view-button"
-                    target="_blank"
-                    rel="noopener">
-
-                    View Document →
-
-                </a>
-
-            `;
-
-
-            documentList.appendChild(
-                documentItem
-            );
-
-        });
-
-    }
-
-    catch (error) {
-
-        console.error(error);
-
-
-        documentCount.textContent =
-            "Unable to load documents";
-
-
-        documentList.innerHTML = `
-
-            <div class="error-message">
-
-                Unable to load the frameworks and
-                guidelines at this time.
-
-                <br><br>
-
-                Please try again later.
-
-            </div>
-
-        `;
-
-    }
-
-}
-
-
-/*
-=======================================================
-   CREATE READABLE TITLE
-=======================================================
-
-Example:
-
-F1_Continental_Humanitarian_Coordination_Framework_v4.pdf
-
-becomes:
-
-Continental Humanitarian Coordination Framework
-
-=======================================================
-*/
-
-function createReadableTitle(filename) {
-
-
-    let title =
-        filename
-        .replace(/\.pdf$/i, "");
-
-
-    /*
-    Remove F1_, F2_, etc.
-    */
-
-    title =
-        title.replace(/^F\d+[_-]/i, "");
-
-
-    /*
-    Remove version suffix
-    */
-
-    title =
-        title.replace(
-            /[_-]v\d+$/i,
-            ""
-        );
-
-
-    /*
-    Replace underscores and hyphens
-    */
-
-    title =
-        title.replace(/[_-]+/g, " ");
-
-
-    /*
-    Add spaces between common joined words
-    */
-
-    title =
-        title.replace(
-            /([a-z])([A-Z])/g,
-            "$1 $2"
-        );
-
-
-    /*
-    Capitalize first letter
-    */
-
-    title =
-        title.charAt(0).toUpperCase() +
-        title.slice(1);
-
-
-    /*
-    Convert common terms to nicer display
-    */
-
-    title =
-        title.replace(
-            /\bAnd\b/g,
-            "and"
-        );
-
-
-    title =
-        title.replace(
-            /\b&\b/g,
-            "&"
-        );
-
-
-    return title;
-
-}
-
-
-/*
-=======================================================
-   DETECT VERSION
-=======================================================
-*/
-
-function detectVersion(filename) {
-
-
-    const match =
-        filename.match(
-            /[_-]v(\d+)/i
-        );
-
-
-    if (match) {
-
-        return "Version " + match[1];
-
-    }
-
-
-    return "";
-
-}
-
-
-/*
-=======================================================
-   ESCAPE HTML
-=======================================================
-*/
-
-function escapeHTML(text) {
-
-
-    const div =
-        document.createElement("div");
-
-
-    div.textContent =
-        text;
-
-
-    return div.innerHTML;
-
-}
-
-
-/*
-=======================================================
-   SEARCH
-=======================================================
-*/
-
-function searchFrameworks() {
-
-
-    const input =
-        document.getElementById(
-            "frameworkSearch"
-        );
-
-
-    const filter =
-        input.value.toLowerCase();
-
-
-    const documents =
-        document.querySelectorAll(
-            ".document-item"
-        );
-
-
-    documents.forEach(function(documentItem) {
-
-
-        const text =
-            documentItem.textContent.toLowerCase();
-
-
-        if (text.includes(filter)) {
-
-            documentItem.classList.remove(
-                "hidden"
-            );
-
-        }
-
-        else {
-
-            documentItem.classList.add(
-                "hidden"
-            );
-
-        }
-
-    });
-
-}
-
-
-/*
-=======================================================
-   START
-=======================================================
-*/
-
-loadFrameworks();
-
-</script>
-
-</body>
-
-</html>
