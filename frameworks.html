@@ -1,5 +1,5 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,12 +7,12 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-   content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <title>Frameworks & Guidelines | AfHA Knowledge Hub</title>
 
 <meta name="description"
-   content="AfHA Knowledge Hub frameworks and guidelines supporting Africa-led humanitarian action.">
+      content="Frameworks, guidelines and normative resources supporting Africa-led humanitarian action.">
 
 <style>
 
@@ -32,11 +32,11 @@
 
     --black: #1F2933;
     --grey: #667085;
+
     --light-grey: #F4F6F8;
     --border: #D9DEE5;
 
     --white: #FFFFFF;
-
 }
 
 
@@ -46,10 +46,6 @@
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -66,11 +62,10 @@ body {
     background: var(--white);
 
     line-height: 1.6;
-
 }
 
+
 a {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -85,7 +80,7 @@ a {
 
     color: var(--white);
 
-    padding: 8px 5%;
+    padding: 8px 6%;
 
     font-size: 13px;
 
@@ -94,20 +89,23 @@ a {
     justify-content: space-between;
 
     align-items: center;
-
 }
 
+
 .top-bar-left {
+
     font-weight: 600;
 }
 
+
 .top-bar-right {
-    opacity: 0.9;
+
+    opacity: 0.95;
 }
 
 
 /* =====================================================
-   NAVBAR
+   NAVIGATION
 ===================================================== */
 
 .navbar {
@@ -116,13 +114,13 @@ a {
 
     border-bottom: 1px solid var(--border);
 
-    padding: 14px 5%;
+    padding: 14px 6%;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
+
+    align-items: center;
 
     position: sticky;
 
@@ -130,21 +128,22 @@ a {
 
     z-index: 1000;
 
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.05);
 }
 
 
-.logo {
+.logo-area {
 
     display: flex;
 
     align-items: center;
 
     gap: 12px;
-
 }
 
 
-.logo-mark {
+.logo {
 
     width: 48px;
 
@@ -158,115 +157,97 @@ a {
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
 
-    font-weight: 700;
+    align-items: center;
 
-    font-size: 15px;
+    font-weight: bold;
+
+    font-size: 18px;
 
     border: 3px solid var(--gold);
-
 }
 
 
 .logo-text {
 
-    line-height: 1.2;
-
+    line-height: 1.15;
 }
 
 
-.logo-text strong {
+.logo-title {
 
-    display: block;
+    font-size: 18px;
 
-    font-size: 17px;
+    font-weight: 700;
 
     color: var(--dark-green);
-
 }
 
 
-.logo-text span {
+.logo-subtitle {
 
-    font-size: 12px;
+    font-size: 11px;
 
     color: var(--grey);
 
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
 }
 
 
-nav {
+.nav-links {
 
     display: flex;
 
     align-items: center;
 
-    gap: 25px;
+    gap: 5px;
 
+    flex-wrap: wrap;
 }
 
 
-nav a {
-
-    font-size: 14px;
+.nav-links a {
 
     color: var(--black);
 
-    font-weight: 500;
+    padding: 9px 13px;
 
-    padding: 6px 0;
+    border-radius: 5px;
 
-    position: relative;
+    font-size: 14px;
 
+    font-weight: 600;
+
+    transition: 0.2s;
 }
 
 
-nav a:hover {
+.nav-links a:hover {
+
+    background: var(--light-green);
 
     color: var(--green);
-
 }
 
 
-nav a.active {
+.nav-links a.active {
 
-    color: var(--green);
+    background: var(--green);
 
-    font-weight: 700;
-
-}
-
-
-nav a.active::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: -7px;
-
-    height: 3px;
-
-    background: var(--gold);
-
+    color: var(--white);
 }
 
 
 /* =====================================================
-   PAGE HERO
+   HERO
 ===================================================== */
 
-.page-hero {
+.hero {
 
     background:
-
         linear-gradient(
             135deg,
             var(--dark-green),
@@ -275,91 +256,58 @@ nav a.active::after {
 
     color: var(--white);
 
-    padding: 55px 5% 60px;
+    padding: 60px 6% 55px;
 
+    position: relative;
+
+    overflow: hidden;
 }
 
 
-.page-hero-inner {
+.hero::after {
 
-    max-width: 1250px;
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 50px solid
+        rgba(245,194,66,0.12);
+
+    right: -100px;
+
+    top: -120px;
+}
+
+
+.hero-content {
+
+    max-width: 1100px;
 
     margin: auto;
 
+    position: relative;
+
+    z-index: 2;
 }
 
 
-.breadcrumb {
+.hero-label {
 
-    font-size: 13px;
+    display: inline-block;
 
-    margin-bottom: 18px;
+    background: var(--gold);
 
-    opacity: 0.85;
+    color: var(--black);
 
-}
+    padding: 6px 14px;
 
-
-.breadcrumb a:hover {
-
-    color: var(--gold);
-
-}
-
-
-.page-hero h1 {
-
-    font-size: 42px;
-
-    margin: 0 0 14px;
-
-    line-height: 1.2;
-
-}
-
-
-.page-hero p {
-
-    max-width: 850px;
-
-    margin: 0;
-
-    font-size: 17px;
-
-    opacity: 0.95;
-
-}
-
-
-/* =====================================================
-   MAIN
-===================================================== */
-
-main {
-
-    max-width: 1250px;
-
-    margin: auto;
-
-    padding: 55px 5% 80px;
-
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.intro-section {
-
-    margin-bottom: 45px;
-
-}
-
-
-.section-label {
-
-    color: var(--green);
+    border-radius: 20px;
 
     font-size: 12px;
 
@@ -367,36 +315,81 @@ main {
 
     text-transform: uppercase;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 0.7px;
 
-    margin-bottom: 8px;
-
+    margin-bottom: 15px;
 }
 
 
-.intro-section h2 {
+.hero h1 {
 
     margin: 0 0 15px;
 
-    font-size: 29px;
+    font-size: 42px;
 
-    color: var(--dark-green);
-
+    line-height: 1.15;
 }
 
 
-.intro-section p {
+.hero p {
+
+    max-width: 780px;
+
+    margin: 0;
+
+    font-size: 17px;
+
+    opacity: 0.95;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.container {
+
+    width: 88%;
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+.section {
+
+    padding: 48px 0;
+}
+
+
+.intro {
 
     max-width: 900px;
 
-    margin: 0 0 13px;
+    margin-bottom: 35px;
+}
 
-    font-size: 15px;
+
+.intro h2 {
+
+    color: var(--dark-green);
+
+    margin-top: 0;
+
+    margin-bottom: 12px;
+
+    font-size: 28px;
+}
+
+
+.intro p {
 
     color: var(--grey);
 
-    line-height: 1.75;
+    font-size: 16px;
 
+    margin-bottom: 10px;
 }
 
 
@@ -416,15 +409,21 @@ main {
 
     margin-bottom: 25px;
 
+    padding: 18px;
+
+    background: var(--light-grey);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
 }
 
 
 .search-box {
 
-    width: 100%;
+    flex: 1;
 
-    max-width: 430px;
-
+    max-width: 550px;
 }
 
 
@@ -436,19 +435,23 @@ main {
 
     border: 1px solid var(--border);
 
-    border-radius: 5px;
+    border-radius: 6px;
 
     font-size: 14px;
 
+    outline: none;
+
+    background: var(--white);
 }
 
 
 .search-box input:focus {
 
-    outline: none;
-
     border-color: var(--green);
 
+    box-shadow:
+        0 0 0 3px
+        rgba(8,120,62,0.10);
 }
 
 
@@ -456,10 +459,11 @@ main {
 
     color: var(--grey);
 
-    font-size: 13px;
+    font-size: 14px;
+
+    font-weight: 600;
 
     white-space: nowrap;
-
 }
 
 
@@ -469,14 +473,11 @@ main {
 
 .document-list {
 
-    border: 1px solid var(--border);
+    display: flex;
 
-    border-radius: 7px;
+    flex-direction: column;
 
-    overflow: hidden;
-
-    background: var(--white);
-
+    gap: 14px;
 }
 
 
@@ -488,29 +489,31 @@ main {
 
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
 
-    padding: 25px;
+    padding: 20px 22px;
 
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--white);
 
     transition:
-        background 0.2s ease;
-
-}
-
-
-.document-item:last-child {
-
-    border-bottom: none;
-
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
 }
 
 
 .document-item:hover {
 
-    background: var(--light-green);
+    transform: translateY(-2px);
 
+    border-color: var(--green);
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.07);
 }
 
 
@@ -518,28 +521,30 @@ main {
 
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
 
-    gap: 18px;
+    gap: 17px;
 
     min-width: 0;
 
+    flex: 1;
 }
 
 
 .file-icon {
 
-    min-width: 48px;
+    min-width: 58px;
 
-    width: 48px;
+    height: 58px;
 
-    height: 48px;
-
-    border-radius: 6px;
+    border-radius: 8px;
 
     background: var(--light-green);
 
     color: var(--green);
+
+    border: 1px solid
+        rgba(8,120,62,0.18);
 
     display: flex;
 
@@ -549,52 +554,49 @@ main {
 
     font-size: 11px;
 
-    font-weight: 700;
+    font-weight: 800;
 
+    letter-spacing: 0.3px;
 }
 
 
 .document-content {
 
     min-width: 0;
-
 }
 
 
 .document-name {
 
-    font-size: 16px;
+    color: var(--dark-green);
+
+    font-size: 17px;
 
     font-weight: 700;
 
-    color: var(--black);
-
-    margin-bottom: 4px;
-
+    margin-bottom: 3px;
 }
 
 
 .document-meta {
 
+    color: var(--dark-gold);
+
     font-size: 12px;
 
-    color: var(--grey);
+    font-weight: 700;
 
-    margin-bottom: 7px;
-
+    margin-bottom: 5px;
 }
 
 
 .document-description {
 
-    max-width: 850px;
+    color: var(--grey);
 
     font-size: 13px;
 
-    color: var(--grey);
-
-    line-height: 1.6;
-
+    line-height: 1.45;
 }
 
 
@@ -602,11 +604,11 @@ main {
 
     display: inline-block;
 
-    padding: 10px 17px;
-
     background: var(--green);
 
     color: var(--white);
+
+    padding: 10px 17px;
 
     border-radius: 5px;
 
@@ -616,19 +618,67 @@ main {
 
     white-space: nowrap;
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-
+    transition: 0.2s;
 }
 
 
 .view-button:hover {
 
     background: var(--dark-green);
+}
 
-    transform: translateY(-1px);
 
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading-message {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: var(--grey);
+
+    background: var(--light-grey);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.error-message {
+
+    padding: 25px;
+
+    border: 1px solid #e2b4b4;
+
+    border-radius: 8px;
+
+    background: #fff7f7;
+
+    color: #8a2d2d;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HIDDEN SEARCH RESULTS
+===================================================== */
+
+.document-item.hidden {
+
+    display: none;
 }
 
 
@@ -638,27 +688,25 @@ main {
 
 .resource-note {
 
-    background: #FFF9E8;
-
-    border-left: 4px solid var(--gold);
-
-    padding: 20px 22px;
-
     margin-top: 30px;
 
-    border-radius: 3px;
+    padding: 18px 20px;
 
-    font-size: 13px;
+    background: var(--light-green);
+
+    border-left: 5px solid var(--green);
+
+    border-radius: 5px;
 
     color: var(--black);
 
+    font-size: 14px;
 }
 
 
 .resource-note strong {
 
     color: var(--dark-green);
-
 }
 
 
@@ -666,10 +714,9 @@ main {
    BACK LINK
 ===================================================== */
 
-.back-section {
+.back-link-area {
 
     margin-top: 35px;
-
 }
 
 
@@ -679,10 +726,9 @@ main {
 
     color: var(--green);
 
-    font-size: 13px;
+    font-size: 14px;
 
     font-weight: 700;
-
 }
 
 
@@ -690,6 +736,7 @@ main {
 
     color: var(--dark-green);
 
+    text-decoration: underline;
 }
 
 
@@ -697,20 +744,21 @@ main {
    FOOTER
 ===================================================== */
 
-footer {
+.footer {
 
     background: var(--dark-green);
 
     color: var(--white);
 
-    padding: 35px 5%;
+    margin-top: 50px;
 
+    padding: 35px 6%;
 }
 
 
-.footer-inner {
+.footer-content {
 
-    max-width: 1250px;
+    max-width: 1150px;
 
     margin: auto;
 
@@ -720,6 +768,7 @@ footer {
 
     gap: 30px;
 
+    flex-wrap: wrap;
 }
 
 
@@ -727,73 +776,27 @@ footer {
 
     font-weight: 700;
 
-    margin-bottom: 8px;
-
+    margin-bottom: 6px;
 }
 
 
 .footer-text {
 
-    font-size: 12px;
+    font-size: 13px;
 
-    opacity: 0.8;
+    opacity: 0.85;
 
-    max-width: 500px;
-
+    max-width: 650px;
 }
 
 
 .footer-right {
 
-    text-align: right;
-
     font-size: 12px;
 
-    opacity: 0.8;
+    opacity: 0.75;
 
-}
-
-
-/* =====================================================
-   SEARCH FILTER
-===================================================== */
-
-.document-item.hidden {
-
-    display: none;
-
-}
-
-
-/* =====================================================
-   LOADING / ERROR
-===================================================== */
-
-.loading-message {
-
-    padding: 40px;
-
-    text-align: center;
-
-    color: var(--grey);
-
-    font-size: 14px;
-
-}
-
-
-.error-message {
-
-    padding: 30px;
-
-    text-align: center;
-
-    color: #9B1C1C;
-
-    background: #FFF5F5;
-
-    font-size: 14px;
-
+    text-align: right;
 }
 
 
@@ -801,527 +804,531 @@ footer {
    RESPONSIVE
 ===================================================== */
 
-@media (max-width: 950px) {
-
-    nav {
-
-        gap: 14px;
-
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .top-bar {
-
-        display: none;
-
-    }
+@media (max-width: 850px) {
 
     .navbar {
 
         flex-direction: column;
 
-        gap: 15px;
-
         align-items: flex-start;
 
+        gap: 15px;
     }
 
-    nav {
+    .nav-links {
 
-        flex-wrap: wrap;
+        width: 100%;
 
-        gap: 12px 18px;
+        overflow-x: auto;
 
+        flex-wrap: nowrap;
     }
 
-    .page-hero h1 {
+    .hero h1 {
 
-        font-size: 32px;
-
+        font-size: 34px;
     }
 
     .resource-toolbar {
 
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: stretch;
+    }
 
+    .search-box {
+
+        max-width: none;
     }
 
     .document-item {
 
         flex-direction: column;
 
-        align-items: flex-start;
-
+        align-items: stretch;
     }
 
     .view-button {
 
-        margin-left: 66px;
-
-    }
-
-    .footer-inner {
-
-        flex-direction: column;
-
+        text-align: center;
     }
 
     .footer-right {
 
         text-align: left;
-
     }
-
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
-    main {
+    .top-bar {
 
-        padding-top: 40px;
-
+        display: none;
     }
 
-    .page-hero {
+    .container {
 
-        padding-top: 40px;
-
+        width: 92%;
     }
 
-    .document-item {
+    .hero {
 
-        padding: 20px;
-
+        padding: 45px 4%;
     }
 
-    .view-button {
+    .hero h1 {
 
-        margin-left: 0;
-
+        font-size: 29px;
     }
 
+    .hero p {
+
+        font-size: 15px;
+    }
+
+    .section {
+
+        padding: 35px 0;
+    }
+
+    .document-info {
+
+        align-items: flex-start;
+    }
+
+    .file-icon {
+
+        min-width: 50px;
+
+        height: 50px;
+    }
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- =================================================
+
+<!-- =====================================================
      TOP BAR
-================================================== -->
+===================================================== -->
 
 <div class="top-bar">
 
-```
-<div class="top-bar-left">
-    African Humanitarian Agency
-</div>
-
-<div class="top-bar-right">
-    Knowledge Hub
-</div>
-```
-
-</div>
-
-<!-- =================================================
-     NAVBAR
-================================================== -->
-
-<header class="navbar">
-
-```
-<a href="index.html"
-   class="logo">
-
-    <div class="logo-mark">
-        AfHA
+    <div class="top-bar-left">
+        African Humanitarian Agency (AfHA)
     </div>
 
-    <div class="logo-text">
+    <div class="top-bar-right">
+        Knowledge Hub
+    </div>
 
-        <strong>
-            African Humanitarian Agency
-        </strong>
+</div>
 
-        <span>
-            Knowledge Hub
-        </span>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo-area">
+
+        <div class="logo">
+            AfHA
+        </div>
+
+        <div class="logo-text">
+
+            <div class="logo-title">
+                AfHA Knowledge Hub
+            </div>
+
+            <div class="logo-subtitle">
+                Humanitarian Knowledge & Resources
+            </div>
+
+        </div>
 
     </div>
 
-</a>
 
-
-<nav>
-
-    <a href="index.html">
-        Home
-    </a>
-
-    <a href="about.html">
-        About AfHA
-    </a>
-
-    <a href="mandate.html">
-        Mandate
-    </a>
-
-    <a href="structure.html">
-        Structure
-    </a>
-
-    <a href="resources.html"
-       class="active">
-        Resources
-    </a>
-
-    <a href="news.html">
-        News
-    </a>
-
-    <a href="principles.html">
-        Principles
-    </a>
-
-    <a href="contact.html">
-        Contact
-    </a>
-
-</nav>
-```
-
-</header>
-
-<!-- =================================================
-     PAGE HERO
-================================================== -->
-
-<section class="page-hero">
-
-```
-<div class="page-hero-inner">
-
-    <div class="breadcrumb">
+    <div class="nav-links">
 
         <a href="index.html">
             Home
         </a>
 
-        &nbsp; / &nbsp;
+        <a href="about.html">
+            About AfHA
+        </a>
 
-        <a href="resources.html">
+        <a href="mandate.html">
+            Mandate
+        </a>
+
+        <a href="structure.html">
+            Structure
+        </a>
+
+        <a href="resources.html"
+           class="active">
             Resources
         </a>
 
-        &nbsp; / &nbsp;
+        <a href="news.html">
+            News
+        </a>
 
-        Frameworks &amp; Guidelines
+        <a href="principles.html">
+            Principles
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
-
-    <h1>
-        Frameworks &amp; Guidelines
-    </h1>
+</nav>
 
 
-    <p>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        Normative frameworks, guidelines and reference
-        documents supporting humanitarian coordination,
-        preparedness, response and Africa-led humanitarian action.
+<section class="hero">
 
-    </p>
+    <div class="hero-content">
 
-</div>
-```
+        <div class="hero-label">
+            Knowledge Resources
+        </div>
+
+        <h1>
+            Frameworks & Guidelines
+        </h1>
+
+        <p>
+            Key frameworks, guidelines and reference documents
+            supporting African-led humanitarian coordination,
+            preparedness, response and resilience.
+        </p>
+
+    </div>
 
 </section>
 
-<!-- =================================================
+
+<!-- =====================================================
      MAIN
-================================================== -->
+===================================================== -->
 
-<main>
+<main class="container">
 
-```
-<!-- =================================================
-     INTRODUCTION
-================================================== -->
-
-<section class="intro-section">
-
-    <div class="section-label">
-        Knowledge Resources
-    </div>
+    <section class="section">
 
 
-    <h2>
-        AfHA Frameworks and Guidelines
-    </h2>
+        <!-- INTRODUCTION -->
+
+        <div class="intro">
+
+            <h2>
+                Frameworks & Guidelines
+            </h2>
+
+            <p>
+                This section provides access to key normative
+                frameworks, guidelines and institutional resources
+                relevant to humanitarian action in Africa.
+            </p>
+
+            <p>
+                The document library is automatically connected
+                to the
+                <strong>
+                    documents/frameworks/
+                </strong>
+                folder in the AfHA Knowledge Hub repository.
+            </p>
+
+        </div>
 
 
-    <p>
+        <!-- =================================================
+             TOOLBAR
+        ================================================= -->
 
-        This collection brings together key frameworks,
-        guidelines and reference documents supporting the
-        African Humanitarian Agency's humanitarian mandate
-        and Africa-led humanitarian action.
+        <div class="resource-toolbar">
 
-    </p>
+            <div class="search-box">
 
+                <input
+                    type="text"
+                    id="frameworkSearch"
+                    placeholder="Search frameworks and guidelines..."
+                    onkeyup="searchFrameworks()">
 
-    <p>
-
-        The resources provide strategic and operational
-        guidance across areas including humanitarian
-        coordination, partnerships, financing, data and
-        information management, capacity development,
-        preparedness, anticipatory action and risk reduction.
-
-    </p>
+            </div>
 
 
-    <p>
+            <div
+                class="document-count"
+                id="documentCount">
 
-        Select <strong>View Document</strong> to open the
-        relevant document.
+                Loading documents...
 
-    </p>
+            </div>
 
-</section>
-
-
-
-<!-- =================================================
-     SEARCH
-================================================== -->
-
-<div class="resource-toolbar">
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="frameworkSearch"
-            placeholder="Search frameworks and guidelines..."
-            onkeyup="searchFrameworks()">
-
-    </div>
+        </div>
 
 
-    <div class="document-count"
-         id="documentCount">
+        <!-- =================================================
+             DOCUMENT LIST
+        ================================================= -->
 
-        Loading documents...
+        <div
+            class="document-list"
+            id="documentList">
 
-    </div>
+            <div class="loading-message">
 
-</div>
+                Loading frameworks and guidelines...
 
+            </div>
 
-
-<!-- =================================================
-     AUTOMATIC DOCUMENT LIST
-================================================== -->
-
-<div class="document-list"
-     id="documentList">
-
-    <div class="loading-message">
-
-        Loading frameworks and guidelines...
-
-    </div>
-
-</div>
+        </div>
 
 
+        <!-- =================================================
+             NOTE
+        ================================================= -->
 
-<!-- =================================================
-     NOTE
-================================================== -->
+        <div class="resource-note">
 
-<div class="resource-note">
+            <strong>
+                Document library:
+            </strong>
 
-    <strong>Document access:</strong>
+            New frameworks and guidelines can be added by
+            uploading the document to the
+            <strong>
+                documents/frameworks/
+            </strong>
+            folder in the GitHub repository.
+            The Knowledge Hub will automatically detect
+            supported files.
 
-    The documents above are stored in the AfHA Knowledge
-    Hub document library. Additional frameworks, guidelines
-    and related reference materials can be added to this
-    collection as they become available.
-
-</div>
+        </div>
 
 
+        <!-- =================================================
+             BACK LINK
+        ================================================= -->
 
-<!-- =================================================
-     BACK TO RESOURCES
-================================================== -->
+        <div class="back-link-area">
 
-<div class="back-section">
+            <a
+                href="resources.html"
+                class="back-link">
 
-    <a href="resources.html"
-       class="back-link">
+                ← Back to Resources
 
-        ← Back to All Resources
+            </a>
 
-    </a>
+        </div>
 
-</div>
-```
+
+    </section>
 
 </main>
 
-<!-- =================================================
+
+<!-- =====================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
-<footer>
+<footer class="footer">
 
-```
-<div class="footer-inner">
+    <div class="footer-content">
 
+        <div>
 
-    <div>
+            <div class="footer-title">
+                AfHA Knowledge Hub
+            </div>
 
-        <div class="footer-title">
-            African Humanitarian Agency
+            <div class="footer-text">
+
+                A knowledge and information resource supporting
+                African-led humanitarian action, coordination,
+                preparedness and response.
+
+            </div>
+
         </div>
 
 
-        <div class="footer-text">
+        <div class="footer-right">
 
-            AfHA Knowledge Hub — a central platform for
-            humanitarian knowledge, resources and learning
-            supporting Africa-led humanitarian action.
+            African Humanitarian Agency (AfHA)
+
+            <br>
+
+            Knowledge Resources
 
         </div>
 
     </div>
-
-
-    <div class="footer-right">
-
-        © 2026 African Humanitarian Agency<br>
-
-        AfHA Knowledge Hub
-
-    </div>
-
-
-</div>
-```
 
 </footer>
 
-<!-- =================================================
-     AUTOMATIC GITHUB DOCUMENT SCRIPT
+
+<!-- =====================================================
+     AUTOMATIC DOCUMENT LOADER
 ===================================================== -->
 
 <script>
 
-
 /* =====================================================
-   GITHUB REPOSITORY
+   AFHA KNOWLEDGE HUB
+   AUTOMATIC DOCUMENT LOADER
 ===================================================== */
 
-const GITHUB_API_URL =
+
+/*
+   GitHub repository folder containing
+   Frameworks & Guidelines.
+
+   IMPORTANT:
+   New documents added to this folder
+   will automatically appear on this page.
+*/
+
+const API_URL =
     "https://api.github.com/repos/afha-usr/afha-knowledge-hub/contents/documents/frameworks";
 
 
 /* =====================================================
-   SUPPORTED DOCUMENT TYPES
-===================================================== */
-
-const SUPPORTED_EXTENSIONS = [
-
-    ".pdf",
-
-    ".doc",
-
-    ".docx",
-
-    ".xls",
-
-    ".xlsx",
-
-    ".ppt",
-
-    ".pptx",
-
-    ".txt"
-
-];
-
-
-/* =====================================================
-   LOAD DOCUMENTS FROM GITHUB
+   LOAD DOCUMENTS
 ===================================================== */
 
 async function loadFrameworks() {
 
+    const list =
+        document.getElementById("documentList");
 
-    const documentList =
-        document.getElementById(
-            "documentList"
-        );
-
-
-    const documentCount =
-        document.getElementById(
-            "documentCount"
-        );
+    const count =
+        document.getElementById("documentCount");
 
 
     try {
 
+        count.textContent =
+            "Connecting to document library...";
+
+
+        /*
+           Request the contents of the GitHub folder.
+        */
 
         const response =
-            await fetch(
-                GITHUB_API_URL
-            );
+            await fetch(API_URL, {
 
+                method: "GET",
+
+                headers: {
+
+                    "Accept":
+                        "application/vnd.github+json"
+
+                },
+
+                cache: "no-store"
+
+            });
+
+
+        /*
+           Check for GitHub API errors.
+        */
 
         if (!response.ok) {
 
+            const errorText =
+                await response.text();
+
             throw new Error(
-                "GitHub API error: " +
-                response.status
+
+                "GitHub API returned " +
+                response.status +
+                " " +
+                response.statusText +
+                ". " +
+                errorText.substring(0, 200)
+
             );
 
         }
 
+
+        /*
+           Convert response to JSON.
+        */
 
         const files =
             await response.json();
 
 
         console.log(
-            "Files returned by GitHub:",
+            "AfHA GitHub files:",
             files
         );
 
 
         /*
-        -------------------------------------------------
-        FILTER DOCUMENTS
-        -------------------------------------------------
+           Make sure GitHub returned
+           an array of files.
+        */
+
+        if (!Array.isArray(files)) {
+
+            throw new Error(
+                "GitHub returned an unexpected response."
+            );
+
+        }
+
+
+        /* =================================================
+           SUPPORTED FILE TYPES
+        ================================================= */
+
+        const allowedTypes = [
+
+            "pdf",
+            "doc",
+            "docx",
+            "xls",
+            "xlsx",
+            "ppt",
+            "pptx",
+            "txt"
+
+        ];
+
+
+        /*
+           Keep only actual files
+           with supported extensions.
         */
 
         const documents =
             files.filter(function(file) {
-
 
                 if (file.type !== "file") {
 
@@ -1330,56 +1337,61 @@ async function loadFrameworks() {
                 }
 
 
-                const filename =
-                    file.name.toLowerCase();
+                const extension =
+                    getExtension(file.name);
 
 
-                return SUPPORTED_EXTENSIONS.some(
-                    function(extension) {
-
-                        return filename.endsWith(
-                            extension
-                        );
-
-                    }
+                return allowedTypes.includes(
+                    extension
                 );
 
             });
 
 
-        console.log(
-            "Documents detected:",
-            documents
-        );
-
-
         /*
-        -------------------------------------------------
-        SORT DOCUMENTS
-        -------------------------------------------------
+           Sort alphabetically.
+
+           numeric:true means:
+
+           F1
+           F2
+           F3
+           ...
+           F10
+
+           instead of:
+
+           F1
+           F10
+           F2
         */
 
         documents.sort(function(a, b) {
 
             return a.name.localeCompare(
+
                 b.name,
+
                 undefined,
+
                 {
+
                     numeric: true,
+
                     sensitivity: "base"
+
                 }
+
             );
 
         });
 
 
-        /*
-        -------------------------------------------------
-        UPDATE COUNT
-        -------------------------------------------------
-        */
+        /* =================================================
+           UPDATE DOCUMENT COUNT
+        ================================================= */
 
-        documentCount.textContent =
+        count.textContent =
 
             documents.length +
 
@@ -1390,88 +1402,83 @@ async function loadFrameworks() {
             );
 
 
-        /*
-        -------------------------------------------------
-        NO DOCUMENTS
-        -------------------------------------------------
-        */
+        /* =================================================
+           NO DOCUMENTS
+        ================================================= */
 
         if (documents.length === 0) {
 
-
-            documentList.innerHTML = `
+            list.innerHTML = `
 
                 <div class="loading-message">
 
-                    No frameworks or guidelines
-                    are currently available.
+                    No documents were found in
+
+                    <strong>
+                        documents/frameworks/
+                    </strong>
 
                 </div>
 
             `;
-
 
             return;
 
         }
 
 
-        /*
-        -------------------------------------------------
-        CLEAR LOADING MESSAGE
-        -------------------------------------------------
-        */
+        /* =================================================
+           CLEAR LOADING MESSAGE
+        ================================================= */
 
-        documentList.innerHTML = "";
+        list.innerHTML = "";
 
 
-        /*
-        -------------------------------------------------
-        CREATE DOCUMENT ITEMS
-        -------------------------------------------------
-        */
+        /* =================================================
+           CREATE DOCUMENT CARDS
+        ================================================= */
 
         documents.forEach(function(file) {
 
 
             /*
-            ---------------------------------------------
-            FILE INFORMATION
-            ---------------------------------------------
+               Get extension.
             */
 
-            const filename =
-                file.name;
+            const extension =
+                getExtension(file.name);
 
+
+            /*
+               Get file type label.
+            */
+
+            const fileType =
+                getFileType(extension);
+
+
+            /*
+               Create readable document title.
+            */
 
             const title =
                 createReadableTitle(
-                    filename
-                );
-
-
-            const version =
-                detectVersion(
-                    filename
-                );
-
-
-            const extension =
-                getFileExtension(
-                    filename
-                );
-
-
-            const fileType =
-                getFileType(
-                    extension
+                    file.name
                 );
 
 
             /*
-            ---------------------------------------------
-            CREATE ITEM
-            ---------------------------------------------
+               Detect version number.
+            */
+
+            const version =
+                detectVersion(
+                    file.name
+                );
+
+
+            /*
+               Create document item.
             */
 
             const item =
@@ -1485,9 +1492,10 @@ async function loadFrameworks() {
 
 
             /*
-            ---------------------------------------------
-            DOCUMENT HTML
-            ---------------------------------------------
+               Use GitHub's own URL.
+
+               This is safer than trying to
+               construct the URL manually.
             */
 
             item.innerHTML = `
@@ -1495,3 +1503,381 @@ async function loadFrameworks() {
                 <div class="document-info">
 
                     <div class="file-icon">
+                        ${fileType}
+                    </div>
+
+
+                    <div class="document-content">
+
+                        <div class="document-name">
+
+                            ${escapeHTML(title)}
+
+                        </div>
+
+
+                        <div class="document-meta">
+
+                            Framework
+
+                            ${
+                                version
+                                ? " · " +
+                                  escapeHTML(version)
+                                : ""
+                            }
+
+                        </div>
+
+
+                        <div class="document-description">
+
+                            Framework or guideline supporting
+                            humanitarian coordination,
+                            preparedness, response and
+                            Africa-led humanitarian action.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a
+
+                    href="${file.html_url}"
+
+                    class="view-button"
+
+                    target="_blank"
+
+                    rel="noopener noreferrer">
+
+                    View Document →
+
+                </a>
+
+            `;
+
+
+            list.appendChild(item);
+
+        });
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+
+            "AfHA document loading error:",
+
+            error
+
+        );
+
+
+        count.textContent =
+            "Document library error";
+
+
+        list.innerHTML = `
+
+            <div class="error-message">
+
+                <strong>
+
+                    Unable to load the document library.
+
+                </strong>
+
+
+                <br><br>
+
+
+                <span>
+
+                    ${escapeHTML(error.message)}
+
+                </span>
+
+
+                <br><br>
+
+
+                <small>
+
+                    Please refresh the page and try again.
+
+                </small>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   GET FILE EXTENSION
+===================================================== */
+
+function getExtension(filename) {
+
+    const parts =
+        filename.split(".");
+
+
+    if (parts.length < 2) {
+
+        return "";
+
+    }
+
+
+    return parts
+        .pop()
+        .toLowerCase();
+
+}
+
+
+/* =====================================================
+   FILE TYPE LABEL
+===================================================== */
+
+function getFileType(extension) {
+
+    const types = {
+
+        pdf: "PDF",
+
+        doc: "DOC",
+
+        docx: "DOCX",
+
+        xls: "XLS",
+
+        xlsx: "XLSX",
+
+        ppt: "PPT",
+
+        pptx: "PPTX",
+
+        txt: "TXT"
+
+    };
+
+
+    return types[extension] || "FILE";
+
+}
+
+
+/* =====================================================
+   CREATE READABLE TITLE
+===================================================== */
+
+function createReadableTitle(filename) {
+
+
+    /*
+       Remove extension.
+    */
+
+    let title =
+        filename;
+
+
+    title =
+        title.replace(
+            /\.[^/.]+$/,
+            ""
+        );
+
+
+    /*
+       Remove F1_, F2_, F7-, etc.
+    */
+
+    title =
+        title.replace(
+            /^F\d+[_-]+/i,
+            ""
+        );
+
+
+    /*
+       Remove version suffix.
+
+       Example:
+
+       _v4
+
+       -v3
+    */
+
+    title =
+        title.replace(
+            /[_-]+v\d+$/i,
+            ""
+        );
+
+
+    /*
+       Replace underscores and hyphens
+       with spaces.
+    */
+
+    title =
+        title.replace(
+            /[_-]+/g,
+            " "
+        );
+
+
+    /*
+       Remove multiple spaces.
+    */
+
+    title =
+        title.replace(
+            /\s+/g,
+            " "
+        )
+        .trim();
+
+
+    /*
+       Capitalize first letter.
+    */
+
+    title =
+        title.charAt(0).toUpperCase() +
+        title.slice(1);
+
+
+    return title;
+
+}
+
+
+/* =====================================================
+   DETECT VERSION
+===================================================== */
+
+function detectVersion(filename) {
+
+    const match =
+        filename.match(
+            /[_-]v(\d+)/i
+        );
+
+
+    if (match) {
+
+        return "Version " + match[1];
+
+    }
+
+
+    return "";
+
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
+
+}
+
+
+/* =====================================================
+   SEARCH DOCUMENTS
+===================================================== */
+
+function searchFrameworks() {
+
+
+    const input =
+        document.getElementById(
+            "frameworkSearch"
+        );
+
+
+    const filter =
+        input.value
+            .toLowerCase()
+            .trim();
+
+
+    const documents =
+        document.querySelectorAll(
+            ".document-item"
+        );
+
+
+    documents.forEach(function(item) {
+
+
+        const text =
+            item.textContent
+                .toLowerCase();
+
+
+        if (
+            text.includes(filter)
+        ) {
+
+            item.classList.remove(
+                "hidden"
+            );
+
+        }
+
+        else {
+
+            item.classList.add(
+                "hidden"
+            );
+
+        }
+
+    });
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+loadFrameworks();
+
+</script>
+
+
+</body>
+
+</html>
+```
