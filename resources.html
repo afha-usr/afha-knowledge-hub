@@ -1,735 +1,55 @@
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<!-- =================================================
+     FRAMEWORKS
+================================================== -->
 
-<head>
+<section class="category-section"
+         id="frameworks">
 
-<meta charset="UTF-8">
+    <div class="category-header">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+        <div>
 
-<title>Resources | AfHA Knowledge Hub</title>
+            <div class="category-title">
 
-<meta name="description"
-      content="AfHA Knowledge Hub resources, frameworks, guidelines, tools, policies, reports, training materials and lessons learned.">
-
-<style>
-
-/* =====================================================
-   AFHA COLOUR PALETTE
-===================================================== */
-
-:root {
-    --green: #08783E;
-    --dark-green: #045A2C;
-    --gold: #F5C242;
-    --dark-gold: #C89A18;
-    --light-green: #EAF5EF;
-    --black: #222222;
-    --grey: #666666;
-    --light-grey: #f5f6f7;
-    --white: #ffffff;
-    --border: #dfe5e1;
-}
-
-
-/* =====================================================
-   GLOBAL
-===================================================== */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--black);
-    background: var(--white);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-mark {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: var(--green);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.logo-text {
-    line-height: 1.2;
-}
-
-.logo-title {
-    font-size: 19px;
-    font-weight: bold;
-    color: var(--dark-green);
-}
-
-.logo-subtitle {
-    font-size: 11px;
-    color: var(--grey);
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-nav {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-}
-
-nav a {
-    color: var(--black);
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 0;
-}
-
-nav a:hover {
-    color: var(--green);
-}
-
-nav a.active {
-    color: var(--green);
-    border-bottom: 3px solid var(--gold);
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-    background:
-        linear-gradient(
-            135deg,
-            var(--dark-green),
-            var(--green)
-        );
-
-    color: var(--white);
-    padding: 65px 25px;
-}
-
-.hero-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.hero-label {
-    color: var(--gold);
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    margin: 0 0 15px 0;
-    font-size: 42px;
-    line-height: 1.15;
-}
-
-.hero p {
-    max-width: 760px;
-    margin: 0;
-    font-size: 17px;
-    opacity: 0.95;
-}
-
-
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
-
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 55px 25px 80px;
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.introduction {
-    max-width: 850px;
-    margin-bottom: 45px;
-}
-
-.introduction h2 {
-    margin-top: 0;
-    color: var(--dark-green);
-    font-size: 28px;
-}
-
-.introduction p {
-    color: var(--grey);
-    font-size: 16px;
-}
-
-
-/* =====================================================
-   RESOURCE CATEGORY NAVIGATION
-===================================================== */
-
-.resource-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 45px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid var(--border);
-}
-
-.resource-navigation a {
-    display: inline-block;
-    padding: 10px 17px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    color: var(--dark-green);
-    background: var(--white);
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.resource-navigation a:hover {
-    background: var(--light-green);
-    border-color: var(--green);
-}
-
-.resource-navigation a.active {
-    background: var(--green);
-    color: var(--white);
-    border-color: var(--green);
-}
-
-
-/* =====================================================
-   SECTION HEADER
-===================================================== */
-
-.section-header {
-    margin-bottom: 25px;
-}
-
-.section-header h2 {
-    margin: 0 0 8px;
-    color: var(--dark-green);
-    font-size: 30px;
-}
-
-.section-header p {
-    margin: 0;
-    color: var(--grey);
-}
-
-
-/* =====================================================
-   DOCUMENT LIST
-===================================================== */
-
-.document-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-
-/* =====================================================
-   DOCUMENT ITEM
-===================================================== */
-
-.document-item {
-    display: grid;
-    grid-template-columns: 70px 1fr auto;
-    align-items: center;
-    gap: 20px;
-
-    padding: 24px 25px;
-
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-left: 5px solid var(--green);
-
-    border-radius: 6px;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.document-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-}
-
-
-/* NUMBER */
-
-.document-number {
-    width: 48px;
-    height: 48px;
-
-    border-radius: 50%;
-
-    background: var(--light-green);
-    color: var(--green);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 17px;
-    font-weight: bold;
-}
-
-
-/* =====================================================
-   DOCUMENT INFORMATION
-===================================================== */
-
-.document-info {
-    min-width: 0;
-}
-
-.document-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--dark-green);
-    margin-bottom: 5px;
-}
-
-.document-meta {
-    font-size: 13px;
-    color: var(--grey);
-    margin-bottom: 10px;
-}
-
-
-/* SYNOPSIS */
-
-.document-synopsis {
-    max-width: 820px;
-    margin: 0;
-
-    color: var(--grey);
-
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-
-/* =====================================================
-   VIEW BUTTON
-===================================================== */
-
-.view-link {
-    display: inline-block;
-
-    padding: 10px 18px;
-
-    background: var(--green);
-    color: var(--white);
-
-    border-radius: 4px;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    white-space: nowrap;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
-
-.view-link:hover {
-    background: var(--dark-green);
-    transform: translateY(-1px);
-}
-
-
-/* =====================================================
-   OTHER RESOURCE CATEGORIES
-===================================================== */
-
-.other-resources {
-    margin-top: 65px;
-}
-
-.resource-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.resource-card {
-    padding: 25px;
-
-    background: var(--light-grey);
-
-    border: 1px solid var(--border);
-    border-radius: 6px;
-}
-
-.resource-card h3 {
-    margin-top: 0;
-    color: var(--dark-green);
-    font-size: 19px;
-}
-
-.resource-card p {
-    color: var(--grey);
-    font-size: 14px;
-}
-
-.resource-card a {
-    color: var(--green);
-    font-size: 13px;
-    font-weight: bold;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-    background: var(--dark-green);
-    color: var(--white);
-    padding: 35px 25px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.footer-text {
-    font-size: 13px;
-    opacity: 0.85;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: var(--white);
-    font-size: 13px;
-}
-
-.footer-links a:hover {
-    color: var(--gold);
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 850px) {
-
-    nav {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .document-item {
-        grid-template-columns: 55px 1fr;
-    }
-
-    .view-link {
-        grid-column: 2;
-        justify-self: start;
-        margin-top: 5px;
-    }
-
-    .resource-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-container {
-        flex-direction: column;
-    }
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header>
-
-    <div class="header-container">
-
-        <div class="logo">
-
-            <div class="logo-mark">
-                AfHA
-            </div>
-
-            <div class="logo-text">
-
-                <div class="logo-title">
-                    AfHA Knowledge Hub
-                </div>
-
-                <div class="logo-subtitle">
-                    African Humanitarian Agency
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <nav>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About AfHA
-            </a>
-
-            <a href="mandate.html">
-                Mandate
-            </a>
-
-            <a href="structure.html">
-                Structure
-            </a>
-
-            <a href="resources.html"
-               class="active">
-                Resources
-            </a>
-
-            <a href="news.html">
-                News
-            </a>
-
-            <a href="principles.html">
-                Principles
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-        <div class="hero-label">
-            AfHA Knowledge Hub
-        </div>
-
-        <h1>
-            Resources
-        </h1>
-
-        <p>
-            A curated collection of frameworks, guidelines,
-            policies, tools, reports, training materials and
-            other knowledge resources supporting humanitarian
-            action across Africa.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main>
-
-
-    <!-- INTRODUCTION -->
-
-    <section class="introduction">
-
-        <h2>
-            Knowledge Resources
-        </h2>
-
-        <p>
-            The AfHA Knowledge Hub brings together key
-            institutional and operational resources that
-            support humanitarian coordination, preparedness,
-            response, capacity development, financing,
-            information management and risk reduction.
-        </p>
-
-    </section>
-
-
-
-    <!-- RESOURCE NAVIGATION -->
-
-    <div class="resource-navigation">
-
-        <a href="resources.html"
-           class="active">
-            Frameworks &amp; Guidelines
-        </a>
-
-        <a href="sops.html">
-            SOPs &amp; Procedures
-        </a>
-
-        <a href="tools.html">
-            Tools &amp; Templates
-        </a>
-
-        <a href="policies.html">
-            Policies &amp; Standards
-        </a>
-
-        <a href="reports.html">
-            Reports &amp; Assessments
-        </a>
-
-        <a href="training.html">
-            Training &amp; Learning
-        </a>
-
-        <a href="lessons.html">
-            Lessons Learned
-        </a>
-
-    </div>
-
-
-
-    <!-- =================================================
-         FRAMEWORKS & GUIDELINES
-    ================================================== -->
-
-    <section>
-
-        <div class="section-header">
-
-            <h2>
-                Frameworks &amp; Guidelines
-            </h2>
-
-            <p>
-                Continental humanitarian frameworks and
-                guidance supporting coordinated and effective
-                humanitarian action.
-            </p>
-
-        </div>
-
-
-
-        <div class="document-list">
-
-
-            <!-- =================================================
-                 F1
-            ================================================== -->
-
-            <div class="document-item">
-
-                <div class="document-number">
+                <div class="category-icon">
                     01
                 </div>
 
-                <div class="document-info">
+                <h3>
+                    Frameworks & Guidelines
+                </h3>
+
+            </div>
+
+        </div>
+
+        <p class="category-description">
+
+            Normative frameworks, guidelines and reference documents
+            that provide direction for humanitarian action.
+
+        </p>
+
+    </div>
+
+
+    <div class="document-list">
+
+
+        <!-- =================================================
+             F1
+        ================================================== -->
+
+        <div class="document-item">
+
+            <div class="document-info">
+
+                <div class="file-icon">
+                    PDF
+                </div>
+
+                <div>
 
                     <div class="document-name">
                         Continental Humanitarian Coordination
@@ -737,41 +57,45 @@ footer {
                     </div>
 
                     <div class="document-meta">
-                        Framework &nbsp;·&nbsp; Version 4
+                        Framework · Version 4
                     </div>
 
-                    <p class="document-synopsis">
+                    <div class="document-synopsis">
                         Provides a framework for strengthening
                         continental humanitarian coordination,
                         partnerships and collective action among
                         the African Union, Member States, regional
                         institutions and humanitarian partners.
-                    </p>
+                    </div>
 
                 </div>
-
-                <a href="documents/frameworks/F1_Continental_Humanitarian_Coordination_and_Partnership_Framework_v4.pdf"
-                   class="view-link"
-                   target="_blank"
-                   rel="noopener">
-                    View Document →
-                </a>
 
             </div>
 
+            <a href="documents/frameworks/F1_Continental_Humanitarian_Coordination_and_Partnership_Framework_v4.pdf"
+               class="view-link"
+               target="_blank"
+               rel="noopener">
+                View document →
+            </a>
+
+        </div>
 
 
-            <!-- =================================================
-                 F2
-            ================================================== -->
 
-            <div class="document-item">
+        <!-- =================================================
+             F2
+        ================================================== -->
 
-                <div class="document-number">
-                    02
+        <div class="document-item">
+
+            <div class="document-info">
+
+                <div class="file-icon">
+                    PDF
                 </div>
 
-                <div class="document-info">
+                <div>
 
                     <div class="document-name">
                         Humanitarian Financing &amp;
@@ -779,41 +103,45 @@ footer {
                     </div>
 
                     <div class="document-meta">
-                        Framework &nbsp;·&nbsp; Version 4
+                        Framework · Version 4
                     </div>
 
-                    <p class="document-synopsis">
+                    <div class="document-synopsis">
                         Provides guidance for strengthening
                         humanitarian financing and resource
                         mobilisation, supporting more predictable,
                         sustainable and coordinated financing for
                         humanitarian action.
-                    </p>
+                    </div>
 
                 </div>
-
-                <a href="documents/frameworks/F2_Humanitarian_Financing_Resource_Mobilisation_Framework_v4.pdf"
-                   class="view-link"
-                   target="_blank"
-                   rel="noopener">
-                    View Document →
-                </a>
 
             </div>
 
+            <a href="documents/frameworks/F2_Humanitarian_Financing_Resource_Mobilisation_Framework_v4.pdf"
+               class="view-link"
+               target="_blank"
+               rel="noopener">
+                View document →
+            </a>
+
+        </div>
 
 
-            <!-- =================================================
-                 F3
-            ================================================== -->
 
-            <div class="document-item">
+        <!-- =================================================
+             F3
+        ================================================== -->
 
-                <div class="document-number">
-                    03
+        <div class="document-item">
+
+            <div class="document-info">
+
+                <div class="file-icon">
+                    PDF
                 </div>
 
-                <div class="document-info">
+                <div>
 
                     <div class="document-name">
                         Humanitarian Data &amp; Information
@@ -821,40 +149,44 @@ footer {
                     </div>
 
                     <div class="document-meta">
-                        Framework &nbsp;·&nbsp; Version 3
+                        Framework · Version 3
                     </div>
 
-                    <p class="document-synopsis">
+                    <div class="document-synopsis">
                         Provides a common approach to improving
                         humanitarian data and information management,
                         interoperability, exchange and use across
                         institutions and humanitarian actors.
-                    </p>
+                    </div>
 
                 </div>
-
-                <a href="documents/frameworks/F3_Humanitarian_Data_Information_Interoperability_Framework_v3.pdf"
-                   class="view-link"
-                   target="_blank"
-                   rel="noopener">
-                    View Document →
-                </a>
 
             </div>
 
+            <a href="documents/frameworks/F3_Humanitarian_Data_Information_Interoperability_Framework_v3.pdf"
+               class="view-link"
+               target="_blank"
+               rel="noopener">
+                View document →
+            </a>
+
+        </div>
 
 
-            <!-- =================================================
-                 F4
-            ================================================== -->
 
-            <div class="document-item">
+        <!-- =================================================
+             F4
+        ================================================== -->
 
-                <div class="document-number">
-                    04
+        <div class="document-item">
+
+            <div class="document-info">
+
+                <div class="file-icon">
+                    PDF
                 </div>
 
-                <div class="document-info">
+                <div>
 
                     <div class="document-name">
                         Capacity Development &amp;
@@ -862,40 +194,44 @@ footer {
                     </div>
 
                     <div class="document-meta">
-                        Framework &nbsp;·&nbsp; Version 3
+                        Framework · Version 3
                     </div>
 
-                    <p class="document-synopsis">
+                    <div class="document-synopsis">
                         Provides a framework for strengthening
                         humanitarian capacities, preparedness and
                         surge readiness, including mechanisms to
                         support timely deployment and response.
-                    </p>
+                    </div>
 
                 </div>
-
-                <a href="documents/frameworks/F4_Capacity_Development_Surge_Readiness_Framework_v3.pdf"
-                   class="view-link"
-                   target="_blank"
-                   rel="noopener">
-                    View Document →
-                </a>
 
             </div>
 
+            <a href="documents/frameworks/F4_Capacity_Development_Surge_Readiness_Framework_v3.pdf"
+               class="view-link"
+               target="_blank"
+               rel="noopener">
+                View document →
+            </a>
+
+        </div>
 
 
-            <!-- =================================================
-                 F5
-            ================================================== -->
 
-            <div class="document-item">
+        <!-- =================================================
+             F5
+        ================================================== -->
 
-                <div class="document-number">
-                    05
+        <div class="document-item">
+
+            <div class="document-info">
+
+                <div class="file-icon">
+                    PDF
                 </div>
 
-                <div class="document-info">
+                <div>
 
                     <div class="document-name">
                         Preparedness, Anticipatory Action
@@ -903,168 +239,31 @@ footer {
                     </div>
 
                     <div class="document-meta">
-                        Framework &nbsp;·&nbsp; Version 3
+                        Framework · Version 3
                     </div>
 
-                    <p class="document-synopsis">
+                    <div class="document-synopsis">
                         Provides guidance for strengthening
                         preparedness, anticipatory action and risk
                         reduction to enable earlier action and
                         reduce the impacts of humanitarian crises.
-                    </p>
+                    </div>
 
                 </div>
 
-                <a href="documents/frameworks/F5_Preparedness_Anticipatory_Action_Risk_Reduction_Framework_v3.pdf"
-                   class="view-link"
-                   target="_blank"
-                   rel="noopener">
-                    View Document →
-                </a>
-
             </div>
 
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================================
-         OTHER RESOURCE CATEGORIES
-    ================================================== -->
-
-    <section class="other-resources">
-
-        <div class="section-header">
-
-            <h2>
-                Other Knowledge Resources
-            </h2>
-
-            <p>
-                Explore additional resource categories in the
-                AfHA Knowledge Hub.
-            </p>
-
-        </div>
-
-
-        <div class="resource-cards">
-
-
-            <div class="resource-card">
-
-                <h3>
-                    SOPs &amp; Procedures
-                </h3>
-
-                <p>
-                    Standard operating procedures and
-                    operational guidance supporting humanitarian
-                    coordination and response.
-                </p>
-
-                <a href="sops.html">
-                    Explore SOPs →
-                </a>
-
-            </div>
-
-
-
-            <div class="resource-card">
-
-                <h3>
-                    Tools &amp; Templates
-                </h3>
-
-                <p>
-                    Practical tools, templates and resources
-                    supporting humanitarian preparedness,
-                    coordination and operations.
-                </p>
-
-                <a href="tools.html">
-                    Explore tools →
-                </a>
-
-            </div>
-
-
-
-            <div class="resource-card">
-
-                <h3>
-                    Training &amp; Learning
-                </h3>
-
-                <p>
-                    Training materials, learning resources and
-                    capacity-development materials for
-                    humanitarian practitioners.
-                </p>
-
-                <a href="training.html">
-                    Explore training →
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <div>
-
-            <div class="footer-title">
-                AfHA Knowledge Hub
-            </div>
-
-            <div class="footer-text">
-                African Humanitarian Agency
-            </div>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="resources.html">
-                Resources
-            </a>
-
-            <a href="contact.html">
-                Contact
+            <a href="documents/frameworks/F5_Preparedness_Anticipatory_Action_Risk_Reduction_Framework_v3.pdf"
+               class="view-link"
+               target="_blank"
+               rel="noopener">
+                View document →
             </a>
 
         </div>
+
 
     </div>
 
-</footer>
-
-
-</body>
-
-</html>
+</section>
 ```
