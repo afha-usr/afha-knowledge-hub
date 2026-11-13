@@ -667,6 +667,75 @@ footer {
 
 }
 
+
+/* Host agreement photo carousel */
+.host-gallery {
+    margin: 40px 0 0;
+}
+
+.host-gallery h2 {
+    max-width: 850px;
+    margin: 0 0 20px;
+    color: var(--dark-green);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.25;
+}
+
+.host-gallery figure {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--light-green);
+    color: var(--dark-green);
+}
+
+.host-gallery figure[hidden],
+.host-gallery-controls[hidden] {
+    display: none;
+}
+
+.host-gallery img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+}
+
+.host-gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.host-gallery-controls button {
+    min-width: 44px;
+    min-height: 44px;
+    border: 1px solid var(--dark-green);
+    border-radius: 8px;
+    background: var(--dark-green);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.host-gallery-controls button:focus-visible {
+    outline: 3px solid var(--dark-gold);
+    outline-offset: 3px;
+}
+
+.host-gallery-source {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--dark-green);
+    text-decoration: underline;
+}
+
 </style>
 
 </head>
@@ -842,6 +911,41 @@ footer {
 <main>
 
 <div class="container">
+
+    <section class="host-gallery" id="host-agreement" aria-labelledby="host-agreement-title">
+        <h2 id="host-agreement-title">African Union and Uganda Officially Signs the Host Agreement for the African Humanitarian Agency (AfHA)</h2>
+
+        <figure>
+            <img src="images/Signing-1.jpeg"
+                 alt="Delegates pose outside with the signed agreement folders">
+        </figure>
+
+        <figure hidden>
+            <img src="images/13.jpeg"
+                 alt="Delegates pose with the signed agreements beside the African Union and Uganda flags">
+        </figure>
+
+        <figure hidden>
+            <img src="images/14.jpeg"
+                 alt="Representatives hold up the signed agreement folders as attendees applaud">
+        </figure>
+
+        <figure hidden>
+            <img src="images/15.jpeg"
+                 alt="A delegate speaks into a microphone during the ceremony">
+        </figure>
+
+        <div class="host-gallery-controls" hidden>
+            <button type="button" data-step="-1" aria-label="Previous photo">←</button>
+            <span data-photo-status role="status">Photo 1 of 4</span>
+            <button type="button" data-step="1" aria-label="Next photo">→</button>
+        </div>
+
+        <a class="host-gallery-source" href="https://au.int/en/pressreleases/20261109/african-union-and-uganda-officially-signs-host-agreement-african">
+            Read the African Union press release
+        </a>
+    </section>
+
 
 
     <!-- =================================================
@@ -1374,6 +1478,30 @@ footer {
 
 </footer>
 
+
+
+<script>
+    const gallery = document.querySelector("#host-agreement");
+    const photos = Array.from(gallery.querySelectorAll("figure"));
+    const controls = gallery.querySelector(".host-gallery-controls");
+    const photoStatus = gallery.querySelector("[data-photo-status]");
+    let currentPhoto = 0;
+
+    function showPhoto(index) {
+        photos[currentPhoto].hidden = true;
+        currentPhoto = (index + photos.length) % photos.length;
+        photos[currentPhoto].hidden = false;
+        photoStatus.textContent = `Photo ${currentPhoto + 1} of ${photos.length}`;
+    }
+
+    controls.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+            showPhoto(currentPhoto + Number(button.dataset.step));
+        });
+    });
+
+    controls.hidden = false;
+</script>
 
 </body>
 
