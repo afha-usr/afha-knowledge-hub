@@ -429,6 +429,22 @@ footer {
     }
 }
 
+
+.sop-library { display: grid; gap: 20px; }
+
+.sop-group {
+    background: var(--afha-white);
+    border: 1px solid var(--afha-border);
+    border-radius: 12px;
+    padding: clamp(16px, 4vw, 26px);
+}
+
+.sop-group h4 { margin: 0 0 12px; color: var(--afha-dark-green); }
+.sop-group ul { margin: 0; padding-left: 1.25em; }
+.sop-group li + li { margin-top: 8px; }
+.sop-group a { color: var(--afha-dark-green); text-decoration: underline; }
+.sop-group a span { color: var(--afha-grey); font-size: 0.85em; }
+
 </style>
 
 </head>
@@ -470,7 +486,7 @@ footer {
                 Home
             </a>
 
-            <a href="index.html#resources" class="active">
+            <a href="resources.html#sops" class="active">
                 Knowledge Resources
             </a>
 
@@ -501,7 +517,7 @@ footer {
 
             &nbsp; / &nbsp;
 
-            <a href="index.html#resources">
+            <a href="resources.html#sops">
                 Knowledge Resources
             </a>
 
@@ -560,128 +576,88 @@ footer {
          RESOURCE CARDS
     ================================================== -->
 
-    <div class="resource-grid">
+    <div class="sop-library">
+        <section class="sop-group" aria-labelledby="framework-1">
+            <h4 id="framework-1">Framework 1 — Humanitarian Coordination</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/SOP_1_1_Multi_level_coordination_v3.docx" download>SOP 1.1 — Multi level coordination <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/SOP_1_2_Partner_engagement_v3.docx" download>SOP 1.2 — Partner engagement <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/SOP_1_3_Cross_border_coordination_mutual_support_v3.docx" download>SOP 1.3 — Cross border coordination mutual support <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/annexures_SOP1_1_v3.docx" download>Annexures to SOP 1.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/annexures_SOP1_2_v3.docx" download>Annexures to SOP 1.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%201_Humanitarian_coordination/annexures_SOP1_3_v3.docx" download>Annexures to SOP 1.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
+        <section class="sop-group" aria-labelledby="framework-2">
+            <h4 id="framework-2">Framework 2 — Financing and Resources</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/SOP2_1_draw_down_mechanism%202.docx" download>SOP 2.1 — Draw down mechanism <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/SOP2_2_MS_partner_contribution%202.docx" download>SOP 2.2 — Member State partner contribution <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/SOP2_3_funding_approval%202.docx" download>SOP 2.3 — Funding approval <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/annexures_SOP2_1.docx" download>Annexures to SOP 2.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/annexures_SOP2_2%202.docx" download>Annexures to SOP 2.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%202_Financing_resources/annexures_SOP2_3.docx" download>Annexures to SOP 2.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
-        <!-- CARD 01 -->
+        <section class="sop-group" aria-labelledby="framework-3">
+            <h4 id="framework-3">Framework 3 — Data and Information</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%203_Data_information/SOP3_1_data_collection_sharing.docx" download>SOP 3.1 — Data collection sharing <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/SOP3_2_coordinating_amhewas_Etc.docx" download>SOP 3.2 — Coordinating AMHEWAS etc <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/SOP3_3_ethical_data_protection.docx" download>SOP 3.3 — Ethical data protection <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/SOP3_4_hum_data_standards.docx" download>SOP 3.4 — Humanitarian data standards <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/annexures_SOP3_1.docx" download>Annexures to SOP 3.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/annexures_SOP3_2.docx" download>Annexures to SOP 3.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%203_Data_information/annexures_SOP3_3.docx" download>Annexures to SOP 3.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
-        <a href="#" class="resource-card">
+        <section class="sop-group" aria-labelledby="framework-4">
+            <h4 id="framework-4">Framework 4 — Capacity Development</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/SOP4_1_surge_roster_deployment.docx" download>SOP 4.1 — Surge roster deployment <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/SOP4_2_training_certification.docx" download>SOP 4.2 — Training certification <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/SOP4_3_partner_surge_integration.docx" download>SOP 4.3 — Partner surge integration <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/annexures_SOP4_1.docx" download>Annexures to SOP 4.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/annexures_SOP4_2.docx" download>Annexures to SOP 4.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%204_Capacity_development/annexures_SOP4_3.docx" download>Annexures to SOP 4.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
-            <div class="card-number">
-                01
-            </div>
+        <section class="sop-group" aria-labelledby="framework-5">
+            <h4 id="framework-5">Framework 5 — Preparedness and Anticipatory Action</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/SOP5_1_anticipatory_triggers.docx" download>SOP 5.1 — Anticipatory triggers <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/SOP5_2_national_regional_CPs.docx" download>SOP 5.2 — National regional contingency plans <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/SOP5_3_prepositioning_logistics.docx" download>SOP 5.3 — Prepositioning logistics <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/annexures_SOP5_1.docx" download>Annexures to SOP 5.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/annexures_SOP5_2.docx" download>Annexures to SOP 5.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%205_Preparedness_AA/annexures_SOP5_3.docx" download>Annexures to SOP 5.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
-            <h4>
-                Operational Procedures
-            </h4>
+        <section class="sop-group" aria-labelledby="framework-6">
+            <h4 id="framework-6">Framework 6 — Political Advocacy</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/SOP6_1_PSC_PA.docx" download>SOP 6.1 — PSC and PA <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/SOP6_2_public_communication_media.docx" download>SOP 6.2 — Public communication media <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/SOP6_3_International_humanitarian_representation.docx" download>SOP 6.3 — International humanitarian representation <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/annexures_SOP6_1.docx" download>Annexures to SOP 6.1 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/annexures_SOP6_2.docx" download>Annexures to SOP 6.2 <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%206_Political_advocacy/annexures_SOP6_3.docx" download>Annexures to SOP 6.3 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
 
-            <p>
-                Procedures and operational guidance supporting
-                humanitarian preparedness, coordination and
-                response.
-            </p>
-
-            <div class="card-link">
-                View resources →
-            </div>
-
-        </a>
-
-
-        <!-- CARD 02 -->
-
-        <a href="#" class="resource-card">
-
-            <div class="card-number">
-                02
-            </div>
-
-            <h4>
-                Coordination Procedures
-            </h4>
-
-            <p>
-                Procedures supporting coordination between
-                humanitarian actors, institutions and partners.
-            </p>
-
-            <div class="card-link">
-                View resources →
-            </div>
-
-        </a>
-
-
-        <!-- CARD 03 -->
-
-        <a href="#" class="resource-card">
-
-            <div class="card-number">
-                03
-            </div>
-
-            <h4>
-                Emergency Procedures
-            </h4>
-
-            <p>
-                Procedures and operational guidance for
-                emergency preparedness and response.
-            </p>
-
-            <div class="card-link">
-                View resources →
-            </div>
-
-        </a>
-
-
-        <!-- CARD 04 -->
-
-        <a href="#" class="resource-card">
-
-            <div class="card-number">
-                04
-            </div>
-
-            <h4>
-                Other Procedures
-            </h4>
-
-            <p>
-                Additional procedures and operational documents
-                relevant to humanitarian action.
-            </p>
-
-            <div class="card-link">
-                View resources →
-            </div>
-
-        </a>
-
-
+        <section class="sop-group" aria-labelledby="framework-7">
+            <h4 id="framework-7">Framework 7 — Civil-Military Cooperation</h4>
+            <ul>
+                <li><a href="documents/SOP/Framework%207_CM_cooperation/SOP-7.1-Civil-Military-Coordination.docx" download>SOP 7.1 — Civil military coordination <span>(DOCX)</span></a></li>
+                <li><a href="documents/SOP/Framework%207_CM_cooperation/Annexures%20to%20the%20SOP%207.1_CCCoord.docx" download>Annexures to SOP 7.1 <span>(DOCX)</span></a></li>
+            </ul>
+        </section>
     </div>
-
-
-    <!-- =================================================
-         INFORMATION BOX
-    ================================================== -->
-
-    <div class="info-box">
-
-        <h4>
-            About this collection
-        </h4>
-
-        <p>
-            The SOPs & Procedures collection will provide a
-            centralized reference point for operational procedures
-            and practical guidance. Documents can be added and
-            organized as the AfHA Knowledge Hub develops.
-        </p>
-
-    </div>
-
 
 </main>
 
